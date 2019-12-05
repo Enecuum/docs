@@ -1,0 +1,117 @@
+module.exports = {
+	locales: {
+		'/': {
+			lang: 'en-US',
+			title: 'Enecuum Guides',
+			description: 'This set of manuals is aimed to help with the first steps into the Blockchain Mobile Network for decentralized applications.'
+		},
+		'/ru/': {
+			lang: 'ru-RU',
+			title: 'Руководства Enecuum',
+			description: 'Этот набор руководств призван помочь с освоением мобильной блокчейн-сети для децентрализованных приложений.'
+		}
+	},
+	themeConfig: {
+		repo: 'Enecuum/docs',
+		//editLinks: true,
+		smoothScroll: true,
+		nextLinks: false,
+		prevLinks: false,
+		searchMaxSuggestions: 10,
+		locales: {
+			'/': {
+				selectText: 'Language',
+				label: 'English',
+				ariaLabel: 'Language',
+				editLinkText: 'Edit this page on GitHub',
+				
+				sidebar: [
+					'/',
+					['/faq', 'FAQ'],
+					['/how-to-use','How to Use the App'],
+					['/how-to-buy','How to Buy ENQ on Exchange'],
+					['/how-by-card','How to Buy ENQ Using Bank Card'],
+					['/how-to-swap','How to Swap ENQ'],
+					['/how-to-mine-bit','How to Mine BIT'],
+					['/referral','How to Join the Referral Program'],
+					['/how-does-roi-work','How Does ROI Calculator Work'],
+					['/research','Research Papers']
+				],
+				
+				nav: [	
+					{ text: 'enecuum.com', link: 'https://enecuum.com' },
+					{
+					text: 'Enecuum Network',
+					items: [
+						{ text: 'Telegram discussion group', link: 'https://t.me/Enecuum_EN' },
+						{ text: 'Telegram news channel', link: 'https://t.me/ENQbeam' },
+						{ text: 'App Download', link: 'https://app.enecuum.com' },
+						{ text: 'Blockchain Explorer', link: 'https://neuro.enecuum.com' },
+						{ text: 'ROI Calculator', link: 'https://neuro.enecuum.com/#!/roi' },
+						{ text: 'Web Wallet & Swap', link: 'https://wallet.enecuum.com' },
+						{ text: 'Etherscan', link: 'https://etherscan.io/token/0x16ea01acb4b0bca2000ee5473348b6937ee6f72f' },
+						{ text: 'Coingecko', link: 'https://www.coingecko.com/en/coins/enecuum' }
+					]
+					}
+					
+				],
+				
+				lastUpdated: 'Last Updated',
+				serviceWorker: {
+					updatePopup: {
+						message: "New content is available.",
+						buttonText: "Refresh"
+					}
+				}
+			},
+			'/ru/': {
+				selectText: 'Язык',
+				label: 'Русский',
+				//editLinkText: 'Улучшить перевод на GitHub',
+				lastUpdated: 'Обновлено',
+				serviceWorker: {
+					updatePopup: {
+						message: "Доступно обовление сайта.",
+						buttonText: "Обновить"
+					}
+				},
+				sidebar: [
+					'/ru/',
+					['/ru/faq', 'FAQ'],
+					['/ru/how-to-use','Как пользоваться приложением'],
+					['/ru/how-to-buy','Как купить ENQ на бирже'],
+					['/ru/how-by-card','Как купить ENQ банковской картой'],
+					['/ru/how-to-swap','Как сделать своп ENQ'],					
+					['/ru/how-to-mine-bit','Как майнить BIT'],
+					['/ru/referral','Как стать участником Реферальной Программы'],
+					['/ru/how-does-roi-work','Как работает калькулятор доходности'],
+					['/ru/research','Научные публикации']
+				],	
+				
+				nav: [
+					{ text: 'enecuum.com', link: 'https://enecuum.com' },
+					{
+					text: 'Сеть Enecuum',
+					items: [
+						{ text: 'Обсуждение Enecuum в Telegram', link: 'https://t.me/Enecuum' },
+						{ text: 'Новостной канал в Telegram', link: 'https://t.me/ENQbeam' },
+						{ text: 'Скачать приложение', link: 'https://app.enecuum.com' },
+						{ text: 'Блокчейн эксплорер', link: 'https://neuro.enecuum.com' },
+						{ text: 'Калькулятор доходности', link: 'https://neuro.enecuum.com/#!/roi' },
+						{ text: 'Веб-кошелёк и своп', link: 'https://wallet.enecuum.com' },
+						{ text: 'Etherscan', link: 'https://etherscan.io/token/0x16ea01acb4b0bca2000ee5473348b6937ee6f72f' },
+						{ text: 'Coingecko', link: 'https://www.coingecko.com/en/coins/enecuum' }
+					]
+					}
+				]
+			}
+		}
+	},
+	plugins: [
+		// ['@vuepress/google-analytics', {
+			// ga: ''
+		// }],
+		['@vuepress/medium-zoom',true],
+		['@vuepress/active-header-links',true]
+	]
+}
