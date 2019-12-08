@@ -56,6 +56,10 @@ Currently, we deploy three components of the BIT Network:  **Proof-of-Activity,*
 Note that PoW and Fullnode can only work with **public IP addresses.** The IP address can be static or dynamic.
 :::
 
+::: danger NOTICE
+Current buid nodes work stable only on Linux OS. There are network issues running nodes on Windows and Mac.
+:::
+
 - BIT components are deployed through *Docker*, a platform meant for building, sharing, and running applications with containers. So first of all, [download Docker](https://www.docker.com/) for your OS using official guides. For Windows users, we recommend [Docker Toolbox](https://github.com/docker/toolbox/releases). Linux users can follow [Docker guide for Ubuntu.](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 - After installing Docker, download the database that will be used in your Fullnode or PoW. **This is a mandatory step**.
 ```
