@@ -13,7 +13,7 @@ module.exports = {
 	},
 	themeConfig: {
 		repo: 'Enecuum/docs',
-		//editLinks: true,
+		editLinks: true,
 		smoothScroll: true,
 		nextLinks: false,
 		prevLinks: false,
@@ -24,7 +24,6 @@ module.exports = {
 				label: 'English',
 				ariaLabel: 'Language',
 				editLinkText: 'Edit this page on GitHub',
-				
 				sidebar: [
 					'/',
 					['/faq', 'FAQ'],
@@ -37,7 +36,6 @@ module.exports = {
 					['/how-does-roi-work','How Does ROI Calculator Work'],
 					['/research','Research Papers']
 				],
-				
 				nav: [	
 					{ text: 'enecuum.com', link: 'https://enecuum.com' },
 					{
@@ -54,27 +52,13 @@ module.exports = {
 					]
 					}
 					
-				],
-				
-				lastUpdated: 'Last Updated',
-				serviceWorker: {
-					updatePopup: {
-						message: "New content is available.",
-						buttonText: "Refresh"
-					}
-				}
+				]
 			},
 			'/ru/': {
 				selectText: 'Язык',
 				label: 'Русский',
-				//editLinkText: 'Улучшить перевод на GitHub',
+				editLinkText: 'Улучшить перевод на GitHub',
 				lastUpdated: 'Обновлено',
-				serviceWorker: {
-					updatePopup: {
-						message: "Доступно обовление сайта.",
-						buttonText: "Обновить"
-					}
-				},
 				sidebar: [
 					'/ru/',
 					['/ru/faq', 'FAQ'],
@@ -87,7 +71,6 @@ module.exports = {
 					['/ru/how-does-roi-work','Как работает калькулятор доходности'],
 					['/ru/research','Научные публикации']
 				],	
-				
 				nav: [
 					{ text: 'enecuum.com', link: 'https://enecuum.com' },
 					{
@@ -106,12 +89,5 @@ module.exports = {
 				]
 			}
 		}
-	},
-	plugins: [
-		// ['@vuepress/google-analytics', {
-			// ga: ''
-		// }],
-		['@vuepress/medium-zoom',true],
-		['@vuepress/active-header-links',true]
-	]
+	}
 }
