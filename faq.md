@@ -26,7 +26,7 @@ To find out more, please read our [Tech paper.](https://enecuum.com/Documentatio
 
 #### Can I be a PoW or PoS miner?
 
-Not now, but we are planning on releasing PoW and PoS mining to the public soon.
+Currently, BIT network with non-tradable tokens is used for testing the team's PoW and PoS. Please read the tutorial on [How to Mine BIT](how-to-mine-bit.md) to find out more. ENQ PoW and PoS mining will be released after the tests are done.
 
 #### What can the Enecuum App do?
 
