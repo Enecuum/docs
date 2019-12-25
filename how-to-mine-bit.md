@@ -18,11 +18,13 @@ To learn more about Enecuum's Trinity protocol, please read our [Tech paper.](ht
 
 ## BIT Testnet Components
 
-Currently, we deploy three components of the BIT Network:  **Proof-of-Activity,** **Proof-of-Work,** and **Fullnode.** Each of them has a specific purpose in the network, and the components can also work separately. 
+Currently, we deploy three components of the BIT Network:  **Proof-of-Activity,** **Proof-of-Stake,** **Proof-of-Work,** and **Fullnode.** Each of them has a specific purpose in the network, and the components can also work separately. 
 
 **Proof-of-Activity** is [Enecuum BIT App.](https://app.enecuum.com/bit/bit-app-v.0.11.3.apk) The only difference from Enecuum Masternode App is a little redesign to distinguish our two applications. As usual, it requires a minimal stake to start mining; but since BIT is not tradable, you can get it with our [faucet.](https://faucet-bit.enecuum.com/) PoA contributes to the network by validating m-blocks.
 
-**Proof-of-Work** is self-explanatory; it generates k-blocks with your PC's CPU power. No minimal stake is required.
+**Proof-of-Stake** publishes m-blocks that PoA nodes have validated. A PoS node is supposed to hold a significant amount of tokens to prove its eligibility.
+
+**Proof-of-Work** is self-explanatory; it generates k-blocks with your PC's CPU power. No minimal stake is required. Currently, BIT PoW mining difficulty is low, and as a result, CPU resources are not used a lot. But HDD usage is still high, as it is required to sync with the blockchain history. 
 
 **Fullnode** consists of the Blockchain Explorer and a module that recalculates referral rewards. Since the Blockchain Explorer demands a lot of resources, it was separated from PoW. Fullnode synchronizes with [BIT Testnet](http://bit.enecuum.com/).
 
@@ -32,39 +34,39 @@ Currently, we deploy three components of the BIT Network:  **Proof-of-Activity,*
 
 - on your mobile device:
   - run PoA;
-
 - on your PC:
+  - run PoS if you are a holder;
   - run PoW to mine;
   - run Fullnode to use Blockchain Explorer;
-  - run PoW+Fullnode to do both if your PC is powerful enough.
+  - run PoW+Fullnode to mine and use Blockchain Explorer if your PC is powerful enough.
 
-## How to Join BIT Testnet
+## Join BIT Testnet on Mobile
 
-### Mobile
-
-#### How to Run PoA
+### How to Run PoA
 
 1. Download [Enecuum BIT App.](https://app.enecuum.com/bit/bit-app-v.0.11.3.apk)
 2. Get BIT coins using our [faucet.](https://faucet-bit.enecuum.com/)
 3. Start mining!
 
-### PC
+## Join BIT Testnet on PC
 
-#### Prerequisites 
+### Prerequisites 
 
 ::: tip
 Note that PoW and Fullnode can only work with **public IP addresses.** The IP address can be static or dynamic.
 :::
 
 ::: danger NOTICE
-Current buid nodes work stable only on Linux OS. There are network issues running nodes on Windows and Mac.
+Current build nodes work stable only on Linux OS. There are network issues running nodes on Windows and Mac.
 :::
 
 - BIT components are deployed through *Docker*, a platform meant for building, sharing, and running applications with containers. So first of all, [download Docker](https://www.docker.com/) for your OS using official guides. For Windows users, we recommend [Docker Toolbox](https://github.com/docker/toolbox/releases). Linux users can follow [Docker guide for Ubuntu.](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+
 - After installing Docker, download the database that will be used in your Fullnode or PoW. **This is a mandatory step**.
-```
-docker run -d --name bit_db -e MYSQL_ROOT_PASSWORD=root enecuum/bit_db
-```
+
+  ```
+  docker run -d --name bit_db -e MYSQL_ROOT_PASSWORD=root enecuum/bit_db
+  ```
 - Working with Docker is easy. The following list of commands should be enough for basic use:
 	- stop the container: `docker stop <container-name>`;
 	- show stopped containers: `docker ps -a`;
@@ -73,64 +75,117 @@ docker run -d --name bit_db -e MYSQL_ROOT_PASSWORD=root enecuum/bit_db
 	- show logs: `docker logs <container-name>`;
 	- show Docker disk usage: `docker system df -v`.
 	
+
 You can stop/restart the container without worrying; no data will be lost.
-	
-#### How to Run PoW
 
-::: tip
-
-Currently, BIT PoW mining difficulty is low, and as a result, CPU resources are not used a lot. But HDD usage is still high; it is required to sync with the blockchain history. 
-
-:::
+### How to Run PoW
 
 1. Carefully read the [prerequisites](how-to-mine-bit.html#prerequisites) above. Check that you have the database installed:
-```
-docker ps
-```
-A container named *bit_db* should appear:
-```
-CONTAINER ID        IMAGE                      COMMAND                  CREATED             STATUS              PORTS             NAMES
-0f59855cf0ea        enecuum/bit_db             "docker-entrypoint.s…"   6 seconds ago       Up 5 seconds        33060/tcp         bit_db
-```
-If you don't see the container in the list, please follow the instructions provided in the prerequisites.
+
+   ```
+   docker ps
+   ```
+
+   A container named *bit_db* should appear:
+
+   ```
+   CONTAINER ID        IMAGE                      COMMAND                  CREATED             STATUS              PORTS             NAMES
+   0f59855cf0ea        enecuum/bit_db             "docker-entrypoint.s…"   6 seconds ago       Up 5 seconds        33060/tcp         bit_db
+   ```
+
+   If you don't see the container in the list, please follow the instructions provided in the prerequisites.
 
 2. Generate public and private keys using Enecuum App or [BIT Web Wallet](https://bit-wallet.enecuum.com/). Do a backup copy. 
 
 3. Download PoW container:
-```
-docker run -ti --name bit_pow -p8000:8000 --link bit_db:dbhost -e PUB_KEY=<your_pub_key> -e DB_PASS='root' -e DB_PORT=3306 -d  enecuum/bit_pow
-```
-Change the `PUB-KEY` parameter value to the generated public key *without* brackets <>. 
+
+   ```
+   docker run -ti --name bit_pow -p8000:8000 --link bit_db:dbhost -e PUB_KEY=<your_pub_key> -e DB_PASS='root' -e DB_PORT=3306 -d  enecuum/bit_pow
+   ```
+
+   Change the `PUB-KEY` parameter value to the generated public key *without* brackets <>. 
 
 4. Check if your container is running:
-```
-docker ps
-```
-A list with *bit_db* and *bit_pow* containers should appear.
+
+   ```
+   docker ps
+   ```
+
+   A list with *bit_db* and *bit_pow* containers should appear.
 
 5. Search for your public key in the [Bit Testnet](http://bit.enecuum.com/). You should be able to see new k-blocks generating. You can use BIT Testnet Blockchain Explorer, your Fullnode or [BIT Web Wallet](https://bit-wallet.enecuum.com/) to check your PoW balance. The installation is finished. If you need to, check logs using `docker logs bit_pow` command. 
 
-#### How to Run Fullnode
+### How to Run Fullnode
 
 1. Carefully read the [prerequisites](how-to-mine-bit.html#prerequisites) above. Check that you have the database installed:
-```
-docker ps
-```
-A container named *bit_db* should appear:
-```
-CONTAINER ID        IMAGE                      COMMAND                  CREATED             STATUS              PORTS                NAMES
-0f59855cf0ea        enecuum/bit_db             "docker-entrypoint.s…"   6 seconds ago       Up 5 seconds        33060/tcp            bit_db
-```
-If you don't see the container in the list, please follow the instructions provided in the prerequisites.
+
+   ```
+   docker ps
+   ```
+
+   A container named *bit_db* should appear:
+
+   ```
+   CONTAINER ID        IMAGE                      COMMAND                  CREATED             STATUS              PORTS                NAMES
+   0f59855cf0ea        enecuum/bit_db             "docker-entrypoint.s…"   6 seconds ago       Up 5 seconds        33060/tcp            bit_db
+   ```
+
+   If you don't see the container in the list, please follow the instructions provided in the prerequisites.
 
 2. Download Fullnode container:
-```
-docker run -ti --name bit_fullnode -p8000:8000 -p80:80 --link bit_db:dbhost -e DB_PASS='root' -e DB_PORT=3306 -d  enecuum/bit_fullnode
-```
+
+   ```
+   docker run -ti --name bit_fullnode -p8000:8000 -p80:80 --link bit_db:dbhost -e DB_PASS='root' -e DB_PORT=3306 -d  enecuum/bit_fullnode
+   ```
+
 3. Check if your container is running:
-```
-docker ps
-```
-A list with *bit_db* and *bit_fullnode* containers should appear.
+
+   ```
+   docker ps
+   ```
+
+   A list with *bit_db* and *bit_fullnode* containers should appear.
 
 4. Enter your IP address in a browser to check if your Fullnode works. You should be able to see a Blockchain Explorer running. It should take a few minutes to synchronize with [BIT Testnet](http://bit.enecuum.com/). You can use your newly installed Fullnode to check your PoW balance. The installation is finished. If you need to, check logs using `docker logs bit_fullnode` command.
+
+## How to Update BIT Components
+
+::: tip
+
+Please, always make sure to back up your private key before updating.
+
+:::
+
+### Mobile
+
+Whenever there's a mobile app update, a pop-up message should appear on the application's main screen. Clicking the message would open a download link in your browser. Download the new installation file, open it and tap the *Update* button. When the process is finished, you would get a notification about a successful application update.
+
+**If the update wasn't successful,** back up your private key, delete the app, and [download and install Enecuum BIT app](how-to-mine-bit.html#how-to-run-poa) again.
+
+### PC
+
+When the BIT PoS, PoW or Fullnode updates are released, the old versions running on your PC will stop working properly because of compatibility issues. Running `docker logs <container-name>` command would show errors -- that is your indication that the update is required.
+
+To ensure a successful update, it is best to not only reinstall the specific component (PoW, PoS or Fullnode), but also to reinstall the database it uses. The instructions below explain how to do it.
+
+1. Stop and remove containers: the database (*bit_db*) and the component you wish to update (*bit_pow, bit_pos* or/and *bit_fullnode*).  
+
+   ```
+   docker stop bit_db
+   docker stop <container-name>
+   docker rm bit_db
+   docker rm <container-name>
+   ```
+
+   If you want to stop and remove all of your containers, you can enter `$(docker ps -a -q)` instead of a container name. This will make the process more efficient.
+
+2. Remove images:
+
+   ```
+   docker images -a -q
+   docker rmi <image-name>
+   ```
+
+   Here, the first command shows the list of images. Search for the ones you need to remove and enter the names in the second command. If you wish to remove all of them, enter `$(docker images -a -q)` instead of an image name.
+
+3. Download the containers again using the [instructions above.](how-to-mine-bit.html#join-bit-testnet-on-pc) In the process, use the back-up copies of your keys for PoW and PoS.
