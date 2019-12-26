@@ -22,7 +22,7 @@ Currently, we deploy four components of the BIT Network:  **Proof-of-Activity,**
 
 **Proof-of-Activity** nodes contribute to the network by validating m-blocks containing transactions. PoA is distributed through [Enecuum BIT App.](https://app.enecuum.com/bit/bit-app-v.0.11.3.apk) The only difference from Enecuum Masternode App is a little redesign to distinguish our two applications. As usual, it requires a minimal stake to start mining; but since BIT is not tradable, you can get it with our [faucet.](https://faucet-bit.enecuum.com/)
 
-**Proof-of-Stake** nodes receive rewards for voting for a PoS leader that publishes m-blocks. A PoS node is supposed to hold a significant amount of tokens to prove its eligibility. 
+**Proof-of-Stake** nodes receive rewards for voting for a PoS leader that publishes macroblocks. In our current BIT implementation, the conditions for becoming a PoS node are simplified -- all you need is to have is a non-zero balance and specify an arbitrary PoS secret share. In the final protocol version, a PoS candidate is supposed to be in the top 100 wallets list and get a secret PoS share from a PoS coalition according to the corresponding Trinity protocol.
 
 **Proof-of-Work** nodes generate k-blocks, which are the basic structure of our blockchain, with your PC's CPU power. No minimal stake is required. Currently, BIT PoW mining difficulty is low, and as a result, CPU resources are not used a lot. But HDD usage is still high, as it is required to sync with the blockchain history. 
 
@@ -62,7 +62,7 @@ Current build nodes work stable only on Linux OS. There are network issues runni
 
 - BIT components are deployed through *Docker*, a platform meant for building, sharing, and running applications with containers. So first of all, [download Docker](https://www.docker.com/) for your OS using official guides. For Windows users, we recommend [Docker Toolbox](https://github.com/docker/toolbox/releases). Linux users can follow [Docker guide for Ubuntu.](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
-- After installing Docker, download the database that will be used in your Fullnode or PoW. **This is a mandatory step**.
+- After installing Docker, download the database that will be used in your Fullnode, PoW or PoS. **This is a mandatory step**.
 
   ```
   docker run -d --name bit_db -e MYSQL_ROOT_PASSWORD=root enecuum/bit_db
@@ -186,7 +186,7 @@ You can stop/restart the container without worrying; no data will be lost.
 
 4. Enter your IP address in a browser to check if your Fullnode works. You should be able to see a Blockchain Explorer running. It should take a few minutes to synchronize with [BIT Testnet](http://bit.enecuum.com/). You can use your newly installed Fullnode to check your PoW balance. The installation is finished. If you need to, check logs using `docker logs bit_fullnode` command.
 
-## How to Update BIT Components
+## Update BIT Components
 
 ::: tip
 
