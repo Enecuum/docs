@@ -100,7 +100,7 @@ You can stop/restart the container without worrying; no data will be lost.
 3. Download PoS container:
 
    ```
-   docker run -ti --name bit_pow -p8000:8000 --link bit_db:dbhost -e PUB_KEY=<your_pub_key>  -e POS_SHARE=<your_secret_pos_share>  -e DB_PASS='root' -e DB_PORT=3306 -d  enecuum/bit_pos
+   docker run -ti --name bit_pos -p8000:8000 --link bit_db:dbhost -e PUB_KEY=<your_pub_key>  -e POS_SHARE=<your_secret_pos_share>  -e DB_PASS='root' -e DB_PORT=3306 -d  enecuum/bit_pos
    ```
 
    Change the `PUB-KEY` parameter value to the generated public key *without* brackets <>.  Choose a secret combination of characters and use it for your `POS_SHARE` parameter. 

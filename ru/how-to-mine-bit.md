@@ -48,7 +48,7 @@ sidebarDepth: 2
 2. Получите монеты BIT через наш [кран.](https://faucet-bit.enecuum.com/)
 3. Начинайте майнинг!
 
-## Присоединиться к BIT Testnet на мобильных ПК
+## Присоединиться к BIT Testnet на ПК
 
 ### Предварительные требования
 
@@ -100,7 +100,7 @@ docker run -d --name bit_db -e MYSQL_ROOT_PASSWORD=root enecuum/bit_db
 3. Скачайте контейнер PoS:
 
    ```
-   docker run -ti --name bit_pow -p8000:8000 --link bit_db:dbhost -e PUB_KEY=<ваш_публичный_ключ>  -e POS_SHARE=<ваша_секретная_доля>  -e DB_PASS='root' -e DB_PORT=3306 -d  enecuum/bit_pos
+   docker run -ti --name bit_pos -p8000:8000 --link bit_db:dbhost -e PUB_KEY=<ваш_публичный_ключ>  -e POS_SHARE=<ваша_секретная_доля>  -e DB_PASS='root' -e DB_PORT=3306 -d  enecuum/bit_pos
    ```
 
    Измените значение параметра `PUB-KEY` на публичный ключ, который был сгенерирован в предыдущем пункте, *без* угловых скобок <>. Придумайте секретную последовательность символов, чтобы использовать её в качестве вашей секретной доли PoS. Введите последовательность в параметр `POS_SHARE`. 
@@ -185,7 +185,7 @@ docker run -d --name bit_db -e MYSQL_ROOT_PASSWORD=root enecuum/bit_db
 
 4. Введите ваш IP-адрес в адресную строку браузера, чтобы проверить работоспособность Fullnode. Вы должны увидеть Блокчейн эксплорер. Потребуется пара минут для синхронизации с [BIT Testnet](http://bit.enecuum.com/). Вы можете использовать только что установленную Fullnode для проверки баланса вашего PoW. Установка завершена. Если в этом есть необходимость, вы можете посмотреть логи, используя команду `docker logs bit_fullnode`. 
 
-## Как обновить компоненты BIT
+## Обновить компоненты BIT
 
 ::: tip СОВЕТ
 
