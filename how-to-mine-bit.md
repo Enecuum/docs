@@ -18,13 +18,13 @@ To learn more about Enecuum's Trinity protocol, please read our [Tech paper.](ht
 
 ## BIT Testnet Components
 
-Currently, we deploy three components of the BIT Network:  **Proof-of-Activity,** **Proof-of-Stake,** **Proof-of-Work,** and **Fullnode.** Each of them has a specific purpose in the network, and the components can also work separately. 
+Currently, we deploy four components of the BIT Network:  **Proof-of-Activity,** **Proof-of-Stake,** **Proof-of-Work,** and **Fullnode.** Each of them has a specific purpose in the network, and the components can also work separately. 
 
-**Proof-of-Activity** is [Enecuum BIT App.](https://app.enecuum.com/bit/bit-app-v.0.11.3.apk) The only difference from Enecuum Masternode App is a little redesign to distinguish our two applications. As usual, it requires a minimal stake to start mining; but since BIT is not tradable, you can get it with our [faucet.](https://faucet-bit.enecuum.com/) PoA contributes to the network by validating m-blocks.
+**Proof-of-Activity** nodes contribute to the network by validating m-blocks containing transactions. PoA is distributed through [Enecuum BIT App.](https://app.enecuum.com/bit/bit-app-v.0.11.3.apk) The only difference from Enecuum Masternode App is a little redesign to distinguish our two applications. As usual, it requires a minimal stake to start mining; but since BIT is not tradable, you can get it with our [faucet.](https://faucet-bit.enecuum.com/)
 
-**Proof-of-Stake** publishes m-blocks that PoA nodes have validated. A PoS node is supposed to hold a significant amount of tokens to prove its eligibility.
+**Proof-of-Stake** nodes receive rewards for voting for a PoS leader that publishes m-blocks. A PoS node is supposed to hold a significant amount of tokens to prove its eligibility. 
 
-**Proof-of-Work** is self-explanatory; it generates k-blocks with your PC's CPU power. No minimal stake is required. Currently, BIT PoW mining difficulty is low, and as a result, CPU resources are not used a lot. But HDD usage is still high, as it is required to sync with the blockchain history. 
+**Proof-of-Work** nodes generate k-blocks, which are the basic structure of our blockchain, with your PC's CPU power. No minimal stake is required. Currently, BIT PoW mining difficulty is low, and as a result, CPU resources are not used a lot. But HDD usage is still high, as it is required to sync with the blockchain history. 
 
 **Fullnode** consists of the Blockchain Explorer and a module that recalculates referral rewards. Since the Blockchain Explorer demands a lot of resources, it was separated from PoW. Fullnode synchronizes with [BIT Testnet](http://bit.enecuum.com/).
 
@@ -78,6 +78,44 @@ Current build nodes work stable only on Linux OS. There are network issues runni
 
 You can stop/restart the container without worrying; no data will be lost.
 
+### How to Run PoS
+
+1. Carefully read the [prerequisites](how-to-mine-bit.html#prerequisites) above. Check that you have the database installed:
+
+   ```
+   docker ps
+   ```
+
+   A container named *bit_db* should appear:
+
+   ```
+   CONTAINER ID        IMAGE                      COMMAND                  CREATED             STATUS              PORTS             NAMES
+   0f59855cf0ea        enecuum/bit_db             "docker-entrypoint.s…"   6 seconds ago       Up 5 seconds        33060/tcp         bit_db
+   ```
+
+   If you don't see the container in the list, please follow the instructions provided in the prerequisites.
+
+2. Generate public and private keys using Enecuum App or [BIT Web Wallet](https://bit-wallet.enecuum.com/). Do a backup copy. You can use the same key pair for PoA, PoS and PoW.
+
+3. Download PoS container:
+
+   ```
+   docker run -ti --name bit_pow -p8000:8000 --link bit_db:dbhost -e PUB_KEY=<your_pub_key>  -e POS_SHARE=<your_secret_pos_share>  -e DB_PASS='root' -e DB_PORT=3306 -d  enecuum/bit_pos
+   ```
+
+   Change the `PUB-KEY` parameter value to the generated public key *without* brackets <>.  Choose a secret combination of characters and use it for your `POS_SHARE` parameter. 
+
+4. Check if your container is running:
+
+   ```
+   docker ps
+   ```
+
+   A list with *bit_db* and *bit_pos* containers should appear.
+
+5. Search for your public key in the [Bit Testnet](http://bit.enecuum.com/). You should be able to see new S-rewards. These are the rewards for your PoS node taking part in voting for a PoS leader. This process is stored in the blockchain in s-blocks. You can use BIT Testnet Blockchain Explorer, your Fullnode or [BIT Web Wallet](https://bit-wallet.enecuum.com/) to check your PoS balance. The installation is finished. If you need to, check logs using `docker logs bit_pos` command. 
+
+
 ### How to Run PoW
 
 1. Carefully read the [prerequisites](how-to-mine-bit.html#prerequisites) above. Check that you have the database installed:
@@ -95,7 +133,7 @@ You can stop/restart the container without worrying; no data will be lost.
 
    If you don't see the container in the list, please follow the instructions provided in the prerequisites.
 
-2. Generate public and private keys using Enecuum App or [BIT Web Wallet](https://bit-wallet.enecuum.com/). Do a backup copy. 
+2. Generate public and private keys using Enecuum App or [BIT Web Wallet](https://bit-wallet.enecuum.com/). Do a backup copy. You can use the same key pair for PoA, PoS and PoW.
 
 3. Download PoW container:
 
