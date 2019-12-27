@@ -11,7 +11,7 @@ After buying ENQ ERC-20 tokens, you need to **send it to an Ethereum wallet and 
 :::
 
 ::: tip
-ENQ is available on [several exchanges](https://enecuum.com/Buy.html). This guide explains how to buy ENQ on Crex24.
+ENQ is available on [several exchanges](https://enecuum.com/buy). This guide explains how to buy ENQ on Crex24.
 :::
 
 ## How to top up an account on [CREX24](https://crex24.com/)
@@ -29,27 +29,22 @@ When you choose the service needed, a window will appear where you can enter the
 Commissions and minimal top up amounts will be shown in these windows. Be attentive. 
 
 <p align = "center"> <img src="./img/how-to-buy/buying_options.jpg" > </p>
-
 ## How to buy or sell ENQ token
 
 - Go to [Crex24 website](https://crex24.com/), click “Log in” in the menu and enter your data to log in the system. 
 
 <p align = "center"> <img src="./img/how-to-buy/crex24_website.png" width="500"> </p>
-
 - In the “Markets” section enter ENQ (in the search field).
 
 <p align = "center"> <img src="./img/how-to-buy/market.jpg" > </p>
-
 - Then we will see different ways of purchasing the tokens - for BTC, RUB, USD. Choose the right one for you. Below, in the “BUY ENQ” section, there will be a trading pair, if you choose USD in the previous step, this will be a pair ENQ/USD (or any other pair available that you chose).
 
 - Go to ENQ/USD orders. In the book of orders choose the best price and quantity for ENQ. Click on it and data from this order will be moved to the “BUY ENQ” section.  
 
 <p align = "center"> <img src="./img/how-to-buy/orders.png" > </p>
-
 - During this step, you can edit the tokens quantity and price before finishing the order. If you are OK with the terms of the chosen order, then click “Buy”. After that, your order will get to the order book and will await for it to get completed. Later your transaction will be finished and ENQ tokens will appear on your balance. 
 
 <p align = "center"> <img src="./img/how-to-buy/chosen_order.png" width="450" > </p>
-
 ## How to withdraw funds
 
 ::: danger
@@ -61,19 +56,15 @@ After buying ENQ ERC-20 tokens, you need to **send it to an Ethereum wallet and 
 - Go to the [Crex24 website](https://crex24.com/), click “Log in” in the menu and enter your data to log in the system. 
 
 <p align = "center"> <img src="./img/how-to-buy/crex24_website.png" width="500"/> </p>
-
 - Go to the “Account” section. Choose the currency - ENQ.
 
 <p align = "center"> <img src="./img/how-to-buy/account.jpg" </p>
-
 - Click on the “Withdraw” sign. Fill all the fields needed. **Please enter an *Ethereum* wallet address, NOT *Enecuum*.** Ethereum addresses start with *0x*, and Enecuum addresses start with *02* or *03*. For Ethereum wallets, we recommend MetaMask or Trust Wallet. 
 
 <p align = "center"> <img src="./img/how-to-buy/withdraw.jpg" </p>
-
 - Follow the instructions in the email you receive.
 
 <p align = "center"> <img src="./img/how-to-buy/email.jpg" width="450"/> </p>
-
 - Next, to use ENQ in the app, please follow our [How to Swap ENQ](how-to-swap.md) guide. 
 
 ### Why can’t I withdraw my money?
