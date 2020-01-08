@@ -14,7 +14,7 @@ Unlike ENQ, *BIT* is not intended for trading; its sole purpose is testing of En
 
 After the successful launch of Enecuum's mining app, i.e., PoA node, the team is ready to share with the public the PoW nodes. The testing is done on another platform, [BIT Testnet](http://bit.enecuum.com/), but after the tests are complete, PoW will be available on [Neuro Testnet](http://neuro.enecuum.com/) alongside PoA. And of course, PoS nodes will be shared as well; stay tuned for the updates.
 
-To learn more about Enecuum's Trinity protocol, please read our [Tech paper.](https://enecuum.com/Documentation.html)
+To learn more about Enecuum's Trinity protocol, please read our [Tech paper.](https://enecuum.com/documentation)
 
 ## BIT Testnet Components
 
