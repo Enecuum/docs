@@ -40,11 +40,11 @@ Media activity stage of Airdrop is over now. Mining stage of Airdrop is active. 
 
 126,880,563.75 ENQ.
 
-Equals to Total Supply in [Etherscan](https://etherscan.io/token/0x16ea01acb4b0bca2000ee5473348b6937ee6f72f). Details [here.](https://new.enecuum.com/#/token)
+Equals to Total Supply in [Etherscan](https://etherscan.io/token/0x16ea01acb4b0bca2000ee5473348b6937ee6f72f). Details [here.](https://enecuum.com/emission-model#conversion-plan)
 
 #### What is Enecuum's max supply?
 
-The upper limit of all ENQ in the system is proposed to be 845,870,425 ENQ. Details [here.](https://new.enecuum.com/#/token)
+The upper limit of all ENQ in the system is proposed to be 845,870,425 ENQ. Details [here.](https://enecuum.com/emission-model#emission-model)
 
 #### How can I receive news about Enecuum?
 

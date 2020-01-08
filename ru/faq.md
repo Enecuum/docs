@@ -40,11 +40,11 @@ PoA паблишеры участвуют в процессе публикаци
 
 126,880,563.75 ENQ.
 
-Равен общему значению на [Etherscan](https://etherscan.io/token/0x16ea01acb4b0bca2000ee5473348b6937ee6f72f). Подробнее [здесь.](https://new.enecuum.com/#/token)
+Равен общему значению на [Etherscan](https://etherscan.io/token/0x16ea01acb4b0bca2000ee5473348b6937ee6f72f). Подробнее [здесь.](https://enecuum.com/emission-model#conversion-plan)
 
 #### Какое максимальное количество монет у Enecuum?
 
-Верхний предел всех ENQ в системе предположительно составляет 845,870,425 ENQ. Подробнее [здесь.](https://new.enecuum.com/#/token)
+Верхний предел всех ENQ в системе предположительно составляет 845,870,425 ENQ. Подробнее [здесь.](https://enecuum.com/emission-model#emission-model)
 
 #### Где мне искать последние новости об Enecuum?
 
