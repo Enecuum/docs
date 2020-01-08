@@ -16,13 +16,13 @@ Enecuum is a blockchain mobile network for decentralized applications. It was cr
 
 In Enecuum, the consensus is achieved through interaction between the following three mining algorithms: Proof-of-Work (“PoW”), Proof-of-Activity (“PoA”) and Proof-of-Stake (“PoS”). This combination makes it possible to achieve a high degree of network decentralization, while significantly increasing both the network security level and its speed.
 
-To find out more, please read our [Tech paper.](https://enecuum.com/Documentation.html)
+To find out more, please read our [Tech paper.](https://enecuum.com/documentation)
 
 #### What is PoA?
 
 PoA publishers are involved in the microblock publishing process. Microblocks contain transactions. PoA  validates PoSLeader.
 
-To find out more, please read our [Tech paper.](https://enecuum.com/Documentation.html)
+To find out more, please read our [Tech paper.](https://enecuum.com/documentation)
 
 #### Can I be a PoW or PoS miner?
 
@@ -113,7 +113,7 @@ There are several options available to see your device status:
 
 This is not a Proof of Work, no hash guessing by phones. Phones do cryptographic tasks of validating PoS leader and signing microblocks. It does not require heavy computation.  So different phones will do this in a different time, but this difference is much less than the time between k-blocks that determine microblock publication window. 
 
-You can get more details from our [Tech paper.](https://enecuum.com/Documentation.html)
+You can get more details from our [Tech paper.](https://enecuum.com/documentation)
 
 #### What is the difficulty right now?
 
@@ -129,7 +129,7 @@ Yes, you can. Currently, we do not have any restrictions on this.
 
 #### How are PoA miner rewards calculated?
 
-Macroblock reward is fixed. Macroblock contains one k-block and arbitrary number of microblocks. K-blocks are created by PoW nodes (1 k-block per 15 seconds on average). Microblocks are created by PoA nodes. 86% of macroblock reward is shared between all PoA publishers (or "miners"). For each published microblock the reward is shared in proportion to the publisher balance. Referral rewards are not included here and have separate budget as stated in the [Emission Model](https://enecuum.com/Emission%20model.html). 
+Macroblock reward is fixed. Macroblock contains one k-block and arbitrary number of microblocks. K-blocks are created by PoW nodes (1 k-block per 15 seconds on average). Microblocks are created by PoA nodes. 86% of macroblock reward is shared between all PoA publishers (or "miners"). For each published microblock the reward is shared in proportion to the publisher balance. Referral rewards are not included here and have separate budget as stated in the [Emission Model](https://enecuum.com/emission-model). 
 
 #### Will the mainnet mining be slower than testnet mining?
 
@@ -151,7 +151,7 @@ It affects microblock reward amount but doesn't affect the number of blocks you 
 
 #### Where do I buy ENQ? 
 
-You can buy ENQ on the [available exchanges](https://enecuum.com/Buy.html) using our [guide](how-to-buy.md).
+You can buy ENQ on the [available exchanges](https://enecuum.com/buy) using our [guide](how-to-buy.md).
 
 #### How do I swap?
 

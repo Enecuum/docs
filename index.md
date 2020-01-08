@@ -10,7 +10,7 @@ This set of manuals is aimed to help with the first steps into the Blockchain Mo
 
 	- [Buy native coins with a bank card](how-by-card.md) to start mining immediately.
 	
-	- [Buy ERC-20 tokens](how-to-buy.md) on the [available exchanges](https://enecuum.com/Buy.html) & [swap](how-to-swap.md) them to the native network via [wallet.enecuum.com](https://wallet.enecuum.com/). 
+	- [Buy ERC-20 tokens](how-to-buy.md) on the [available exchanges](https://enecuum.com/buy) & [swap](how-to-swap.md) them to the native network via [wallet.enecuum.com](https://wallet.enecuum.com/). 
 
 4. In the app, tap *Start activity*.
 5. Keep calm and start mining.
