@@ -17,7 +17,6 @@ module.exports = {
 		smoothScroll: true,
 		nextLinks: false,
 		prevLinks: false,
-		searchMaxSuggestions: 10,
 		locales: {
 			'/': {
 				selectText: 'Language',
@@ -89,5 +88,30 @@ module.exports = {
 				]
 			}
 		}
-	}
+	},
+	plugins: [
+		['@vuepress/back-to-top'],
+		['@vuepress/pwa', {
+			serviceWorker: true,
+			updatePopup: {
+				'/': {
+					message: "New content is available.",
+					buttonText: "Refresh"
+				},
+				'/ru/': {
+					message: "Сайт обновился.",
+					buttonText: "Перезагрузить страницу"
+				}
+			}
+		}],
+		['@vuepress/medium-zoom'],
+		['@vuepress/active-header-links'],
+		['@vuepress/search', {
+			searchMaxSuggestions: 10
+		}],
+		['@vuepress/google-analytics',{
+			'ga': '' // UA-00000000-0
+		}],
+		['@vuepress/nprogress']
+	]
 }
