@@ -47,7 +47,9 @@ module.exports = {
 						{ text: 'ROI Calculator', link: 'https://neuro.enecuum.com/#!/roi' },
 						{ text: 'Web Wallet & Swap', link: 'https://wallet.enecuum.com' },
 						{ text: 'Etherscan', link: 'https://etherscan.io/token/0x16ea01acb4b0bca2000ee5473348b6937ee6f72f' },
-						{ text: 'Coingecko', link: 'https://www.coingecko.com/en/coins/enecuum' }
+						{ text: 'Coingecko', link: 'https://www.coingecko.com/en/coins/enecuum' },
+						{ text: 'Privacy Policy', link: 'https://enecuum.com/docs/privacy.pdf' },
+						{ text: 'Terms & Conditions', link: 'https://enecuum.com/docs/terms.pdf' }
 					]
 					}
 					
@@ -82,7 +84,9 @@ module.exports = {
 						{ text: 'Калькулятор доходности', link: 'https://neuro.enecuum.com/#!/roi' },
 						{ text: 'Веб-кошелёк и своп', link: 'https://wallet.enecuum.com' },
 						{ text: 'Etherscan', link: 'https://etherscan.io/token/0x16ea01acb4b0bca2000ee5473348b6937ee6f72f' },
-						{ text: 'Coingecko', link: 'https://www.coingecko.com/en/coins/enecuum' }
+						{ text: 'Coingecko', link: 'https://www.coingecko.com/en/coins/enecuum' },
+						{ text: 'Политика конфиденциальности', link: 'https://enecuum.com/docs/privacy.pdf' },
+						{ text: 'Условия использования', link: 'https://enecuum.com/docs/terms.pdf' }
 					]
 					}
 				]
