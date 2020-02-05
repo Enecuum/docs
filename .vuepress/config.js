@@ -110,7 +110,7 @@ module.exports = {
 			searchMaxSuggestions: 10
 		}],
 		['@vuepress/google-analytics',{
-			'ga': '' // UA-00000000-0
+			'ga': 'UA-138901721-5'
 		}],
 		['@vuepress/nprogress']
 	]
