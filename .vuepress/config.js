@@ -17,6 +17,10 @@ module.exports = {
 		smoothScroll: true,
 		nextLinks: false,
 		prevLinks: false,
+		algolia: {
+			apiKey: '267bde9989879be498654286a751ad9b',
+			indexName: 'enecuum'
+		},
 		locales: {
 			'/': {
 				selectText: 'Language',
