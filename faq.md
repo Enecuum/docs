@@ -131,6 +131,12 @@ Yes, you can. Currently, we do not have any restrictions on this.
 
 Macroblock reward is fixed. Macroblock contains one k-block and arbitrary number of microblocks. K-blocks are created by PoW nodes (1 k-block per 15 seconds on average). Microblocks are created by PoA nodes. 86% of macroblock reward is shared between all PoA publishers (or "miners"). For each published microblock the reward is shared in proportion to the publisher balance. Referral rewards are not included here and have separate budget as stated in the [Emission Model](https://enecuum.com/emission-model). 
 
+#### Why do rewards differ?
+
+The reward is divided between the miners in proportion to the balance of PoA nodes within one macroblock. Thus, the reward depends on the number of macroblock neighbors the miner has and their ENQ balance. Neighbors are determined randomly. In rare cases, when the publication time between k-blocks is less than a second, the PoA miner may not have enough time to publish the signed microblock. In this case, the microblock won't be added to the blockchain, therefore the PoA miner won't receive the reward for it.
+
+To learn more about the distribution of ENQ mining rewards, refer to [the corresponding article.](https://medium.com/@ENQBlockchain/enecuum-referral-program-and-miner-rewards-62209ead9f6a)
+
 #### Will the mainnet mining be slower than testnet mining?
 
 In terms of block frequency, it is an open question; in terms of the block reward, it will be higher in the mainnet.
