@@ -35,6 +35,7 @@ module.exports = {
 					['/how-by-card','How to Buy ENQ Using Bank Card'],
 					['/how-to-swap','How to Swap ENQ'],
 					['/how-to-mine-bit','How to Mine BIT'],
+					['/token-issue','How to Issue Own Tokens'],
 					['/referral','How to Join the Referral Program'],
 					['/how-does-roi-work','How Does ROI Calculator Work'],
 					['/research','Research Papers']
@@ -72,6 +73,7 @@ module.exports = {
 					['/ru/how-by-card','Как купить ENQ банковской картой'],
 					['/ru/how-to-swap','Как сделать своп ENQ'],					
 					['/ru/how-to-mine-bit','Как майнить BIT'],
+					['/ru/token-issue','Как выпустить собственные токены'],
 					['/ru/referral','Как стать участником Реферальной Программы'],
 					['/ru/how-does-roi-work','Как работает калькулятор доходности'],
 					['/ru/research','Научные публикации']
