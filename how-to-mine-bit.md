@@ -97,15 +97,17 @@ You can stop/restart the container without worrying; no data will be lost.
 
 2. Generate public and private keys using Enecuum App or [BIT Web Wallet](https://bit-wallet.enecuum.com/). Do a backup copy. You can use the same key pair for PoA, PoS and PoW.
 
-3. Download PoS container:
+3. Create a PoS contract as [this guide states](how-to-pos.html).
+
+4. Download PoS container:
 
    ```
-   docker run -ti --name bit_pos -p8000:8000 --link bit_db:dbhost -e PUB_KEY=<your_pub_key>  -e POS_SHARE=<your_secret_pos_share>  -e DB_PASS='root' -e DB_PORT=3306 -d  enecuum/bit_pos
+   docker run -ti --name bit_pos -p8000:8000 --link bit_db:dbhost -e POS_ID=<your_pos_contract_hash>  -e POS_SHARE=<your_secret_pos_share>  -e DB_PASS='root' -e DB_PORT=3306 -d  enecuum/bit_pos
    ```
 
-   Change the `PUB-KEY` parameter value to the generated public key *without* brackets <>.  Choose a secret combination of characters and use it for your `POS_SHARE` parameter. 
+   Change the `POS_ID` parameter value to the PoS contract hash *without* brackets <>.  Choose a secret combination of characters and use it for your `POS_SHARE` parameter. `POS_SHARE` mechanism is not used and will be turned on later with new rules for receiving you `POS_SHARE`. 
 
-4. Check if your container is running:
+5. Check if your container is running:
 
    ```
    docker ps
@@ -113,7 +115,7 @@ You can stop/restart the container without worrying; no data will be lost.
 
    A list with *bit_db* and *bit_pos* containers should appear.
 
-5. Search for your public key in the [Bit Testnet](http://bit.enecuum.com/). You should be able to see new S-rewards. These are the rewards for your PoS node taking part in voting for a PoS leader. This process is stored in the blockchain in s-blocks. You can use BIT Testnet Blockchain Explorer, your Fullnode or [BIT Web Wallet](https://bit-wallet.enecuum.com/) to check your PoS balance. The installation is finished. If you need to, check logs using `docker logs bit_pos` command. 
+6. Search for your public key in the [Bit Testnet](http://bit.enecuum.com/). You should be able to see new S-rewards. These are the rewards for your PoS node taking part in voting for a PoS leader. This process is stored in the blockchain in s-blocks. You can use BIT Testnet Blockchain Explorer, your Fullnode or [BIT Web Wallet](https://bit-wallet.enecuum.com/) to check your PoS balance. The installation is finished. If you need to, check logs using `docker logs bit_pos` command. 
 
 
 ### How to Run PoW
