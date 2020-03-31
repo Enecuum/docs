@@ -14,7 +14,9 @@ Go to [bit.enecuum.com](https://bit.enecuum.com/), download the Android app, cre
 
 ## Staking and PoS Contracts
 
-General idea of staking is depositing (or "delegating" as we call it below) your funds to PoS-nodes to increase their stake power to remain in top 100 wallets (as only the richest wallets are allowed to perform PoS work) for a share from PoS mining rewards. To guarantee it, this share is calculated thoroughly, and in time, PoS contracts are introduced. These contracts control delegated funds in a way that they can be used only for PoS mining and a delegator can always return coins. So if you want to run a PoS node you should create a PoS contract first (make a special transaction). Then, you can run a node - a piece of software associated with the PoS contract.
+General idea of staking is depositing (or "delegating" as we call it below) your funds to PoS-nodes to increase their stake power to remain in top 100 wallets (as only the richest wallets are allowed to perform PoS work) for a share from PoS mining rewards. To guarantee it, this share is calculated thoroughly, and in time, PoS contracts are introduced. These contracts control delegated funds in a way that they can be used only for PoS mining and a delegator can always return coins. 
+
+So if you want to run a PoS node you should create a PoS contract first (make a special transaction). Then, you can run a node - a piece of software associated with the PoS contract.
 
 Think of it this way: when you create a PoS contact, you establish a bank. When you delegate your funds to a PoS contract, you open a bank deposit.
 
