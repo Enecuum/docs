@@ -20,7 +20,7 @@ To learn more about Enecuum's Trinity protocol, please read our [Tech paper.](ht
 
 Currently, we deploy four components of the BIT Network:  **Proof-of-Activity,** **Proof-of-Stake,** **Proof-of-Work,** and **Fullnode.** Each of them has a specific purpose in the network, and the components can also work separately. 
 
-**Proof-of-Activity** nodes contribute to the network by validating m-blocks containing transactions. PoA is distributed through [Enecuum BIT App.](https://app.enecuum.com/bit/bit-app-v.0.11.3.apk) The only difference from Enecuum Masternode App is a little redesign to distinguish our two applications. As usual, it requires a minimal stake to start mining; but since BIT is not tradable, you can get it with our [faucet.](https://faucet-bit.enecuum.com/)
+**Proof-of-Activity** nodes contribute to the network by validating m-blocks containing transactions. PoA is distributed through Enecuum BIT App which can be downloaded at [bit.enecuum.com](https://bit.enecuum.com/). As usual, it requires a minimal stake to start mining; but since BIT is not tradable, you can get it with our [faucet.](https://faucet-bit.enecuum.com/)
 
 **Proof-of-Stake** nodes receive rewards for voting for a PoS leader that publishes macroblocks. In our current BIT implementation, the conditions for becoming a PoS node are simplified -- all you need is to have is a non-zero balance and specify an arbitrary secret PoS share. In the final protocol version, a PoS candidate is supposed to be in the top 100 wallets list and get a secret PoS share from a PoS coalition according to the corresponding Trinity protocol.
 
@@ -97,7 +97,7 @@ You can stop/restart the container without worrying; no data will be lost.
 
 2. Generate public and private keys using Enecuum App or [BIT Web Wallet](https://bit-wallet.enecuum.com/). Do a backup copy. You can use the same key pair for PoA, PoS and PoW.
 
-3. Create a PoS contract as [this guide states](how-to-pos.html).
+3. Create a PoS contract via web-wallet as [this guide states](how-to-pos.md).
 
 4. Download PoS container:
 
@@ -105,7 +105,7 @@ You can stop/restart the container without worrying; no data will be lost.
    docker run -ti --name bit_pos -p8000:8000 --link bit_db:dbhost -e POS_ID=<your_pos_contract_hash>  -e POS_SHARE=<your_secret_pos_share>  -e DB_PASS='root' -e DB_PORT=3306 -d  enecuum/bit_pos
    ```
 
-   Change the `POS_ID` parameter value to the PoS contract hash *without* brackets <>.  Choose a secret combination of characters and use it for your `POS_SHARE` parameter. `POS_SHARE` mechanism is not used and will be turned on later with new rules for receiving you `POS_SHARE`. 
+   Change the `POS_ID` parameter value to the PoS contract hash *without* brackets <>.  Choose a secret combination of characters and use it for your `POS_SHARE` parameter. `POS_SHARE` mechanism is not used and will be turned on later with new rules for receiving your `POS_SHARE`. 
 
 5. Check if your container is running:
 

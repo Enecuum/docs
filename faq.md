@@ -159,6 +159,10 @@ It affects microblock reward amount but doesn't affect the number of blocks you 
 
 You can buy ENQ on the [available exchanges](https://enecuum.com/buy) using our [guide](how-to-buy.md).
 
+#### Can I buy ENQ with a bank card?
+
+ENQ test coin, backed by ERC-20 token is no longer sold by Suex. Pay bу card service will return with native coins distribution.
+
 #### How do I swap?
 
 In a nutshell, to swap ERC-20 tokens you just bought to testnet ENQ coins which will be used in the app, you need to install MetaMask, import your ETH account there, log in to [wallet.enecuum.com](https://wallet.enecuum.com) and select the amount you need to swap.
@@ -274,7 +278,7 @@ You can check your referrer in the [Blockchain Explorer.](https://neuro.enecuum.
 #### I transferred ENQ from the exchange straight to the app, skipping the swapping process
 
 - Your tokens could not be transferred to Enecuum network address, so they are still at the exchange. You can try to withdraw it again to a new correct **Ethereum** address. 
-- If your exchange balance is lowered, then please contact the support of the exchange ([service@graviex.net](mailto:service@graviex.net) or [support@crex24.com](mailto:support@crex24.com)). 
+- If your exchange balance is lowered, then please contact the support of the exchange. 
 
 #### I transferred my ENQ to smart contract instead of Crex24
 
