@@ -21,8 +21,8 @@ To receive additional returns from coins you hold you should delegate them to an
 Think of it this way: when you create a PoS contact, you establish a bank. When you delegate your funds to a PoS contract, you open a bank deposit.
 
 ::: warning NOTICE
-
 Only system native coins and only integer amount of the coins are available for delegating, undelegating and transfer. This is done by design of the system to achieve performance and scalability goals. So minimum 1 BIT (ENQ) is possible to stake.
+:::
 
 ## Staking via web wallet
 
@@ -40,25 +40,30 @@ After delegation, your total balance remains unchanged, but the delegated amount
 "My validators" tab shows balances of delegated funds to PoS contracts. You can manage each PoS contract to receive reward or stop delegating. Choose the "undelegate" option to withdraw integer number of coins from "delegated" to "available" balance. 
 
 <p align = "center"> <img src="./img/how-to-delegate/undelegate.png" width="500"> </p>
-::: warning NOTICE
 
+::: warning NOTICE
 Undelegation takes 2 transactions to be performed so you need to pay 2 standard transaction fees.
+:::
+
 
 ### Transit
 
 This is not an action but a state of your coins after the undelegation transaction. There is a time lock on your coins, which is the time needed for the coins to become available for the transfer to your balance. This time lock guarantees fair rewards calculation eliminating possibility to use one coin in two PoS contacts simultaneously. 
 
 <p align = "center"> <img src="./img/how-to-delegate/transit.png" width="500"> </p>
+
 ### Transfer
 
 To finish undelegation procedure, you should transfer undelegated coins from a PoS contract to your "available" balance. You should make one transfer transaction for each undelegation transaction after the time lock passes.
 
 <p align = "center"> <img src="./img/how-to-delegate/undelegate.png" width="500"> </p>
+
 ### Claim reward
 
 Finally, you can claim your reward if it is available. Use "My validators" -> "Manage" -> "Claim reward" menu.
 
 <p align = "center"> <img src="./img/how-to-delegate/claim.png" width="500"> </p>
+
 ## Balances
 
 The staking procedure introduces 5 different state of your funds, resulting in 5 types of balances.
