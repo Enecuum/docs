@@ -2,80 +2,79 @@
 sidebarDepth: 2
 ---
 
-# How to Stake
+# Как делегировать средства
 
-BIT is a test network of the Enecuum blockchain. With BIT, it is possible to test the Trinity protocol (a combination of PoA, PoS and PoW) as well as new functionality such as ETM (Enecuum Token Machine), delegation to PoS nodes (delegated smart stacking), issuing and testing of different types of tokens - mining, NFT and other.
+BIT - это тестовая сеть блокчейна Enecuum. С помощью BIT можно тестировать протокол Trinity (комбинация PoA, PoS и PoW), а также новые функции, такие как ETM (Enecuum Token Machine), делегирование на узлы PoS (делегированный смарт стейкинг), выпуск и тестирование различных типов токенов - для майнинга, NFT и др.
 
-The network is created for public testing for Enecuum community members, partners and developers of decentralized applications. All new features developed by the Enecuum team will be publicly tested in the BIT network and then added to the main network.
+Сеть создана для публичного тестирования для членов сообщества Enecuum, партнеров и разработчиков децентрализованных приложений. Все новые функции, разработанные командой Enecuum, будут публично протестированы в сети BIT, а затем добавлены в основную сеть.
 
-## How to use BIT
+## Как пользоваться BIT
 
-Go to [bit.enecuum.com](https://bit.enecuum.com/), download the Android app, create a wallet and save your secret key. Of course, you can also create an account from your computer at [bit-wallet.enecuum.com/login](). Transaction fees are introduced in BIT network, so you need to pay extra 0.01 BIT for every "write access" to the blockchain, like creating PoS-contract or claiming PoS-staking rewards. To pay these fees, you can get BIT coins from [faucet-bit.enecuum.com]() (25 BIT once every 10 minutes per address).
+Перейдите на [bit.enecuum.com](https://bit.enecuum.com/), загрузите приложение для Android, создайте кошелек и сохраните свой секретный ключ. Вы также можете создать учетную запись со своего компьютера на [bit-wallet.enecuum.com/login](https://bit-wallet.enecuum.com/login). 
 
-## Staking and PoS-contracts
+В сети BIT введены комиссии за транзакции, поэтому вам необходимо доплачивать 0,01 BIT за каждый «доступ на запись» в блокчейн, например, при создании PoS-контракта или получении вознаграждения за PoS-стейкинг. Чтобы оплатить комиссию, вы можете получить монеты BIT на [faucet-bit.enecuum.com](https://faucet-bit.enecuum.com/) (25 бит раз в 10 минут для одного адреса).
 
-General idea of staking is depositing (or "delegating" as we call it below) your funds to PoS-nodes to increase their stake power to remain in top 100 wallets (as only the richest wallets are allowed to perform PoS work) for a share from PoS mining rewards. To guarantee it, this share is calculated thoroughly, and in time, PoS contracts are introduced. These contracts control delegated funds in a way that they can be used only for PoS mining and a delegator can always return coins. 
+## Стейкинг и PoS-контракты
 
-To receive additional returns from coins you hold you should delegate them to an active PoS contract. Active means that there are a PoS node (server) running and this PoS contract is in top 100 contracts by their stake power.
+Общая идея стейкинга состоит в том, чтобы вносить (или «делегировать») ваши средства на PoS-узлы, чтобы увеличить их долю («stake power»), чтобы оставаться в топ-100 кошельков (поскольку только самые богатые кошельки могут выполнять работу PoS) для получения части наград от PoS-майнинга. Чтобы гарантировать это, эта часть награды рассчитывается полностью, и со временем вводятся PoS-контракты. Эти контракты контролируют делегированные средства таким образом, что их можно использовать только для PoS-майнинга, а делегатор всегда может вернуть монеты.
 
-Think of it this way: when you create a PoS contact, you establish a bank. When you delegate your funds to a PoS contract, you open a bank deposit.
+Для получения прибыли от имеющихся у вас монет вы должны делегировать их в активный контракт PoS. Активный означает, что запущен узел (сервер) PoS, и этот PoS-контракт входит в топ-100 контрактов по доли («stake power»).
 
-::: warning NOTICE
-Only system native coins and only integer amount of the coins are available for delegating, undelegating and transfer. This is done by design of the system to achieve performance and scalability goals. So minimum 1 BIT (ENQ) is possible to stake.
+Можете представить это так: когда вы создаете PoS-контакт, вы основываете банк. Когда вы делегируете свои средства на PoS-контракт, вы создаёте вклад в банке.
+
+::: warning ВНИМАНИЕ
+Для делегирования, отмены делегирования и отправления доступны только нативные монеты системы и только целое количество монет. Это было реализовано специально для достижения целей производительности и масштабируемости. Таким образом, можно сделать ставку минимум на 1 бит (ENQ).
 :::
 
-## Staking via web wallet
+## Стейкинг через веб-кошелек
 
-You can manage you funds staked via mobile app or web interface. Let's start with web wallet. First of all, log in to your web wallet and make sure that you have not only funds to delegate but also to pay transaction fees.
+Вы можете управлять своими средствами через мобильное приложение или веб-интерфейс. В этом руководстве объясняется алгритм стейкинга через веб-интерфейс. Прежде всего, войдите в свой веб-кошелек и убедитесь, что у вас есть не только средства для делегирования, но и для оплаты транзакций.
 
-### Delegate 
+### Делегирование 
 
-Choose PoS contract (stake provider) you want to delegate.  Main parameters to consider are PoS contract fee and PoS node uptime. To elaborate, the amount coins you should share with PoS owner is determined by the fee value and how often this PoS contract receives rewards for its delegators is shown by uptime number. At first release, we will only show PoS contract rewards history to estimate the uptime by eye. Detailed statistics will be added step by step.
+Выберите PoS-контракт (стейкинг-провайдера), который вы хотите делегировать. Основными параметрами, которые следует учитывать, являются комиссия PoS-контракта и время работы PoS-узла. Количество монет, которое вы передаёте владельцу PoS, определяется величиной комиссии. То, как часто этот контракт PoS получает вознаграждения для своих делегатов, отображается по номеру аптайма (времени работы). В первом обновлении системы показывается только история вознаграждений по контрактам PoS, чтобы оценить время безотказной работы. Подробная статистика будет добавлена шаг за шагом.
 
 <p align = "center"> <img src="./img/how-to-delegate/delegate.png" width="500"> </p>
-After delegation, your total balance remains unchanged, but the delegated amount of coins moves from "available" to "delegated" balance. You can not use delegated funds as they work in PoS mining until you undelegate them. But this funds are still shown in your total balance as no one can use your funds either.
 
-### Undelegate
+После делегирования ваш общий баланс остается неизменным, но делегированное количество монет переходит от «доступного» к «делегированному» балансу. Вы не можете использовать делегированные средства, так как они работают в PoS майнинге, пока вы не совершите отзыв средств («разделегирование»). Но эти средства по-прежнему отображаются в вашем общем балансе, и никто не может использовать ваши средства.
 
-"My validators" tab shows balances of delegated funds to PoS contracts. You can manage each PoS contract to receive reward or stop delegating. Choose the "undelegate" option to withdraw integer number of coins from "delegated" to "available" balance. 
+### Отзыв
+
+На вкладке «Мои валидаторы» показаны балансы делегированных средств для PoS-контрактов. Вы можете управлять каждым контрактом PoS для получения вознаграждения или прекращения делегирования. Выберите опцию «отозвать», чтобы снять целое число монет с «делегированного» баланса на «доступный».
 
 <p align = "center"> <img src="./img/how-to-delegate/undelegate.png" width="500"> </p>
 
-::: warning NOTICE
-Undelegation takes 2 transactions to be performed so you need to pay 2 standard transaction fees.
+::: warning ВНИМАНИЕ
+Отзыв средств требует 2 транзакции, следовательно, необходимо оплатить 2 комиссии за транзакции.
 :::
 
 
-### Transit
+### Транзит
 
-This is not an action but a state of your coins after the undelegation transaction. There is a time lock on your coins, which is the time needed for the coins to become available for the transfer to your balance. This time lock guarantees fair rewards calculation eliminating possibility to use one coin in two PoS contacts simultaneously. 
+Это не действие над средствами, а состояние ваших монет после отзыва. На ваших средствах будет действовать временная блокировка - время, необходимое для того, чтобы монеты стали доступны для перевода на ваш баланс. Эта временная блокировка гарантирует справедливый расчет вознаграждений, исключая возможность одновременного использования одной монеты в двух контактах PoS.
 
 <p align = "center"> <img src="./img/how-to-delegate/transit.png" width="500"> </p>
 
-### Transfer
+### Вывод
 
-To finish undelegation procedure, you should transfer undelegated coins from a PoS contract to your "available" balance. You should make one transfer transaction for each undelegation transaction after the time lock passes.
+Чтобы завершить процедуру отзыва монет («разделегирования»), вы должны перевести отозванные монеты из PoS-контракта на свой «доступный» баланс. Вы должны сделать одну транзакцию вывода для каждой транзакции отзыва по истечении времени блокировки.
 
 <p align = "center"> <img src="./img/how-to-delegate/undelegate.png" width="500"> </p>
 
-### Claim reward
+### Забрать награду
 
-Finally, you can claim your reward if it is available. Use "My validators" -> "Manage" -> "Claim reward" menu.
+Наконец, вы можете забрать награду, если она доступна. Используйте меню «Мои валидаторы» -> «Управлять» -> «Забрать награду».
 
 <p align = "center"> <img src="./img/how-to-delegate/claim.png" width="500"> </p>
 
-## Balances
+## Виды балансов
 
-The staking procedure introduces 5 different state of your funds, resulting in 5 types of balances.
+Процедура стейкинга вводит 5 различных состояний ваших средств, в результате чего получается 5 видов балансов.
 
--   Available: coins you can use freely. For instance, delegate, perform transaction or use to start mining.
+- Доступный: монеты, которые вы можете использовать свободно. Например, делегировать, выполнять транзакции или использовать для майнинга.
+- Делегировано: монеты, которые вы перевели на определенный PoS-контракт, чтобы получить вознаграждение, если контракт принадлежит активному PoS.
+- Транзит: монеты с активной временной блокировкой, которые были отозваны от PoS-контракта. Чтобы монеты перешли из этого состояния в состояние «отозвано», должно истечь время блокировки.
+- Отозвано: монеты, которые больше не делегированы. Их можно свободно переводить на «доступный» баланс с помощью транзакции вывода.
+- Награда: заработок от делегирования средств на PoS-контракт. Эти вознаграждения могут быть прямо переведены на ваш баланс. Мы планируем сделать этот шаг автоматическим с функциями Staking 2.0.
 
--   Delegated: coins you moved to a certain PoS contract to receive rewards if the contract belongs to an active PoS.
-
--   Transit: coins you ordered to undelegate from a PoS contract with an active time lock. A time lock needs to pass for the coins to move to the "undelegated" state.
-
--   Undelegated: coins that are no longer delegated. They are free to be transferred to the "available" balance with a "transfer" transaction.
-
--   Reward: earnings from funds delegation to a PoS contract. These rewards can be transferred explicitly to your balance. We plan to make this step automatic with Staking 2.0 features. 
-
-    <p align = "center"> <img src="./img/how-to-delegate/balances.png" width="500"> </p>
+<p align = "center"> <img src="./img/how-to-delegate/balances.png" width="500"> </p>

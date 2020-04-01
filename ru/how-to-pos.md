@@ -2,48 +2,54 @@
 sidebarDepth: 2
 ---
 
-# How to Run PoS Node 
+# Как запустить PoS
 
-BIT is a test network of the Enecuum blockchain. With BIT, it is possible to test the Trinity protocol (a combination of PoA, PoS and PoW) as well as new functionality such as ETM (Enecuum Token Machine), delegation to PoS nodes (delegated smart stacking), issuing and testing of different types of tokens - mining, NFT and other.
+BIT - это тестовая сеть блокчейна Enecuum. С помощью BIT можно тестировать протокол Trinity (комбинация PoA, PoS и PoW), а также новые функции, такие как ETM (Enecuum Token Machine), делегирование на узлы PoS (делегированный смарт стейкинг), выпуск и тестирование различных типов токенов - для майнинга, NFT и др.
 
-The network is created for public testing for Enecuum community members, partners and developers of decentralized applications. All new features developed by the Enecuum team will be publicly tested in the BIT network and then added to the main network.
+Сеть создана для публичного тестирования для членов сообщества Enecuum, партнеров и разработчиков децентрализованных приложений. Все новые функции, разработанные командой Enecuum, будут публично протестированы в сети BIT, а затем добавлены в основную сеть.
 
-## How to Use BIT
+## Как пользоваться BIT
 
-Go to [bit.enecuum.com](https://bit.enecuum.com/), download the Android app, create a wallet and save your secret key. Of course, you can also create an account from your computer at [bit-wallet.enecuum.com/login](). Transaction fees are introduced in BIT network, so you need to pay extra 0.01 BIT for every "write access" to the blockchain, like creating PoS-contract or claiming PoS-staking rewards. To pay these fees, you can get BIT coins from [faucet-bit.enecuum.com]() (25 BIT once every 10 minutes per address).
+Перейдите на [bit.enecuum.com](https://bit.enecuum.com/), загрузите приложение для Android, создайте кошелек и сохраните свой секретный ключ. Вы также можете создать учетную запись со своего компьютера на [bit-wallet.enecuum.com/login](https://bit-wallet.enecuum.com/login). 
 
-## Staking and PoS Contracts
+В сети BIT введены комиссии за транзакции, поэтому вам необходимо доплачивать 0,01 BIT за каждый «доступ на запись» в блокчейн, например, при создании PoS-контракта или получении вознаграждения за PoS-стейкинг. Чтобы оплатить комиссию, вы можете получить монеты BIT на [faucet-bit.enecuum.com](https://faucet-bit.enecuum.com/) (25 бит раз в 10 минут для одного адреса).
 
-General idea of staking is depositing (or "delegating" as we call it below) your funds to PoS-nodes to increase their stake power to remain in top 100 wallets (as only the richest wallets are allowed to perform PoS work) for a share from PoS mining rewards. To guarantee it, this share is calculated thoroughly, and in time, PoS contracts are introduced. These contracts control delegated funds in a way that they can be used only for PoS mining and a delegator can always return coins. 
+## Стейкинг и PoS-контракты
 
-So if you want to run a PoS node you should create a PoS contract first (make a special transaction). Then, you can run a node - a piece of software associated with the PoS contract.
+Общая идея стейкинга состоит в том, чтобы вносить (или «делегировать») ваши средства на PoS-узлы, чтобы увеличить их долю («stake power»), чтобы оставаться в топ-100 кошельков (поскольку только самые богатые кошельки могут выполнять работу PoS) для получения части наград от PoS-майнинга. Чтобы гарантировать это, эта часть награды рассчитывается полностью, и со временем вводятся PoS-контракты. Эти контракты контролируют делегированные средства таким образом, что их можно использовать только для PoS-майнинга, а делегатор всегда может вернуть монеты.
 
-Think of it this way: when you create a PoS contact, you establish a bank. When you delegate your funds to a PoS contract, you open a bank deposit.
+Поэтому, если вы хотите запустить PoS-узел, вы должны сначала создать PoS-контракт (сделать специальную транзакцию). Затем вы можете запустить узел - часть программного обеспечения, связанную с контрактом PoS.
 
-### Creating a PoS Contract
+Можете представить это так: когда вы создаете PoS-контакт, вы основываете банк. Когда вы делегируете свои средства на PoS-контракт, вы создаёте вклад в банке.
 
-To create a PoS contract, use a [web-wallet](https://bit-wallet.enecuum.com/) interface.
+### Создание PoS-контракта
+
+Для создания PoS-контракта используйте интерфейс [веб-кошелька](https://bit-wallet.enecuum.com/).
 
 <p align = "center"> <img src="./img/how-to-pos/CreatePoS.png" width="500"> </p>
-There two input fields. PoS contract name, which can be left blank, and a PoS contract fee. Contract fee determines the "salary" PoS owner receives for running a server. Choose it wisely, as if you set it too small, you can loose money paying for your sever; but if you set it too high, nobody will delegate funds to you and you can be out of top 100 with no earning at all. This commission percent will be adjustable in the future but with first release it cannot be changed after creation. 
 
-After confirming PoS contract transaction and paying a transaction fee, please wait a bit. You will see a new record in the blockchain. Please find you contract at https://bit.enecuum.com/#!/pos-contracts. If your PoS name is blank, you can find your contract by owner address. It should be the wallet you used to send PoS contract creation transaction.
+В интерфейсе два поля ввода: название PoS-контракта, которое можно оставить пустым, и комиссия за PoS-контракт. Комиссия за контракт определяет, какую «зарплату» получает владелец PoS за работу сервера. Тщательно выберите это значение, т.к. если оно будет установлено слишком маленьким, вы можете потерять деньги, платя за ваш сервер; но если вы установите его слишком высоким, никто не будет делегировать вам средства, и вы можете пропасть из списка топ-100 кошельков без какого-либо заработка. Этот процент комиссии будет изменяться в будущем, но в первом обновлении системы он не может быть изменен после создания.
+
+После подтверждения транзакции PoS-контракта и оплаты комиссии за транзакцию, пожалуйста, подождите немного. Вы увидите новую запись в блокчейне. Пожалуйста, найдите ваш контракт на [странице PoS-контрактов в сети BIT](https://bit.enecuum.com/#!/pos-contracts). Если название PoS отсутствует, вы можете найти свой контракт по адресу владельца. Это должен быть кошелек, который вы использовали для отправки транзакции создания контракта PoS.
 
 <p align = "center"> <img src="./img/how-to-pos/FindMyPoScontractHash.png" width="500"> </p>
-Click Hash value of your contract to copy your PoS contract hash (address).  In this test case, it is 17d0b43aafb141dbc4e36ae0abefc2b28b3979f96a84cdecf7e26dc25bd1c042, as can be seen in the figure above, marked with red. The hash will be used in the next step.
 
-### Delegating to Your PoS Contract
+Нажмите на хэш вашего контракта и скопируйте его. В случае на изображении выше, хэшем является последовательность 17d0b43aafb141dbc4e36ae0abefc2b28b3979f96a84cdecf7e26dc25bd1c042, которая обозначена красным цветом. Этот хэш будет использован в следующем шаге.
 
-There is a minimal self-delegated stake to be introduced later. But with initial release, no self-delegating is required. So, **you can skip this step.** Just create a PoS contract and run the node. But if you want to increase your rewards, you can delegate to you own PoS contract in the way any other delegation takes place.
+### Делегирование PoS-контракту
 
-To find out how to delegate your funds, refer to [the according guide.](how-to-delegate)
+В следующих обновлениях появится минимальный стейк для самоделегирования. Но на данный момент делегировать собственные средства на свой контракт необязательно. Итак, **вы можете пропустить этот шаг.** Просто создайте контракт PoS и запустите узел. Но если вы хотите увеличить ваши вознаграждения, вы можете делегировать свой собственный PoS-контракт так же, как и любой другой.
 
-### Running a PoS Node
+Чтобы узнать, как делегировать свои средства, обратитесь к [соответствующему руководству.](how-to-delegate.md)
 
-Follow the [PoS section](how-to-mine-bit.html#how-to-run-pos) of How to Mine Bit guide. Use the hash from the previous step as the POS_ID parameter. 
+### Запуск PoS-узла
 
-### View Your Delegators and Rewards
+Следуйте [разделу PoS](how-to-mine-bit.html#как-запустить-pos) руководства "Как майнить BIT". Используйте хэш из предыдущего шага в качестве параметра POS_ID.
+
+### Просмотр делегатов и наград
 
 <p align = "center"> <img src="./img/how-to-pos/PoSContractDelegators.png" width="500"> </p>
+
 <p align = "center"> <img src="./img/how-to-pos/PoSContractRewards.png" width="500"> </p>
-At PoS contract page, you can find the amount of delegated coins and rewards that your contract receives. Please note that rewards shown in the Blockchain Explorer are split between PoS owner and its delegators according to your PoS fee value. 
+
+На странице контракта PoS вы можете найти количество делегированных монет и вознаграждений, которые получает ваш контракт. Обратите внимание, что вознаграждения, показанные в Blockchain Explorer, распределяются между владельцем PoS и его делегатами в соответствии с вашей комиссией  контракта.

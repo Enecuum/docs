@@ -4,19 +4,21 @@ sidebarDepth: 2
 
 # How to Stake
 
-BIT is a test network of the Enecuum blockchain. With BIT, it is possible to test the Trinity protocol (a combination of PoA, PoS and PoW) as well as new functionality such as ETM (Enecuum Token Machine), delegation to PoS nodes (delegated smart stacking), issuing and testing of different types of tokens - mining, NFT and other.
+BIT is a test network of the Enecuum blockchain. With BIT, it is possible to test the Trinity protocol (a combination of PoA, PoS and PoW) as well as new functionality such as ETM (Enecuum Token Machine), delegation to PoS nodes (delegated smart staking), issuing and testing of different types of tokens - mining, NFT and other.
 
 The network is created for public testing for Enecuum community members, partners and developers of decentralized applications. All new features developed by the Enecuum team will be publicly tested in the BIT network and then added to the main network.
 
 ## How to use BIT
 
-Go to [bit.enecuum.com](https://bit.enecuum.com/), download the Android app, create a wallet and save your secret key. Of course, you can also create an account from your computer at [bit-wallet.enecuum.com/login](). Transaction fees are introduced in BIT network, so you need to pay extra 0.01 BIT for every "write access" to the blockchain, like creating PoS-contract or claiming PoS-staking rewards. To pay these fees, you can get BIT coins from [faucet-bit.enecuum.com]() (25 BIT once every 10 minutes per address).
+Go to [bit.enecuum.com](https://bit.enecuum.com/), download the Android app, create a wallet and save your secret key. Of course, you can also create an account from your computer at [bit-wallet.enecuum.com/login](https://bit-wallet.enecuum.com/login). 
+
+Transaction fees are introduced in BIT network, so you need to pay extra 0.01 BIT for every "write access" to the blockchain, like creating PoS-contract or claiming PoS-staking rewards. To pay these fees, you can get BIT coins from [faucet-bit.enecuum.com](https://faucet-bit.enecuum.com/) (25 BIT once every 10 minutes per address).
 
 ## Staking and PoS-contracts
 
 General idea of staking is depositing (or "delegating" as we call it below) your funds to PoS-nodes to increase their stake power to remain in top 100 wallets (as only the richest wallets are allowed to perform PoS work) for a share from PoS mining rewards. To guarantee it, this share is calculated thoroughly, and in time, PoS contracts are introduced. These contracts control delegated funds in a way that they can be used only for PoS mining and a delegator can always return coins. 
 
-To receive additional returns from coins you hold you should delegate them to an active PoS contract. Active means that there are a PoS node (server) running and this PoS contract is in top 100 contracts by their stake power.
+To receive additional returns from coins you hold you should delegate them to an active PoS contract. Active means that there is a PoS node (server) running and this PoS contract is in top 100 contracts by their stake power.
 
 Think of it this way: when you create a PoS contact, you establish a bank. When you delegate your funds to a PoS contract, you open a bank deposit.
 
@@ -33,6 +35,7 @@ You can manage you funds staked via mobile app or web interface. Let's start wit
 Choose PoS contract (stake provider) you want to delegate.  Main parameters to consider are PoS contract fee and PoS node uptime. To elaborate, the amount coins you should share with PoS owner is determined by the fee value and how often this PoS contract receives rewards for its delegators is shown by uptime number. At first release, we will only show PoS contract rewards history to estimate the uptime by eye. Detailed statistics will be added step by step.
 
 <p align = "center"> <img src="./img/how-to-delegate/delegate.png" width="500"> </p>
+
 After delegation, your total balance remains unchanged, but the delegated amount of coins moves from "available" to "delegated" balance. You can not use delegated funds as they work in PoS mining until you undelegate them. But this funds are still shown in your total balance as no one can use your funds either.
 
 ### Undelegate
@@ -66,16 +69,12 @@ Finally, you can claim your reward if it is available. Use "My validators" -> "M
 
 ## Balances
 
-The staking procedure introduces 5 different state of your funds, resulting in 5 types of balances.
+The staking procedure introduces 5 different states of your funds, resulting in 5 types of balances.
 
 -   Available: coins you can use freely. For instance, delegate, perform transaction or use to start mining.
-
 -   Delegated: coins you moved to a certain PoS contract to receive rewards if the contract belongs to an active PoS.
-
 -   Transit: coins you ordered to undelegate from a PoS contract with an active time lock. A time lock needs to pass for the coins to move to the "undelegated" state.
-
 -   Undelegated: coins that are no longer delegated. They are free to be transferred to the "available" balance with a "transfer" transaction.
-
 -   Reward: earnings from funds delegation to a PoS contract. These rewards can be transferred explicitly to your balance. We plan to make this step automatic with Staking 2.0 features. 
 
     <p align = "center"> <img src="./img/how-to-delegate/balances.png" width="500"> </p>
