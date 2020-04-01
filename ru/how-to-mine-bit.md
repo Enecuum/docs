@@ -44,7 +44,7 @@ sidebarDepth: 2
 
 ### Как запустить PoA
 
-1. Скачайте приложение [Enecuum BIT.](https://app.enecuum.com/bit/bit-app-v.0.11.3.apk)
+1. Скачайте приложение Enecuum BIT на сайте [bit.enecuum.com](https://bit.enecuum.com/) через меню *Как майнить BIT* -> *Скачать приложение*.
 2. Получите монеты BIT через наш [кран.](https://faucet-bit.enecuum.com/)
 3. Начинайте майнинг!
 

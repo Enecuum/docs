@@ -44,7 +44,7 @@ Currently, we deploy four components of the BIT Network:  **Proof-of-Activity,**
 
 ### How to Run PoA
 
-1. Download [Enecuum BIT App.](https://app.enecuum.com/bit/bit-app-v.0.11.3.apk)
+1. Download Enecuum BIT App via [bit.enecuum.com](https://bit.enecuum.com/) using *How to Mine Bit* -> *Download App* menu.
 2. Get BIT coins using our [faucet.](https://faucet-bit.enecuum.com/)
 3. Start mining!
 
