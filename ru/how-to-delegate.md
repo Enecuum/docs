@@ -59,7 +59,7 @@ BIT - это тестовая сеть блокчейна Enecuum. С помощ
 
 Чтобы завершить процедуру отзыва монет («разделегирования»), вы должны перевести отозванные монеты из PoS-контракта на свой «доступный» баланс. Вы должны сделать одну транзакцию вывода для каждой транзакции отзыва по истечении времени блокировки.
 
-<p align = "center"> <img src="./img/how-to-delegate/undelegate.png" width="500"> </p>
+<p align = "center"> <img src="./img/how-to-delegate/undelegate.png" width="500"> </p><p align = "center"> <img src="./img/how-to-delegate/transfer-mobile.png" width="200"/> <img src="./img/how-to-delegate/transfer-mobile2.png" width="200"/></p>
 
 ### Забрать награду
 

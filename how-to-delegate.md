@@ -59,7 +59,7 @@ This is not an action but a state of your coins after the undelegation transacti
 
 To finish undelegation procedure, you should transfer undelegated coins from a PoS contract to your "available" balance. You should make one transfer transaction for each undelegation transaction after the time lock passes.
 
-<p align = "center"> <img src="./img/how-to-delegate/undelegate.png" width="500"> </p>
+<p align = "center"> <img src="./img/how-to-delegate/undelegate.png" width="500"> </p><p align = "center"> <img src="./img/how-to-delegate/transfer-mobile.png" width="200"/> <img src="./img/how-to-delegate/transfer-mobile2.png" width="200"/></p>
 
 ### Claim Reward
 
