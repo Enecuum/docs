@@ -8,7 +8,7 @@ BIT is a test network of the Enecuum blockchain. With BIT, it is possible to tes
 
 The network is created for public testing for Enecuum community members, partners and developers of decentralized applications. All new features developed by the Enecuum team will be publicly tested in the BIT network and then added to the main network.
 
-## How to use BIT
+## How to Use BIT
 
 Go to [bit.enecuum.com](https://bit.enecuum.com/), download the Android app, create a wallet and save your secret key. Of course, you can also create an account from your computer at [bit-wallet.enecuum.com/login](https://bit-wallet.enecuum.com/login). 
 
@@ -26,7 +26,7 @@ Think of it this way: when you create a PoS contact, you establish a bank. When 
 Only system native coins and only integer amount of the coins are available for delegating, undelegating and transfer. This is done by design of the system to achieve performance and scalability goals. So minimum 1 BIT (ENQ) is possible to stake.
 :::
 
-## Staking via web wallet
+## Staking via Web Wallet or App
 
 You can manage you funds staked via mobile app or web interface. Let's start with web wallet. First of all, log in to your web wallet and make sure that you have not only funds to delegate but also to pay transaction fees.
 
@@ -34,7 +34,7 @@ You can manage you funds staked via mobile app or web interface. Let's start wit
 
 Choose PoS contract (stake provider) you want to delegate.  Main parameters to consider are PoS contract fee and PoS node uptime. To elaborate, the amount coins you should share with PoS owner is determined by the fee value and how often this PoS contract receives rewards for its delegators is shown by uptime number. At first release, we will only show PoS contract rewards history to estimate the uptime by eye. Detailed statistics will be added step by step.
 
-<p align = "center"> <img src="./img/how-to-delegate/delegate.png" width="500"> </p>
+<p align = "center"> <img src="./img/how-to-delegate/delegate.png" width="500"> </p> <p align = "center"> <img src="./img/how-to-delegate/delegate-mobile.png" width="200"/> <img src="./img/how-to-delegate/delegate-mobile2.png" width="200"/></p>
 
 After delegation, your total balance remains unchanged, but the delegated amount of coins moves from "available" to "delegated" balance. You can not use delegated funds as they work in PoS mining until you undelegate them. But this funds are still shown in your total balance as no one can use your funds either.
 
@@ -42,7 +42,7 @@ After delegation, your total balance remains unchanged, but the delegated amount
 
 "My validators" tab shows balances of delegated funds to PoS contracts. You can manage each PoS contract to receive reward or stop delegating. Choose the "undelegate" option to withdraw integer number of coins from "delegated" to "available" balance. 
 
-<p align = "center"> <img src="./img/how-to-delegate/undelegate.png" width="500"> </p>
+<p align = "center"> <img src="./img/how-to-delegate/undelegate.png" width="500"> </p> <p align = "center"> <img src="./img/how-to-delegate/undelegate-mobile.png" width="200"/> <img src="./img/how-to-delegate/undelegate-mobile2.png" width="200"/></p>
 
 ::: warning NOTICE
 Undelegation takes 2 transactions to be performed so you need to pay 2 standard transaction fees.
@@ -53,7 +53,7 @@ Undelegation takes 2 transactions to be performed so you need to pay 2 standard 
 
 This is not an action but a state of your coins after the undelegation transaction. There is a time lock on your coins, which is the time needed for the coins to become available for the transfer to your balance. This time lock guarantees fair rewards calculation eliminating possibility to use one coin in two PoS contacts simultaneously. 
 
-<p align = "center"> <img src="./img/how-to-delegate/transit.png" width="500"> </p>
+<p align = "center"> <img src="./img/how-to-delegate/transit.png" width="500"> <img src="./img/how-to-delegate/transit-mobile.png" width="200"/></p>
 
 ### Transfer
 
@@ -61,11 +61,11 @@ To finish undelegation procedure, you should transfer undelegated coins from a P
 
 <p align = "center"> <img src="./img/how-to-delegate/undelegate.png" width="500"> </p>
 
-### Claim reward
+### Claim Reward
 
 Finally, you can claim your reward if it is available. Use "My validators" -> "Manage" -> "Claim reward" menu.
 
-<p align = "center"> <img src="./img/how-to-delegate/claim.png" width="500"> </p>
+<p align = "center"> <img src="./img/how-to-delegate/claim.png" width="500"> </p> <p align = "center"> <img src="./img/how-to-delegate/claim-mobile.png" width="200"/> <img src="./img/how-to-delegate/claim-mobile2.png" width="200"/></p>
 
 ## Balances
 
@@ -78,3 +78,5 @@ The staking procedure introduces 5 different states of your funds, resulting in 
 -   Reward: earnings from funds delegation to a PoS contract. These rewards can be transferred explicitly to your balance. We plan to make this step automatic with Staking 2.0 features. 
 
     <p align = "center"> <img src="./img/how-to-delegate/balances.png" width="500"> </p>
+	<p align = "center"> <img src="./img/how-to-delegate/balances-mobile.png" width="500"> </p>
+	<p align = "center"> <img src="./img/how-to-delegate/balances-mobile2.png" width="500"> </p>
