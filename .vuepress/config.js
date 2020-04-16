@@ -110,7 +110,7 @@ module.exports = {
 	plugins: [
 		['@vuepress/back-to-top'],
 		['@vuepress/pwa', {
-			serviceWorker: true,
+			serviceWorker: false,
 			updatePopup: {
 				'/': {
 					message: "New content is available.",
