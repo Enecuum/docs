@@ -15,7 +15,7 @@ module.exports = {
 		}
 	},
 	head: [
-		['meta', {'http-equiv': 'Cache-control', content: 'no-cache'}]
+		['meta', {'http-equiv': 'Cache-control', content: 'no-cache, no-store, must-revalidate'}]
 	],
 	themeConfig: {
 		repo: 'Enecuum/docs',
