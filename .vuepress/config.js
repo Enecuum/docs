@@ -5,11 +5,17 @@ module.exports = {
 		'/': {
 			lang: 'en-US',
 			title: 'Enecuum Guides',
+			head: [
+				['meta', { http-equiv: 'Cache-control', content: 'no-cache' }]
+			],
 			description: 'This set of manuals is aimed to help with the first steps into the Blockchain Mobile Network for decentralized applications.'
 		},
 		'/ru/': {
 			lang: 'ru-RU',
 			title: 'Руководства Enecuum',
+			head: [
+				['meta', { http-equiv: 'Cache-control', content: 'no-cache' }]
+			],
 			description: 'Этот набор руководств призван помочь с освоением мобильной блокчейн-сети для децентрализованных приложений.'
 		}
 	},
