@@ -1,3 +1,5 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 module.exports = {
 	locales: {
 		'/': {
@@ -124,6 +126,7 @@ module.exports = {
 		['@vuepress/google-analytics',{
 			'ga': 'UA-138901721-5'
 		}],
-		['@vuepress/nprogress']
+		['@vuepress/nprogress'],
+		new HtmlWebpackPlugin({hash: true})
 	]
 }
