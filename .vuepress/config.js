@@ -12,6 +12,7 @@ module.exports = {
 		}
 	},
 	themeConfig: {
+		logo: '/enq-logo.png',
 		repo: 'Enecuum/docs',
 		editLinks: true,
 		smoothScroll: true,
@@ -30,16 +31,29 @@ module.exports = {
 				sidebar: [
 					'/',
 					['/faq', 'FAQ'],
-					['/how-to-use','How to Use the App'],
-					['/how-to-buy','How to Buy ENQ on Exchange'],
-					['/how-to-swap','How to Swap ENQ'],
-					['/how-to-mine-bit','How to Mine BIT'],
-					['/token-issue','How to Issue Own Tokens'],
-					['/how-to-pos','How to Run PoS Node'],
-					['/how-to-delegate','How to Delegate'],
-					['/referral','How to Join the Referral Program'],
-					['/how-does-roi-work','How Does ROI Calculator Work'],
-					['/research','Research Papers']
+					['/research','Research Papers'],
+					{
+						title: 'Enecuum Network',
+						collapsable: false,
+						children: [
+							//['/enq/emission-model','ENQ Emission Model'],
+							['/enq/how-to-use','How to Use the App'],
+							['/enq/how-to-buy','How to Buy ENQ on Exchange'],
+							['/enq/how-to-swap','How to Swap ENQ'],
+							['/enq/referral','How to Join the Referral Program'],
+							['/enq/how-does-roi-work','How Does ROI Calculator Work']
+						]
+					},
+					{
+						title: 'BIT Network',
+						collapsable: false,
+						children: [
+							['/bit/how-to-mine-bit','How to Mine BIT'],
+							['/bit/token-issue','How to Issue Own Tokens'],
+							['/bit/how-to-pos','How to Run PoS Node'],
+							['/bit/how-to-delegate','How to Delegate']
+						]
+					}
 				],
 				nav: [	
 					{ text: 'enecuum.com', link: 'https://enecuum.com' },
@@ -69,17 +83,30 @@ module.exports = {
 				sidebar: [
 					'/ru/',
 					['/ru/faq', 'FAQ'],
-					['/ru/how-to-use','Как пользоваться приложением'],
-					['/ru/how-to-buy','Как купить ENQ на бирже'],
-					['/ru/how-to-swap','Как сделать своп ENQ'],					
-					['/ru/how-to-mine-bit','Как майнить BIT'],
-					['/ru/token-issue','Как выпустить собственные токены'],
-					['/ru/how-to-pos','Как запустить PoS'],
-					['/ru/how-to-delegate','Как делегировать средства'],
-					['/ru/referral','Как стать участником Реферальной Программы'],
-					['/ru/how-does-roi-work','Как работает калькулятор доходности'],
-					['/ru/research','Научные публикации']
-				],	
+					['/ru/research','Научные публикации'],
+					{
+						title: 'Сеть Enecuum',
+						collapsable: false,
+						children: [
+							['/ru/enq/emission-model','Модель эмиссии ENQ'],
+							['/ru/enq/how-to-use','Как пользоваться приложением'],
+							['/ru/enq/how-to-buy','Как купить ENQ на бирже'],
+							['/ru/enq/how-to-swap','Как сделать своп ENQ'],
+							['/ru/enq/referral','Как стать участником Реферальной Программы'],
+							['/ru/enq/how-does-roi-work','Как работает калькулятор доходности'],
+						]
+					},
+					{
+						title: 'Сеть BIT',
+						collapsable: false,
+						children: [
+							['/ru/bit/how-to-mine-bit','Как майнить BIT'],
+							['/ru/bit/token-issue','Как выпустить собственные токены'],
+							['/ru/bit/how-to-pos','Как запустить PoS'],
+							['/ru/bit/how-to-delegate','Как делегировать средства']
+						]
+					}
+				],
 				nav: [
 					{ text: 'enecuum.com', link: 'https://enecuum.com' },
 					{

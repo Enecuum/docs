@@ -6,16 +6,11 @@ This set of manuals is aimed to help with the first steps into the Blockchain Mo
 
 1. Download the app: [app.enecuum.com](https://app.enecuum.com).
 2. Create an account in the app. 
-3. Deposit at least 25 ENQ using one of the following ways:
-
-	- [Buy native coins with a bank card](how-by-card.md) to start mining immediately.
-	
-	- [Buy ERC-20 tokens](how-to-buy.md) on the [available exchanges](https://enecuum.com/buy) & [swap](how-to-swap.md) them to the native network via [wallet.enecuum.com](https://wallet.enecuum.com/). 
-
+3. Deposit at least 25 ENQ. [Buy ERC-20 tokens](/enq/how-to-buy.html) on the [available exchanges](https://enecuum.com/buy) & [swap](/enq/how-to-swap.html) them to the native network via [wallet.enecuum.com](https://wallet.enecuum.com/). 
 4. In the app, tap *Start activity*.
 5. Keep calm and start mining.
 
-If you have any questions, refer to [FAQ](faq.md). If you are having trouble navigating the app, check out our guide on [How to Use the App.](how-to-use.md) You can find other detailed manuals on the left menu.
+If you have any questions, refer to [FAQ](/faq.html). If you are having trouble navigating the app, check out our guide on [How to Use the App.](/enq/how-to-use.html) You can find other detailed manuals on the left menu.
 
 ## Useful Links
 
