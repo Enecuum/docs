@@ -36,7 +36,7 @@ module.exports = {
 						title: 'Enecuum Network',
 						collapsable: false,
 						children: [
-							//['/enq/emission-model','ENQ Emission Model'],
+							['/enq/emission-model','ENQ Emission Model'],
 							['/enq/how-to-use','How to Use the App'],
 							['/enq/how-to-buy','How to Buy ENQ on Exchange'],
 							['/enq/how-to-swap','How to Swap ENQ'],
