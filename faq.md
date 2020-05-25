@@ -26,7 +26,7 @@ To find out more, please read our [Tech paper.](https://enecuum.com/documentatio
 
 #### Can I be a PoW or PoS miner?
 
-Currently, BIT network with non-tradable tokens is used for testing the team's PoW and PoS. Please read the tutorial on [How to Mine BIT](how-to-mine-bit.md) to find out more. ENQ PoW and PoS mining will be released after the tests are done.
+Currently, BIT network with non-tradable tokens is used for testing the team's PoW and PoS. Please read the tutorial on [How to Mine BIT](/bit/how-to-mine-bit.html) to find out more. ENQ PoW and PoS mining will be released after the tests are done.
 
 #### What can the Enecuum App do?
 
@@ -58,7 +58,7 @@ All you need is a smartphone with an Android 4.4 or higher.
 
 #### How do I earn/mine?
 
-To mine, you need a minimum stake of 25 ENQ (check [How to buy on exchange guide](how-to-buy.md)). Once you have it, all you need to do is press "Start activity" button in the app. Remember that the higher the stake (balance), the bigger the reward.
+To mine, you need a minimum stake of 25 ENQ (check [How to buy on exchange guide](/enq/how-to-buy.html)). Once you have it, all you need to do is press "Start activity" button in the app. Remember that the higher the stake (balance), the bigger the reward.
 
 #### How do I stake?
 
@@ -157,7 +157,7 @@ It affects microblock reward amount but doesn't affect the number of blocks you 
 
 #### Where do I buy ENQ? 
 
-You can buy ENQ on the [available exchanges](https://enecuum.com/buy) using our [guide](how-to-buy.md).
+You can buy ENQ on the [available exchanges](https://enecuum.com/buy) using our [guide](/enq/how-to-buy.html).
 
 #### Can I buy ENQ with a bank card?
 
@@ -169,7 +169,7 @@ In a nutshell, to swap ERC-20 tokens you just bought to testnet ENQ coins which 
 
 In order to swap testnet ENQ to ERC-20 tokens, you need to log in to [wallet.enecuum.com](https://wallet.enecuum.com), enter the amount and the ETH address.
 
-For detailed instructions, please read [our guide](how-to-swap.md).
+For detailed instructions, please read [our guide](/enq/how-to-swap.html).
 
 #### Why do I need to swap?
 
@@ -273,7 +273,7 @@ You can check your referrer in the [Blockchain Explorer.](https://neuro.enecuum.
 #### The exchange keeps canceling the withdrawal
 
 - Check that you are entering a correct **Ethereum** address, not an Enecuum address. 
-- Please read our guide on [How to withdraw funds.](how-to-buy.html#how-to-withdraw-funds)
+- Please read our guide on [How to withdraw funds.](/enq/how-to-buy.html#how-to-withdraw-funds)
 
 #### I transferred ENQ from the exchange straight to the app, skipping the swapping process
 
@@ -293,7 +293,7 @@ You can check your referrer in the [Blockchain Explorer.](https://neuro.enecuum.
 #### I don't see my tokens in MetaMask 
 
 - Import ENQ (ERC-20) token into Metamask using **0x16ea01acb4b0bca2000ee5473348b6937ee6f72f** token address. 
-- If you are still having issues, you can read our [guide](how-to-swap.html#enq-erc-20-→-enq-testnet-swap) or watch a [video tutorial](https://www.youtube.com/watch?time_continue=84&v=9EfS3k7NPzg).
+- If you are still having issues, you can read our [guide](/enq/how-to-swap.html#enq-erc-20-→-enq-testnet-swap) or watch a [video tutorial](https://www.youtube.com/watch?time_continue=84&v=9EfS3k7NPzg).
 
 ## Support
 
