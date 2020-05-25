@@ -13,6 +13,9 @@ module.exports = {
 			description: 'Этот набор руководств призван помочь с освоением мобильной блокчейн-сети для децентрализованных приложений.'
 		}
 	},
+	head: [
+		['meta', {'http-equiv': 'Cache-control', content: 'no-cache, no-store, must-revalidate'}]
+	],
 	themeConfig: {
 		logo: '/enq-logo.png',
 		repo: 'Enecuum/docs',
