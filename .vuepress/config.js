@@ -14,7 +14,7 @@ module.exports = {
 		}
 	},
 	head: [
-		['meta', {'http-equiv': 'Cache-control', content: 'no-cache, no-store, must-revalidate'}]
+		['meta', {'http-equiv': 'Cache-control', content: 'no-cache, no-store, must-revalidate, max-age=0'}]
 	],
 	themeConfig: {
 		logo: '/enq-logo.png',
