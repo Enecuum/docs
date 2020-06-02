@@ -1,5 +1,17 @@
 # Research Papers
 
+## [An Overview on Blockchain for Smartphones: State-of-the-Art, Consensus, Implementation, Challenges and Future Trends](https://ieeexplore.ieee.org/document/9104713)
+
+**Authors:** Aleksandr Ometov, Yulia Bardinova, Alexandra Afanasyeva, Pavel Masek, Konstantin Zhidanov, Sergey Vanurin, Mikhail Sayfullin, Viktoriia Shubina, Mikhail Komarov, Sergey Bezzateev
+
+**Abstract:**
+
+The blockchain technology is currently penetrating different areas of the modern Information and Communications Technology community. Most of the devices involved in blockchain-related processes are specially designed targeting only the mining aspect, i.e., solving the computational puzzle task. At the same time, the use of wearable and mobile devices may also become a part of eCommerce blockchain operation, especially during the on-charge time. The paper considers the possibility of using a large number of constrained devices to support the operation of the blockchain with a low impact on battery consumption. The utilization of such devices is expected to improve the system efficiency as well as to attract a more substantial number of users. This paper contributes to the body of knowledge with a survey of the main applications of blockchain for smartphones along with existing mobile blockchain projects. It also proposes a novel consensus protocol based on a combination of Proof-of-Work (PoW), Proof-of-Activity (PoA), and Proof-of-Stake (PoS) algorithms for efficient and on-the-fly utilization on resource-constrained devices. The system was deployed in a worldwide testnet with more than two thousand smartphones and compared with other projects from the user-experienced metrics perspective. The results prove that the utilization of PoA systems on a smartphone does not significantly affect the lifetime of the smartphone battery while existing methods based on PoW have a tremendous negative impact. Finally, the main open challenges and future investigation directions are outlined.
+
+**Published in:** [IEEE Access](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6287639) (Early Access)
+
+**Read the article on [IEEE Xplore](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9104713) and [ResearchGate](https://www.researchgate.net/publication/341812302_An_Overview_on_Blockchain_for_Smartphones_State-of-the-Art_Consensus_Implementation_Challenges_and_Future_Trends)**
+
 ## [Blockchain Technology for Smartphones and Constrained IoT Devices: A Future Perspective and Implementation](https://ieeexplore.ieee.org/abstract/document/8808043/)
 
 **Authors:** Konstantin Zhidanov, Sergey Bezzateev, Alexandra Afanasyeva, Mikhail Sayfullin, Sergey Vanurin, Yulia Bardinova, Aleksandr Ometov
