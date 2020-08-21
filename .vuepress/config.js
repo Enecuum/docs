@@ -45,6 +45,9 @@ module.exports = {
 							['/enq/how-to-use','How to Use the App'],
 							['/enq/how-to-buy','How to Buy ENQ on Exchange'],
 							['/enq/how-to-swap','How to Swap ENQ'],
+							['/enq/how-to-pos','How to Run PoS Node'],
+							['/enq/token-issue','How to Issue Own Tokens'],
+							['/enq/how-to-delegate','How to Delegate'],
 							['/enq/referral','How to Join the Referral Program'],
 							['/enq/how-does-roi-work','How Does ROI Calculator Work']
 						]
@@ -53,10 +56,7 @@ module.exports = {
 						title: 'BIT Network',
 						collapsable: false,
 						children: [
-							['/bit/how-to-mine-bit','How to Mine BIT'],
-							['/bit/token-issue','How to Issue Own Tokens'],
-							['/bit/how-to-pos','How to Run PoS Node'],
-							['/bit/how-to-delegate','How to Delegate']
+							['/bit/how-to-mine-bit','How to Mine BIT']
 						]
 					}
 				],
@@ -97,6 +97,9 @@ module.exports = {
 							['/ru/enq/how-to-use','Как пользоваться приложением'],
 							['/ru/enq/how-to-buy','Как купить ENQ на бирже'],
 							['/ru/enq/how-to-swap','Как сделать своп ENQ'],
+							['/ru/enq/how-to-pos','Как запустить PoS'],
+							['/ru/enq/token-issue','Как выпустить собственные токены'],
+							['/ru/enq/how-to-delegate','Как делегировать средства']
 							['/ru/enq/referral','Как стать участником Реферальной Программы'],
 							['/ru/enq/how-does-roi-work','Как работает калькулятор доходности'],
 						]
@@ -105,10 +108,7 @@ module.exports = {
 						title: 'Сеть BIT',
 						collapsable: false,
 						children: [
-							['/ru/bit/how-to-mine-bit','Как майнить BIT'],
-							['/ru/bit/token-issue','Как выпустить собственные токены'],
-							['/ru/bit/how-to-pos','Как запустить PoS'],
-							['/ru/bit/how-to-delegate','Как делегировать средства']
+							['/ru/bit/how-to-mine-bit','Как майнить BIT']
 						]
 					}
 				],
