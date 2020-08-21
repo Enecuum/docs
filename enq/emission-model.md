@@ -17,7 +17,7 @@ The two phases of ENQ emission are presented below.
 
 ### Stage 2. Distribution of ENQ (after the main net launch)
 
-1. 17,500,00.00 ENQ are proposed to be reserved as a reward to the team with a one-year period of uniform unlocking  after the launch of the main network;
+1. 17,500,000.00 ENQ are proposed to be reserved as a reward to the team with a one-year period of uniform unlocking  after the launch of the main network;
 2. 45,500,000.00 ENQ are proposed to be reserved as a reserve fund with a one-year period of uniform unlocking after the launch of the main network;
 3. 160,119,436.25 ENQ will be distributed among network participants (miners) within 25 years after the launch of the main network, as well as a support to the miners network development program.
 
