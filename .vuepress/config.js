@@ -57,6 +57,9 @@ module.exports = {
 						collapsable: false,
 						children: [
 							['/bit/how-to-mine-bit','How to Mine BIT']
+							['/bit/token-issue','How to Issue Own Tokens'],
+							['/bit/how-to-pos','How to Run PoS Node'],
+							['/bit/how-to-delegate','How to Delegate']
 						]
 					}
 				],
@@ -68,8 +71,8 @@ module.exports = {
 						{ text: 'Telegram discussion group', link: 'https://t.me/Enecuum_EN' },
 						{ text: 'Telegram news channel', link: 'https://t.me/ENQbeam' },
 						{ text: 'App Download', link: 'https://app.enecuum.com' },
-						{ text: 'Blockchain Explorer', link: 'https://neuro.enecuum.com' },
-						{ text: 'ROI Calculator', link: 'https://neuro.enecuum.com/#!/roi' },
+						{ text: 'Blockchain Explorer', link: 'https://pulse.enecuum.com' },
+						{ text: 'ROI Calculator', link: 'https://pulse.enecuum.com/#!/roi' },
 						{ text: 'Web Wallet & Swap', link: 'https://wallet.enecuum.com' },
 						{ text: 'Etherscan', link: 'https://etherscan.io/token/0x16ea01acb4b0bca2000ee5473348b6937ee6f72f' },
 						{ text: 'Coingecko', link: 'https://www.coingecko.com/en/coins/enecuum' },
@@ -109,6 +112,9 @@ module.exports = {
 						collapsable: false,
 						children: [
 							['/ru/bit/how-to-mine-bit','Как майнить BIT']
+							['/ru/bit/token-issue','Как выпустить собственные токены'],
+							['/ru/bit/how-to-pos','Как запустить PoS'],
+							['/ru/bit/how-to-delegate','Как делегировать средства']
 						]
 					}
 				],
@@ -120,8 +126,8 @@ module.exports = {
 						{ text: 'Обсуждение Enecuum в Telegram', link: 'https://t.me/Enecuum' },
 						{ text: 'Новостной канал в Telegram', link: 'https://t.me/ENQbeam' },
 						{ text: 'Скачать приложение', link: 'https://app.enecuum.com' },
-						{ text: 'Блокчейн эксплорер', link: 'https://neuro.enecuum.com' },
-						{ text: 'Калькулятор доходности', link: 'https://neuro.enecuum.com/#!/roi' },
+						{ text: 'Блокчейн эксплорер', link: 'https://pulse.enecuum.com' },
+						{ text: 'Калькулятор доходности', link: 'https://pulse.enecuum.com/#!/roi' },
 						{ text: 'Веб-кошелёк и своп', link: 'https://wallet.enecuum.com' },
 						{ text: 'Etherscan', link: 'https://etherscan.io/token/0x16ea01acb4b0bca2000ee5473348b6937ee6f72f' },
 						{ text: 'Coingecko', link: 'https://www.coingecko.com/en/coins/enecuum' },

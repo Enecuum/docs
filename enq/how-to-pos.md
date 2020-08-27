@@ -18,21 +18,21 @@ To create a PoS contract, use a [web-wallet](https://wallet.enecuum.com/) interf
 
 There two input fields. PoS contract name, which can be left blank, and a PoS contract fee. Contract fee determines the "salary" PoS owner receives for running a server. Choose it wisely, as if you set it too small, you can loose money paying for your sever; but if you set it too high, nobody will delegate funds to you and you can be out of top 100 with no earning at all. This commission percent will be adjustable in the future but with first release it cannot be changed after creation. 
 
-After confirming PoS contract transaction and paying a transaction fee, please wait a bit. You will see a new record in the blockchain. Please find you contract at [PoS contracts page](https://neuro.enecuum.com/#!/pos-contracts). If your PoS name is blank, you can find your contract by owner address. It should be the wallet you used to send PoS contract creation transaction.
+After confirming PoS contract transaction and paying a transaction fee, please wait a bit. You will see a new record in the blockchain. Please find you contract at [PoS contracts page](https://pulse.enecuum.com/#!/pos-contracts). If your PoS name is blank, you can find your contract by owner address. It should be the wallet you used to send PoS contract creation transaction.
 
 <p align = "center"> <img src="./img/how-to-pos/FindMyPoScontractHash.png" width="500"> </p>
 
 Click Hash value of your contract to copy your PoS contract hash (address).  In this test case, it is 17d0b43aafb141dbc4e36ae0abefc2b28b3979f96a84cdecf7e26dc25bd1c042, as can be seen in the figure above, marked with red. The hash will be used in the next step.
 
-In oder for the contact to become active, you need to fulfill this requirements:
+In order for the contact to become active, you need to fulfill this requirements:
 
-- delegate 25001 ENQ to the created contact yourself;
-- be in the top 100 rating of wallets;
+- delegate 25001 ENQ to the created contact from the same wallet, used for the contract creation;
+- be in the top 100 rating of PoS contracts;
 - run the PoS node.
 
 ### Delegating to Your PoS Contract
 
-n order for the contract to become active, you need to delegate to it. A minimal self-delegated stake 25001 ENQ.
+In order for the contract to become active, you need to delegate to it. A minimal self-delegated stake is 25001 ENQ.
 
 To find out how to delegate your funds, refer to [the according guide.](how-to-delegate.md)
 
