@@ -56,7 +56,7 @@ module.exports = {
 						title: 'BIT Network',
 						collapsable: false,
 						children: [
-							['/bit/how-to-mine-bit','How to Mine BIT']
+							['/bit/how-to-mine-bit','How to Mine BIT'],
 							['/bit/token-issue','How to Issue Own Tokens'],
 							['/bit/how-to-pos','How to Run PoS Node'],
 							['/bit/how-to-delegate','How to Delegate']
@@ -102,16 +102,16 @@ module.exports = {
 							['/ru/enq/how-to-swap','Как сделать своп ENQ'],
 							['/ru/enq/how-to-pos','Как запустить PoS'],
 							['/ru/enq/token-issue','Как выпустить собственные токены'],
-							['/ru/enq/how-to-delegate','Как делегировать средства']
+							['/ru/enq/how-to-delegate','Как делегировать средства'],
 							['/ru/enq/referral','Как стать участником Реферальной Программы'],
-							['/ru/enq/how-does-roi-work','Как работает калькулятор доходности'],
+							['/ru/enq/how-does-roi-work','Как работает калькулятор доходности']
 						]
 					},
 					{
 						title: 'Сеть BIT',
 						collapsable: false,
 						children: [
-							['/ru/bit/how-to-mine-bit','Как майнить BIT']
+							['/ru/bit/how-to-mine-bit','Как майнить BIT'],
 							['/ru/bit/token-issue','Как выпустить собственные токены'],
 							['/ru/bit/how-to-pos','Как запустить PoS'],
 							['/ru/bit/how-to-delegate','Как делегировать средства']
