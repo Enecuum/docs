@@ -39,7 +39,7 @@ Undelegation takes 2 transactions to be performed so you need to pay 2 standard 
 
 ### Transit
 
-This is not an action but a state of your coins after the undelegation transaction. There is a time lock on your coins, which is the time needed for the coins to become available for the transfer to your balance. This time lock guarantees fair rewards calculation eliminating possibility to use one coin in two PoS contacts simultaneously. 
+This is not an action but a state of your coins after the undelegation transaction. There is a time lock on your coins, which is the time needed for the coins to become available for the transfer to your balance, about 1.5 days. This time lock guarantees fair rewards calculation eliminating possibility to use one coin in two PoS contacts simultaneously. 
 
 <p align = "center"> <img src="./img/how-to-delegate/transit.png" width="500"> <img src="./img/how-to-delegate/transit-mobile.png" width="200"/></p>
 
@@ -61,7 +61,7 @@ The staking procedure introduces 5 different states of your funds, resulting in 
 
 -   Available: coins you can use freely. For instance, delegate, perform transaction or use to start mining.
 -   Delegated: coins you moved to a certain PoS contract to receive rewards if the contract belongs to an active PoS.
--   Transit: coins you ordered to undelegate from a PoS contract with an active time lock. A time lock needs to pass for the coins to move to the "undelegated" state.
+-   Transit: coins you ordered to undelegate from a PoS contract with an active time lock. A time lock needs to pass for the coins to move to the "undelegated" state, 1.5 days.
 -   Undelegated: coins that are no longer delegated. They are free to be transferred to the "available" balance with a "transfer" transaction.
 -   Reward: earnings from funds delegation to a PoS contract. These rewards can be transferred explicitly to your balance. We plan to make this step automatic with Staking 2.0 features. 
 

@@ -18,7 +18,7 @@ Each type of token has the following common parameters:
 - Name - a token description up to 40 characters long.
 - Token type - a type that determines token operation. The types are explained in the section above.
 - Decimals - a number of decimal places.
-- Emission - a token supply at the time of the issue. 
+- Emission/Premine - a token supply at the time of the issue. 
 - Fee type -  a type that determines whether the fee is fixed or percentage.
 - Fee - an exact fee amount for token transactions. The fee from each transaction will be sent to the wallet of the token creator.
 - Min fee - a minimum fee for token transactions if the token type is percentage. 
@@ -35,7 +35,7 @@ Besides the parameters mentioned above, mineable tokens also feature the followi
 
 ### Token Calculator
 
-You can use our [token calculator](http://neuro.enecuum.com/#!/token-roi) to estimate your return on mineable token investment. This tool can help you plan mineable token parameters based on your expectations. The calculator will predict how long it will take to mine your custom token and what the ROI will be depending on the premine value and the number of staked coins.
+You can use our [token calculator](http://pulse.enecuum.com/#!/token-roi) to estimate your return on mineable token investment. This tool can help you plan mineable token parameters based on your expectations. The calculator will predict how long it will take to mine your custom token and what the ROI will be depending on the premine value and the number of staked coins.
 
 You can fill out the white fields with desired parameters. The calculated values will then be displayed in the blue-ish fields. The center column shows the token values, and the right column displays the same values converted in USD. Note that staked tokens is a user assumption only and is not related to blockchain functions.
 
@@ -51,7 +51,7 @@ You can create custom token via ENQ App or on your computer using our website.
 
 ### ENQ App
 
-1. Go to [neuro.enecuum.com](https://neuro.enecuum.com/) and download the Android app via top menu. Navigate to How to mine -> Download app.
+1. Go to [pulse.enecuum.com](https://pulse.enecuum.com/) and download the Android app via top menu. Navigate to How to mine -> Download app.
 2. Create a wallet and save your secret key. Without a secret key, you can't recover your account.
 3. Get ENQ tokens. You can buy ENQ on exchanges.
 4. Open the app. Click on the icon in the lower right corner to access the token issue interface. This feature is provided to any Enecuum Network user. The issuing functions of new tokens are included in the protocol. The user is only required to specify the token parameters.
@@ -59,7 +59,7 @@ You can create custom token via ENQ App or on your computer using our website.
 
 <p align = "center"> <img src="./img/token-issue/2-token-issue.jpg" width="300"> </p>
 
-6. Confirm the issuing of your new token. You will receive a message that tokens have been successfully created. 2.01 ENQ will be deducted from your account. 
+6. Confirm the issuing of your new token. You will receive a message that tokens have been successfully created. 1000.1 ENQ will be deducted from your account. 
 
 <p align = "center"> <img src="./img/token-issue/3-token-confirm.jpg" width="300"> </p>
 
@@ -77,11 +77,11 @@ You can create custom token via ENQ App or on your computer using our website.
 
 <p align = "center"> <img src="./img/token-issue/5-web-token.jpg" width="500"> </p>
 
-5. Confirm the issuing of your new token. You will receive a message that tokens have been successfully created. 2.01 ENQ will be deducted from your account. 
+5. Confirm the issuing of your new token. You will receive a message that tokens have been successfully created. 1000.1 ENQ will be deducted from your account. 
 
 <p align = "center"> <img src="./img/token-issue/6-web-confirm.jpg" width="500"> </p>
 
-6. You should see a 2.01 ENQ transaction in the “History” tab. If the transaction status is “confirmed”, that means you have successfully issued your own token. Otherwise, there must have been an error in the filled-out parameters. 
+6. You should see a 1000.1 ENQ transaction in the “History” tab. If the transaction status is “confirmed”, that means you have successfully issued your own token. Otherwise, there must have been an error in the filled-out parameters. 
 
 <p align = "center"> <img src="./img/token-issue/7-web-result.jpg" width="500"> </p>
 
@@ -89,7 +89,7 @@ You can create custom token via ENQ App or on your computer using our website.
 
 If you see an error when issuing your custom token, there can be several reasons:
 
-- You do not have enough balance to issue the token. You need to have at least 2.01 ENQ.
+- You do not have enough balance to issue the token. You need to have at least 1000.1 ENQ.
 - The token ticker is not unique. Try typing another ticker.
 - The block reward is greater than the max token supply allows it. 
 - The maximum token supply is less than the emission.
