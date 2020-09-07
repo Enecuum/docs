@@ -36,12 +36,16 @@ In order for the contract to become active, you need to delegate to it. A minima
 
 To find out how to delegate your funds, refer to [the according guide.](how-to-delegate.md)
 
-### Running a PoS Node
+## Running a PoS Node
 
-#### Prerequisites 
+### Prerequisites 
 
 ::: tip
-Note that PoW and Fullnode can only work with **public IP addresses.** The IP address can be static or dynamic.
+Note that PoW and Fullnode can only work with **public IP addresses.** The IP address can be static or dynamic.  
+:::
+
+::: tip
+Minimal hardware requirements are **1 CPU, 2 GB of RAM, 20 GB of disk**. These are like of a small VPS server offered by the majority of hosting providers. Disk requirements will rise with the size of the blockchain and are estimated as **1 TB** in 1-2 years. Please note this minimal hardware may **not** let your node to achieve maximum performance (and rewards). Recommended hardware requirements will be published after PoS software updates bringing planned optimizations. 
 :::
 
 ::: danger NOTICE
@@ -66,7 +70,7 @@ Current build nodes work stable only on Linux OS. There are network issues runni
 
 You can stop/restart the container without worrying; no data will be lost.
 
-#### How to Run PoS
+### How to Run PoS
 
 1. Carefully read the [prerequisites](how-to-pos.html#prerequisites) above. Check that you have the database installed:
 
@@ -87,7 +91,7 @@ You can stop/restart the container without worrying; no data will be lost.
 
 3. Create a PoS contract via web-wallet as [this guide states](how-to-pos.md).
 
-4. Download PoS container:
+4. Download and run PoS container:
 
    ```
    docker run -ti --name pulse_pos --link pulse_db:dbhost -p8000:8000 -e POS_ID=<your_pos_id> -e PORT=8000 -e DB_PASS='<your_db_password>' -e PEER='95.216.68.221:8000' -e DB_PORT=3306 -d  enecuum/pulse_pos
@@ -103,13 +107,13 @@ You can stop/restart the container without worrying; no data will be lost.
 
    A list with *pulse_db* and *pulse_pos* containers should appear.
 
-6. Search for your public key in the [Blockchain Explorer](http://neuro.enecuum.com/). You should be able to see new S-rewards. These are the rewards for your PoS node taking part in voting for a PoS leader. This process is stored in the blockchain in s-blocks. You can use Blockchain Explorer or [Web Wallet](https://wallet.enecuum.com/) to check your PoS balance. The installation is finished. If you need to, check logs using `docker logs pulse_pos` command. 
+6. Wait for synchronization to be completed. After that you PoS-contract will be displayed as "Active" and its performance will rise with each published s-block. You can compare current block number from the Blockchain Explorer with your nodes current block with `docker logs pulse_pos | grep n: | tail` command. 
 
 
-### View Your Delegators and Rewards
+## View Your Delegators and Rewards
 
 <p align = "center"> <img src="./img/how-to-pos/PoSContractDelegators.png" width="500"> </p>
 
 <p align = "center"> <img src="./img/how-to-pos/PoSContractRewards.png" width="500"> </p>
 
-At PoS contract page, you can find the amount of delegated coins and rewards that your contract receives. Please note that rewards shown in the Blockchain Explorer are split between PoS owner and its delegators according to your PoS fee value. 
+At the PoS contract page (list of all contracts is [here](https://pulse.enecuum.com/#!/pos-contracts)), you can find the amount of delegated coins and rewards that your contract receives. Please note that rewards shown in the Blockchain Explorer are split between PoS owner and its delegators according to your PoS fee value. 
