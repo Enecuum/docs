@@ -10,7 +10,7 @@ So if you want to run a PoS node you should create a PoS contract first (make a 
 
 Think of it this way: when you create a PoS contact, you establish a bank. When you delegate your funds to a PoS contract, you open a bank deposit.
 
-### Creating a PoS Contract
+### Create a PoS Contract
 
 To create a PoS contract, use a [web-wallet](https://wallet.enecuum.com/) interface.
 
@@ -24,19 +24,19 @@ After confirming PoS contract transaction and paying a transaction fee, please w
 
 Click Hash value of your contract to copy your PoS contract hash (address).  In this test case, it is 17d0b43aafb141dbc4e36ae0abefc2b28b3979f96a84cdecf7e26dc25bd1c042, as can be seen in the figure above, marked with red. The hash will be used in the next step.
 
-In order for the contact to become active, you need to fulfill this requirements:
+In order for the contact to become active, you need to fulfill these requirements:
 
-- delegate 25001 ENQ to the created contact from the same wallet, used for the contract creation;
+- delegate 25001 ENQ to the created contract from the same wallet (the one used for the contract creation);
 - be in the top 100 rating of PoS contracts;
 - run the PoS node.
 
-### Delegating to Your PoS Contract
+### Delegate to Your PoS Contract
 
 In order for the contract to become active, you need to delegate to it. A minimal self-delegated stake is 25001 ENQ.
 
 To find out how to delegate your funds, refer to [the according guide.](how-to-delegate.md)
 
-## Running a PoS Node
+## Run a PoS Node
 
 ### Prerequisites 
 
@@ -89,7 +89,7 @@ You can stop/restart the container without worrying; no data will be lost.
 
 2. Generate public and private keys using Enecuum App or [Web Wallet](https://wallet.enecuum.com/). Do a backup copy. You can use the same key pair for PoA, PoS and PoW.
 
-3. Create a PoS contract via web-wallet as [this guide states](how-to-pos.md).
+3. If you have not done it yet, create a PoS contract using the instructions above.
 
 4. Download and run PoS container:
 
@@ -107,8 +107,72 @@ You can stop/restart the container without worrying; no data will be lost.
 
    A list with *pulse_db* and *pulse_pos* containers should appear.
 
-6. Wait for synchronization to be completed. After that you PoS-contract will be displayed as "Active" and its performance will rise with each published s-block. You can compare current block number from the Blockchain Explorer with your nodes current block with `docker logs pulse_pos | grep n: | tail` command. 
+6. Wait for synchronization to be completed. After that your PoS contract will be displayed as "Active" and its performance will rise with each published s-block. You can compare current block number from the Blockchain Explorer with your nodes current block with `docker logs pulse_pos | grep n: | tail` command. 
 
+## Update the PoS Node
+
+Periodically, the Enecuum team releases PoS node updates. When it happens, your node may stop running. To update your node, please follow the steps.
+
+1. Stop the node:
+
+   ``` 
+   docker stop pulse_pos
+   ```
+   
+2. Remove the PoS node container:
+
+   ``` 
+   docker rm pulse_pos
+   ``` 
+   
+3. Remove the PoS node image:
+   ``` 
+   docker rmi enecuum/pulse_pos
+   ``` 
+   
+4. Restart the PoS node. Please remember to change the `<your_pos_id>` parameter value to the PoS contract hash and the `<your_db_password>` to your database password:
+
+   ``` 
+   docker run -ti --name pulse_pos --link pulse_db:dbhost -p8000:8000 -e POS_ID=<your_pos_id> -e PORT=8000 -e DB_PASS='<your_db_password>' -e PEER='95.216.68.221:8000' -e DB_PORT=3306 -d  enecuum/pulse_pos
+   ``` 
+   
+You can check your PoS node page in the Blockchain Explorer to see if it is running. It might take a few minutes. If the node is not operating, contact the [support](/faq.md#support).
+
+## Additional Commands
+
+### Erase logs
+
+You might need to erase your PoS logs if you want to free up disk space. 
+
+1. Empty the PM2 logs:
+
+   ``` 
+   docker exec pulse_pos pm2 flush
+   ```
+   
+2. Shrink the log file size:
+
+   ``` 
+   truncate -s 0 /var/lib/docker/containers/*/*-json.log;
+   ```
+
+### Save logs
+
+if there are problems with running the node, you might need to save your docker logs and share them with the Enecuum team. No personal information will be saved.
+
+1. Upload your log file:
+
+   ```
+   docker logs pulse_pos > pulse.log && curl -F "file=@pulse.log" https://file.io
+   ```
+
+   You should see the following message:
+
+   ```
+   {"success":true,"key":"jaoNuk3Q5umj","link":"<LINK_TO_FILE>","expiry":"14 days"}
+   ```
+   
+2. If the team asks you for the logs, send the link to the file.
 
 ## View Your Delegators and Rewards
 
