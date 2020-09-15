@@ -4,11 +4,11 @@
 
 Currently, Enecuum offers two coins: *ENQ* and *BIT*. Each coin has its own purpose and platform. 
 
-*ENQ* is used in Enecuum's [Neuro Testnet](http://neuro.enecuum.com/) and can be mined in our mobile mining application utilizing the Proof-of-Activity algorithm. ENQ can be swapped to a tradable ERC20 token and vice versa. 
+*ENQ* is used in Enecuum's [Pulse Network](http://pulse.enecuum.com/) and can be mined in our mobile mining application utilizing the Proof-of-Activity algorithm.
 
 Unlike ENQ, *BIT* is not intended for trading; its sole purpose is testing of Enecuum's Trinity protocol: a combination of Proof-of-Activity, Proof-of-Work, and Proof-of-Stake algorithms. By launching BIT, Enecuum allows users to experience mobile mining without buying minimal stake and to try out PoW and PoS nodes before the Mainnet release with a tradable ENQ. 
 
-After the successful launch of Enecuum's mining app, i.e., PoA node, the team is ready to share with the public the PoW nodes. The testing is done on another platform, [BIT Testnet](http://bit.enecuum.com/), but after the tests are complete, PoW will be available on [Neuro Testnet](http://neuro.enecuum.com/) alongside PoA. And of course, PoS nodes will be shared as well; stay tuned for the updates.
+After the successful launch of Enecuum's mining app, i.e., PoA node, the team is ready to share with the public the PoW nodes. The testing is done on another platform, [BIT Testnet](http://bit.enecuum.com/), but after the tests are complete, PoW will be available on [Pulse Network](http://pulse.enecuum.com/) alongside PoA. And of course, PoS nodes will be shared as well; stay tuned for the updates.
 
 To learn more about Enecuum's Trinity protocol, please read our [Tech paper.](https://enecuum.com/documentation)
 

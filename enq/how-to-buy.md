@@ -1,16 +1,10 @@
 # How to Buy ENQ on Exchange
 
-::: danger
-**DO NOT SEND YOUR TOKENS DIRECTLY TO YOUR ENQ ADDRESS.** That WILL NOT work as intended.
-
-After buying ENQ ERC-20 tokens, you need to **send it to an Ethereum wallet and perform a swap.** The swap is required because Enecuum is a testnet project which uses testnet ENQ coins that are not tradable. Please follow the guide below step-by-step. You will find the swap instructions at the end of the tutorial.
-:::
-
 ::: tip
 ENQ is available on [several exchanges](https://enecuum.com/buy). This guide explains how to buy ENQ on Crex24.
 :::
 
-## How to top up an account on [CREX24](https://crex24.com/)
+## How to top up an account on [Crex24](https://crex24.com/)
 
 Go to the "Account" page. Select currency in the search field. For example, USD. Then, in the  “Deposit” column click on the “+ with a cash picture” icon in front of the chosen currency for the top up. 
 

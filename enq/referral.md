@@ -18,7 +18,7 @@ Everyone benefits from this kind of cooperation - both sides get 10% increased r
 
 ### As an agent
 
-1. **Check if you have 1 000 ENQs on your balance.** This is the only term for agents to follow. If you don’t have enough coins, you can [buy them on exchange](how-to-buy.html#how-to-buy-or-sell-enq-token). After the purchase, [convert your ERC-20 ENQs to ENQ coins](how-to-swap.html#enq-erc-20-enq-testnet-swap).
+1. **Check if you have 1 000 ENQs on your balance.** This is the only term for agents to follow. If you don’t have enough coins, you can [buy them on exchange](how-to-buy.html#how-to-buy-or-sell-enq-token).
 2. Open the Enecuum application. You will see the icon of a QR code on the home screen. You can use it to share the code with your friend by sending it to any social network or by scanning it with another phone. 
 3.  Wait till your friend enters your code in their application and you will get 10% from your referral’s mined amount! 
 

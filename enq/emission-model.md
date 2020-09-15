@@ -101,7 +101,7 @@ The total PoA reward is distributed among PoA publishers according to their stak
 
 *poa_reward = block_reward * poa_stake / total_poa_stake*
 
-A predicted calculation can be done using the ROI calculator: [neuro.enecuum.com/#!/roi](https://neuro.enecuum.com/#!/roi)
+A predicted calculation can be done using the ROI calculator: [pulse.enecuum.com/#!/roi](https://pulse.enecuum.com/#!/roi)
 
 After the launch of the main PoA network, miners will receive 31.81% of the rewards for blocks creation, which in absolute terms will be 50,928,338.25 ENQ for 25 years.
 

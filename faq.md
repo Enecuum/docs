@@ -30,11 +30,11 @@ Currently, BIT network with non-tradable tokens is used for testing the team's P
 
 #### What can the Enecuum App do?
 
-The main purpose of the app is PoA mining. You can also see the blockchain explorer, send transactions and use ROI calculator, but these features are not limited to the app and they are available on our [website.](https://neuro.enecuum.com/)
+The main purpose of the app is PoA mining. You can also see the blockchain explorer, send transactions and use ROI calculator, but these features are not limited to the app and they are available on our [website.](https://pulse.enecuum.com/)
 
 #### Do you have an Airdrop?
 
-Media activity stage of Airdrop is over now. Mining stage of Airdrop is active. You can gain tokens from mining in the testnet. Swap and sell at cryptoexchange.
+Media activity stage of Airdrop is over now. Mining stage of Airdrop is active. You can gain tokens from mining or buying at cryptoexchanges.
 
 #### What is Enecuum's circulating supply?
 
@@ -64,7 +64,7 @@ To mine, you need a minimum stake of 25 ENQ (check [How to buy on exchange guide
 
 The balance is counted as a stake automatically at the time of the microblock publication. You do not need to freeze/lock coins to stake. So, all you need to do to stake is press "Start activity". 
 
-You can check the reward for staking in the ROI calculator in the app or on [our website](https://neuro.enecuum.com/#!/roi). To receive the full day reward listed in the calculator, you need to mine for 24 hours. If you are mining with breaks or with a weak internet connection, you will not get the full reward.
+You can check the reward for staking in the ROI calculator in the app or on [our website](https://pulse.enecuum.com/#!/roi). To receive the full day reward listed in the calculator, you need to mine for 24 hours. If you are mining with breaks or with a weak internet connection, you will not get the full reward.
 
 #### What are the private key and the address?
 
@@ -98,7 +98,7 @@ You can use Spaces/Parallels apps to run several instances of Enecuum app. But t
 
 #### Is there a list of top wallets?
 
-[Yes.](https://neuro.enecuum.com/#!/tops)
+[Yes.](https://pulse.enecuum.com/#!/tops)
 
 #### How can I determine that my device is online?
 
@@ -106,8 +106,8 @@ There are several options available to see your device status:
 
 1. Use our official [Telegram bot](https://t.me/enecuum_notify_bot) to receive notifications about your nodes' status change (online/offline) and your daily rewards. Multiple devices monitoring is available.
 2. Another option is to input your address in [masternodes.online](https://explorer.masternodes.online/search/) search field. Be aware that the node's status change is displayed with a significant delay in comparison to Enecuum's Telegram bot.
-3. You can check the map or see recent blocks in the [Blockchain Explorer](https://neuro.enecuum.com). Try searching your address in the Explorer (on the top right of the page) and see if you published any microblocks.
-4. You can also check our [API](https://neuro.enecuum.com/api/v1/poa_nodes_online) which lists all the active nodes in Enecuum blockchain. Search for your address using Ctrl+F.
+3. You can check the map or see recent blocks in the [Blockchain Explorer](https://pulse.enecuum.com). Try searching your address in the Explorer (on the top right of the page) and see if you published any microblocks.
+4. You can also check our [API](https://pulse.enecuum.com/api/v1/poa_nodes_online) which lists all the active nodes in Enecuum blockchain. Search for your address using Ctrl+F.
 
 #### Does the performance of the phone affect the productivity of the node?
 
@@ -137,10 +137,6 @@ The reward is divided between the miners in proportion to the balance of PoA nod
 
 To learn more about the distribution of ENQ mining rewards, refer to [the corresponding article.](https://medium.com/@ENQBlockchain/enecuum-referral-program-and-miner-rewards-62209ead9f6a)
 
-#### Will the mainnet mining be slower than testnet mining?
-
-In terms of block frequency, it is an open question; in terms of the block reward, it will be higher in the mainnet.
-
 #### How does ROI calculation work?
 
 It is based on the last 24h mining history. We replay this history assuming there was 1 more miner online for 24h with the specified stake.
@@ -153,55 +149,15 @@ The amount above max stake is ignored for staking rewards. The balance above the
 
 It affects microblock reward amount but doesn't affect the number of blocks you mine. So, the higher the stake, the more you receive.
 
-###  Buying & Swapping
+###  Buying
 
 #### Where do I buy ENQ? 
 
-You can buy ENQ on the [available exchanges](https://enecuum.com/buy) using our [guide](/enq/how-to-buy.html).
-
-#### Can I buy ENQ with a bank card?
-
-ENQ test coin, backed by ERC-20 token is no longer sold by Suex. Pay bу card service will return with native coins distribution.
-
-#### How do I swap?
-
-In a nutshell, to swap ERC-20 tokens you just bought to testnet ENQ coins which will be used in the app, you need to install MetaMask, import your ETH account there, log in to [wallet.enecuum.com](https://wallet.enecuum.com) and select the amount you need to swap.
-
-In order to swap testnet ENQ to ERC-20 tokens, you need to log in to [wallet.enecuum.com](https://wallet.enecuum.com), enter the amount and the ETH address.
-
-For detailed instructions, please read [our guide](/enq/how-to-swap.html).
-
-#### Why do I need to swap?
-
-You can't trade testnet ENQ coins. A swap is needed to convert them into tradable tokens and sell them on the exchange.
-
-This works in the opposite direction; in order to stake/mine, you need testnet ENQ, not a tradable ERC-20 token.
-
-#### How much time does the swap take?
-
-It should take just a few minutes. If the process takes too long, contact the [support](#support).
-
-#### Can I use something beside MetaMask to swap?
-
-You can use Trust Wallet, but other wallets have not been tested properly.
-
-#### Can I speed up a swap transaction in Metamask?
-
-Yes, you can. It is safe to use “speed up” button in Metamask.
-
-#### Are there any transaction/swap fees?
-
-Zero fees now in our testnet. Standard gas fee in Ethereum.
-
-#### Can I swap ENQ coin to ERC-20 address wallet of exchange?
-
-Technically you can. In theory, exchanges can have some rules against it, but as far as we know they don't. Confirmed for Graviex and Crex24.
-
-The opposite direction is not currently available.
+You can buy ENQ on the [available exchanges](https://enecuum.com/buy) using our [guide](/enq/how-to-buy.html). The ERC20 -> Native coin swap is closed.
 
 #### How do I manage my ENQ assets?
 
-In [wallet.enecuum.com](https://wallet.enecuum.com/) you can manage only native coin. As for ERC-20 ENQ — you should keep it in some Ethereum wallet. We recommend MetaMask for web wallet and Trust Wallet for a mobile wallet.
+In [wallet.enecuum.com](https://wallet.enecuum.com/).
 
 ###  Referral Program
 
@@ -219,7 +175,7 @@ Please back up a copy of your private key and reinstall the app.  It is more rel
 
 #### How do I check who is my referrer?
 
-You can check your referrer in the [Blockchain Explorer.](https://neuro.enecuum.com/) Enter your wallet address (public key) in the search field on the top right of the page. Click the hash that has "refreward" description. You will see your address in the "publisher" field and your referrer's address in the corresponding field.
+You can check your referrer in the [Blockchain Explorer.](https://pulse.enecuum.com/) Enter your wallet address (public key) in the search field on the top right of the page. Click the hash that has "refreward" description. You will see your address in the "publisher" field and your referrer's address in the corresponding field.
 
 ## Troubleshooting
 
@@ -228,7 +184,6 @@ You can check your referrer in the [Blockchain Explorer.](https://neuro.enecuum.
 #### The app won't install
 
 - Make sure you have Android 4.4 or higher.
-
 - If you are updating the app, check that its version is above the one you already have.
 
 #### The app won't launch
@@ -238,7 +193,6 @@ You can check your referrer in the [Blockchain Explorer.](https://neuro.enecuum.
 #### The app is crashing/stopping
 
 - Make sure you have Android 4.4 or higher.
-
 - The servers might be under maintenance. 
 
 ###  Mining
@@ -256,7 +210,7 @@ You can check your referrer in the [Blockchain Explorer.](https://neuro.enecuum.
 
 #### Mining is too slow/The reward is too little/My wife earns more than I do
 
-- Background activity may be restricted by default. Check Android settings. Try to mine with always on screen and with locked screen. Compare your microblock rewards at [Blockchain Explorer](https://neuro.enecuum.com).
+- Background activity may be restricted by default. Check Android settings. Try to mine with always on screen and with locked screen. Compare your microblock rewards at [Blockchain Explorer](https://pulse.enecuum.com).
 - Weak Internet connection is the second most common problem.
 
 #### ROI calculator is incorrect
@@ -265,35 +219,14 @@ You can check your referrer in the [Blockchain Explorer.](https://neuro.enecuum.
 
 #### No referral reward
 
-- *As a referral*: search for you address (public key) history in the [Blockchain Explorer.](https://neuro.enecuum.com/) Click on the microblock hash and make sure that you have a referrer (agent) listed in the "referrer" field. If you don't, back up your private key, reinstall the app, import your private key and enter the referral code again.
-- *As an agent*: search for your referral's address (public key) in the [Blockchain Explorer.](https://neuro.enecuum.com/) Click on the microblock hash and make sure it is your address that is listed in the "referrer" field. If that is correct, check that your referral is actually mining.
+- *As a referral*: search for you address (public key) history in the [Blockchain Explorer.](https://pulse.enecuum.com/) Click on the microblock hash and make sure that you have a referrer (agent) listed in the "referrer" field. If you don't, back up your private key, reinstall the app, import your private key and enter the referral code again.
+- *As an agent*: search for your referral's address (public key) in the [Blockchain Explorer.](https://pulse.enecuum.com/) Click on the microblock hash and make sure it is your address that is listed in the "referrer" field. If that is correct, check that your referral is actually mining.
 
-###  Buying & Swapping
-
-#### The exchange keeps canceling the withdrawal
-
-- Check that you are entering a correct **Ethereum** address, not an Enecuum address. 
-- Please read our guide on [How to withdraw funds.](/enq/how-to-buy.html#how-to-withdraw-funds)
-
-#### I transferred ENQ from the exchange straight to the app, skipping the swapping process
-
-- Your tokens could not be transferred to Enecuum network address, so they are still at the exchange. You can try to withdraw it again to a new correct **Ethereum** address. 
-- If your exchange balance is lowered, then please contact the support of the exchange. 
+###  Buying
 
 #### I transferred my ENQ to smart contract instead of Crex24
 
 - There is no way to get tokens from the smart contact address. Unfortunately you have lost your tokens.
-
-#### The swap takes too long/The swap is stuck in pending
-
-- Ethereum transaction stuck in pending can be caused by an increase in the gas price in Ethereum ([https://ethgasstation.info/](https://ethgasstation.info/)). Please be patient.
-- If you don’t see corresponding transaction (TX hash field is empty but status is approved) in history for 15 minutes, please contact [support](#support).
-- If you had edited the transaction (e.g. changed the gas fee), you might have erased transaction's DATA field. We will need to process your swap manually, and in order to do so, you'll need to provide a proof that the transaction is yours. Please [sign your transaction](https://vintage.myetherwallet.com/signmsg.html) and contact the [support](#Support). 
-
-#### I don't see my tokens in MetaMask 
-
-- Import ENQ (ERC-20) token into Metamask using **0x16ea01acb4b0bca2000ee5473348b6937ee6f72f** token address. 
-- If you are still having issues, you can read our [guide](/enq/how-to-swap.html#enq-erc-20-→-enq-testnet-swap) or watch a [video tutorial](https://www.youtube.com/watch?time_continue=84&v=9EfS3k7NPzg).
 
 ## Support
 

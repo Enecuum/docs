@@ -6,7 +6,7 @@
 
 1. Скачайте приложение: [app.enecuum.com](https://app.enecuum.com).
 2. Запустите приложение и создайте аккаунт. 
-3. Внесите хотя бы 25 ENQ в приложение. [Купите ERC-20 токены](/ru/enq/how-to-buy.html) на [доступных биржах](https://enecuum.com/buy) и [сделайте своп (конвертацию)](/ru/enq/how-to-swap.html) токенов в нативные монеты через [wallet.enecuum.com](https://wallet.enecuum.com/).
+3. Внесите хотя бы 25 ENQ в приложение. [Купите токены](/ru/enq/how-to-buy.html) на [доступных биржах](https://enecuum.com/buy).
 4. В приложении нажмите *Начать работу*.
 5. Сохраняйте спокойствие и начинайте майнинг.
 
@@ -18,7 +18,7 @@
 - Новостной канал в Telegram: [t.me/ENQbeam](https://t.me/ENQbeam)
 - Веб-сайт: [enecuum.com](https://enecuum.com)
 - Скачать приложение: [app.enecuum.com](https://app.enecuum.com)
-- Блокчейн эксплорер: [neuro.enecuum.com](https://neuro.enecuum.com)
-- Калькулятор доходности (ROI калькулятор): [neuro.enecuum.com/#!/roi](https://neuro.enecuum.com/#!/roi)
+- Блокчейн эксплорер: [pulse.enecuum.com](https://pulse.enecuum.com)
+- Калькулятор доходности (ROI калькулятор): [pulse.enecuum.com/#!/roi](https://pulse.enecuum.com/#!/roi)
 - Ваш кошелек на веб-сайте, а так же обмен (своп) ENQ: [wallet.enecuum.com](https://wallet.enecuum.com)
 - Вы также можете следить за токеном на [Etherscan](https://etherscan.io/token/0x16ea01acb4b0bca2000ee5473348b6937ee6f72f) и [Coingecko](https://www.coingecko.com/en/coins/enecuum).

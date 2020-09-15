@@ -21,9 +21,3 @@ You can see the same calculations for a period of 1 week, 1 month, 1 year.
 Information on the value of ROI is constantly updated depending on the change in the number of active miners and the value of the reward for miners in the Enecuum network:
 
 <p align = "center"> <img src="./img/roi/active.png" width="500"/> </p>
-
-**Be careful.** All rewards you get in the Enecuum network are the ENQ (Coins) -  blockchain native tokens. The native ENQ token (Coin) is not traded on exchanges. The ENQ token (ERC20) is traded on the stock exchanges, which was created on the Ethereum blockchain and is a tradable token of the Enecuum project. 
-
-In the project, there are two types of cryptocurrencies in order to create liquidity for the native ENQ (Coin) token. At the moment, placing a token based on the Ethereum blockchain is the most common way to get on the exchange and create liquidity for the blockchain project. Liquidity, in short, is the ability of a cryptocurrency to exchange for another cryptocurrency.
-
-The exchange between ENQ (Coin) and ENQ (ERC20) is 1: 1. If you want to know how to do it quickly and easily, refer to [swap](how-to-swap.md).

@@ -1,5 +1,5 @@
 ::: danger 
-**ENQ is in the mainnet phase. Swap is no longer available. Please use native ENQ coins.**
+**Swap is сlosed starting 15 September 2020. Only native ENQ coins are in use. Refer to the [How to Buy ENQ](how-to-buy.md) guide.**
 :::
 
 # How to Swap ENQ
