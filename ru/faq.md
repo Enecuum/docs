@@ -36,15 +36,13 @@ PoA паблишеры участвуют в процессе публикаци
 
 Эйрдропы в СМИ больше не производятся. Сейчас активна майнинг стадия. Вы получаете прибыль монетами благодаря майнингу или покупкой на бирже.
 
-#### Какой у Enecuum оборот?
+#### Какое у Enecuum циркулирующее предложение?
 
-126,880,563.75 ENQ.
-
-Равен общему значению на [Etherscan](https://etherscan.io/token/0x16ea01acb4b0bca2000ee5473348b6937ee6f72f). Подробнее [здесь.](https://enecuum.com/emission-model#conversion-plan)
+Точное значение Вы можете узнать в [Блокчейн Эксплорере](https://pulse.enecuum.com/) или по прямой [ссылке](https://pulse.enecuum.com/api/v1/ext/plain/circ_supply). Подробнее об эмисионной модели [здесь.](https://enecuum.com/emission-model#conversion-plan)
 
 #### Какое максимальное количество монет у Enecuum?
 
-Верхний предел всех ENQ в системе предположительно составляет 845,870,425 ENQ. Подробнее [здесь.](https://enecuum.com/emission-model#emission-model)
+Верхний предел всех ENQ в системе составляет 350,000,000 ENQ. Подробнее [здесь.](https://enecuum.com/emission-model#emission-model)
 
 #### Где мне искать последние новости об Enecuum?
 

@@ -73,8 +73,7 @@ module.exports = {
 						{ text: 'App Download', link: 'https://app.enecuum.com' },
 						{ text: 'Blockchain Explorer', link: 'https://pulse.enecuum.com' },
 						{ text: 'ROI Calculator', link: 'https://pulse.enecuum.com/#!/roi' },
-						{ text: 'Web Wallet & Swap', link: 'https://wallet.enecuum.com' },
-						{ text: 'Etherscan', link: 'https://etherscan.io/token/0x16ea01acb4b0bca2000ee5473348b6937ee6f72f' },
+						{ text: 'Web Wallet', link: 'https://wallet.enecuum.com' },
 						{ text: 'Coingecko', link: 'https://www.coingecko.com/en/coins/enecuum' },
 						{ text: 'Privacy Policy', link: 'https://enecuum.com/docs/privacy.pdf' },
 						{ text: 'Terms & Conditions', link: 'https://enecuum.com/docs/terms.pdf' }
@@ -128,8 +127,7 @@ module.exports = {
 						{ text: 'Скачать приложение', link: 'https://app.enecuum.com' },
 						{ text: 'Блокчейн эксплорер', link: 'https://pulse.enecuum.com' },
 						{ text: 'Калькулятор доходности', link: 'https://pulse.enecuum.com/#!/roi' },
-						{ text: 'Веб-кошелёк и своп', link: 'https://wallet.enecuum.com' },
-						{ text: 'Etherscan', link: 'https://etherscan.io/token/0x16ea01acb4b0bca2000ee5473348b6937ee6f72f' },
+						{ text: 'Веб-кошелёк', link: 'https://wallet.enecuum.com' },
 						{ text: 'Coingecko', link: 'https://www.coingecko.com/en/coins/enecuum' },
 						{ text: 'Политика конфиденциальности', link: 'https://enecuum.com/docs/privacy.pdf' },
 						{ text: 'Условия использования', link: 'https://enecuum.com/docs/terms.pdf' }

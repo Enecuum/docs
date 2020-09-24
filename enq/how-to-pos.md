@@ -123,19 +123,20 @@ Periodically, the Enecuum team releases PoS node updates. When it happens, your 
 
    ``` 
    docker rm pulse_pos
-   ``` 
+   ```
    
 3. Remove the PoS node image:
    ``` 
    docker rmi enecuum/pulse_pos
-   ``` 
+   ```
    
 4. Restart the PoS node. Please remember to change the `<your_pos_id>` parameter value to the PoS contract hash and the `<your_db_password>` to your database password:
 
    ``` 
    docker run -ti --name pulse_pos --link pulse_db:dbhost -p8000:8000 -e POS_ID=<your_pos_id> -e PORT=8000 -e DB_PASS='<your_db_password>' -e PEER='95.216.68.221:8000' -e DB_PORT=3306 -d  enecuum/pulse_pos
-   ``` 
+   ```
    
+
 You can check your PoS node page in the Blockchain Explorer to see if it is running. It might take a few minutes. If the node is not operating, contact the [support](/faq.md#support).
 
 ## Additional Commands
@@ -144,13 +145,13 @@ You can check your PoS node page in the Blockchain Explorer to see if it is runn
 
 You might need to erase your PoS logs if you want to free up disk space. 
 
-1. Empty the PM2 logs:
+1. Empty logs of the PoS node:
 
    ``` 
    docker exec pulse_pos pm2 flush
    ```
    
-2. Shrink the log file size:
+2. Empty docker logs. Note that this will empty logs for **ALL** docker containers of you server, not only PoS node:
 
    ``` 
    truncate -s 0 /var/lib/docker/containers/*/*-json.log;
