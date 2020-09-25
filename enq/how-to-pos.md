@@ -159,7 +159,7 @@ You might need to erase your PoS logs if you want to free up disk space.
 
 ### Save logs
 
-if there are problems with running the node, you might need to save your docker logs and share them with the Enecuum team. No personal information will be saved.
+If there are problems with running the node, you might need to save your docker logs and share them with the Enecuum team. No personal information will be saved.
 
 1. Upload your log file:
 
