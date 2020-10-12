@@ -11,7 +11,12 @@ module.exports = {
 			lang: 'ru-RU',
 			title: 'Руководства Enecuum',
 			description: 'Этот набор руководств призван помочь с освоением мобильной блокчейн-сети для децентрализованных приложений.'
-		}
+		},
+		'/ko/': {
+			lang: 'ko-KR',
+			title: 'Enecuum Guides',
+			description: 'This set of manuals is aimed to help with the first steps into the Blockchain Mobile Network for decentralized applications.'
+		}	
 	},
 	head: [
 		['meta', {'http-equiv': 'Cache-control', content: 'no-cache, no-store, must-revalidate, max-age=0'}]
@@ -133,6 +138,59 @@ module.exports = {
 						{ text: 'Условия использования', link: 'https://enecuum.com/docs/terms.pdf' }
 					]
 					}
+				]
+			},
+			'/ko/': {
+				selectText: '언어',
+				label: '한국어',
+				editLinkText: 'Edit this page on GitHub',
+				sidebar: [
+					'/ko/',
+					['/ko/faq', 'FAQ'],
+					['/ko/research','Research Papers'],
+					{
+						title: 'Enecuum Network',
+						collapsable: false,
+						children: [
+							['/ko/enq/emission-model','ENQ 배출 모델'],
+							['/ko/enq/how-to-use','How to Use the App'],
+							['/ko/enq/how-to-buy','How to Buy ENQ on Exchange'],
+							['/ko/enq/how-to-pos','How to Run PoS Node'],
+							['/ko/enq/token-issue','How to Issue Own Tokens'],
+							['/ko/enq/how-to-delegate','How to Delegate'],
+							['/ko/enq/referral','How to Join the Referral Program'],
+							['/ko/enq/how-does-roi-work','How Does ROI Calculator Work']
+						]
+					},
+					{
+						title: 'BIT Network',
+						collapsable: false,
+						children: [
+							['/ko/bit/how-to-mine-bit','How to Mine BIT'],
+							['/ko/bit/token-issue','How to Issue Own Tokens'],
+							['/ko/bit/how-to-pos','How to Run PoS Node'],
+							['/ko/bit/how-to-delegate','How to Delegate']
+						]
+					}
+				],
+				nav: [	
+					{ text: 'enecuum.com', link: 'https://enecuum.com' },
+					{
+					text: 'Enecuum Network',
+					items: [
+						{ text: 'Telegram discussion group', link: 'https://t.me/Enecuum_EN' },
+						{ text: 'Telegram news channel', link: 'https://t.me/ENQbeam' },
+						{ text: 'App Download', link: 'https://app.enecuum.com' },
+						{ text: 'Blockchain Explorer', link: 'https://pulse.enecuum.com' },
+						{ text: 'ROI Calculator', link: 'https://pulse.enecuum.com/#!/roi' },
+						{ text: 'Web Wallet & Swap', link: 'https://wallet.enecuum.com' },
+						{ text: 'Etherscan', link: 'https://etherscan.io/token/0x16ea01acb4b0bca2000ee5473348b6937ee6f72f' },
+						{ text: 'Coingecko', link: 'https://www.coingecko.com/en/coins/enecuum' },
+						{ text: 'Privacy Policy', link: 'https://enecuum.com/docs/privacy.pdf' },
+						{ text: 'Terms & Conditions', link: 'https://enecuum.com/docs/terms.pdf' }
+					]
+					}
+					
 				]
 			}
 		}
