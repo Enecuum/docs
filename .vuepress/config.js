@@ -147,11 +147,31 @@ module.exports = {
 				label: '한국어',
 				editLinkText: 'Edit this page on GitHub',
 				sidebar: [
+					'/ko/',
+					['/ko/faq', 'FAQ'],
+					['/ko/research','Research Papers'],
 					{
 						title: 'Enecuum Network',
 						collapsable: false,
 						children: [
 							['/ko/enq/emission-model','ENQ 배출 모델'],
+							['/ko/enq/how-to-use','How to Use the App'],
+							['/ko/enq/how-to-buy','How to Buy ENQ on Exchange'],
+							['/ko/enq/how-to-pos','How to Run PoS Node'],
+							['/ko/enq/token-issue','How to Issue Own Tokens'],
+							['/ko/enq/how-to-delegate','How to Delegate'],
+							['/ko/enq/referral','How to Join the Referral Program'],
+							['/ko/enq/how-does-roi-work','How Does ROI Calculator Work']
+						]
+					},
+					{
+						title: 'BIT Network',
+						collapsable: false,
+						children: [
+							['/ko/bit/how-to-mine-bit','How to Mine BIT'],
+							['/ko/bit/token-issue','How to Issue Own Tokens'],
+							['/ko/bit/how-to-pos','How to Run PoS Node'],
+							['/ko/bit/how-to-delegate','How to Delegate']
 						]
 					}
 				],
