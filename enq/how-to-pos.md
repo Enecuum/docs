@@ -94,10 +94,14 @@ You can stop/restart the container without worrying; no data will be lost.
 4. Download and run PoS container:
 
    ```
-   docker run -ti --name pulse_pos --link pulse_db:dbhost -p8000:8000 -e POS_ID=<your_pos_id> -e PORT=8000 -e DB_PASS='<your_db_password>' -e PEER='95.216.68.221:8000' -e DB_PORT=3306 -d  enecuum/pulse_pos
+   docker run -ti --name pulse_pos --link pulse_db:dbhost -p8000:8000 -e POS_ID=<your_pos_id> -e PORT=8000 -e DB_PASS='<your_db_password>' -e PEER='95.216.68.221:8000' -e DB_PORT=3306 -e LAG_INTERVAL=300 -e SYNC_INTERVAL=258 -d enecuum/pulse_pos
    ```
 
-   Change the `<your_pos_id>` parameter value to the PoS contract hash *without* brackets <>. You can use the hash from the previous step as the POS_ID parameter. Type your database password in `<your_db_password>`.
+   Change the `<your_pos_id>` parameter value to the PoS contract hash *without* brackets <>. You can use the hash from the previous step as the POS_ID parameter. Type your database password in `<your_db_password>`. 
+
+   ::: tip
+   The command above starts PoS in a fast sync mode, if you want to download full blockchain history please remove "-e LAG_INTERVAL=300 -e SYNC_INTERVAL=258" from the command.
+   :::
 
 5. Check if your container is running:
 
