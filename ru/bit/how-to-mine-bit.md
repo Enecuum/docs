@@ -96,10 +96,15 @@ docker run -d --name bit_db -e MYSQL_ROOT_PASSWORD=root enecuum/bit_db
 4. Скачайте контейнер PoS:
 
    ```
-   docker run -ti --name bit_pos -p8000:8000 --link bit_db:dbhost -e POS_ID=<хэш_pos_контракта>  -e POS_SHARE=<ваша_секретная_доля>  -e DB_PASS='root' -e DB_PORT=3306 -d  enecuum/bit_pos
+   docker run -ti --name bit_pos -p7000:7000 --link bit_db:dbhost -e POS_ID=<хэш_pos_контракта>  -e POS_SHARE=<ваша_секретная_доля>  -e PORT=7000 -e PEER='95.216.246.116:7000' -e DB_PASS='root' -e DB_PORT=3306 -e LAG_INTERVAL=300 -e SYNC_INTERVAL=258 -d enecuum/bit_pos
    ```
 
    Измените значение параметра `POS_ID` на хэш вашего PoS контракта, который был сгенерирован в предыдущем пункте, *без* угловых скобок <>. Придумайте секретную последовательность символов, чтобы использовать её в качестве вашей секретной доли PoS. Введите последовательность в параметр `POS_SHARE`. Механизм `POS_SHARE`  на данный момент не используется, но он будет реализован в скором времени с новыми правилами. 
+
+   ::: tip ВНИМАНИЕ
+
+   Команда выше запускает узел PoS в режиме быстрой синхронизации, если вы хотите хранить полную историю блокчейна, исключите "-e LAG_INTERVAL=300 -e SYNC_INTERVAL=258" из команды запуска.
+   :::
 
 5. Проверьте, работают ли контейнеры:
 
@@ -133,10 +138,15 @@ docker run -d --name bit_db -e MYSQL_ROOT_PASSWORD=root enecuum/bit_db
 3. Скачайте контейнер PoW:
 
    ```
-   docker run -ti --name bit_pow -p8000:8000 --link bit_db:dbhost -e PUB_KEY=<ваш_публичный_ключ> -e DB_PASS='root' -e DB_PORT=3306 -d  enecuum/bit_pow
+   docker run -ti --name bit_pow -p7000:7000 --link bit_db:dbhost -e PUB_KEY=<ваш_публичный_ключ> -e DB_PASS='root' -e DB_PORT=3306 -e PORT=7000 -e PEER='95.216.246.116:7000' -e LAG_INTERVAL=300 -e SYNC_INTERVAL=258 -d enecuum/bit_pow
    ```
    
    Измените значение параметра `PUB-KEY` на публичный ключ, который был сгенерирован в предыдущем пункте, *без* угловых скобок <>.
+   
+   ::: tip ВНИМАНИЕ
+   
+   Команда выше запускает узел PoW в режиме быстрой синхронизации, если вы хотите хранить полную историю блокчейна, исключите "-e LAG_INTERVAL=300 -e SYNC_INTERVAL=258" из команды запуска.
+   :::
    
 4. Проверьте, работают ли контейнеры:
 
@@ -168,8 +178,13 @@ docker run -d --name bit_db -e MYSQL_ROOT_PASSWORD=root enecuum/bit_db
 2. Скачайте контейнер Fullnode:
 
    ```
-   docker run -ti --name bit_fullnode -p8000:8000 -p80:80 --link bit_db:dbhost -e DB_PASS='root' -e DB_PORT=3306 -d  enecuum/bit_fullnode
+   docker run -ti --name bit_fullnode -p7000:7000 -p80:80 --link bit_db:dbhost -e DB_PASS='root' -e PORT=7000 -e PEER='95.216.246.116:7000' -e LAG_INTERVAL=300 -e SYNC_INTERVAL=258 -e DB_PORT=3306 -d  enecuum/bit_fullnode
    ```
+
+   ::: tip ВНИМАНИЕ
+
+   Команда выше запускает узел Fullnode в режиме быстрой синхронизации, если вы хотите хранить полную историю блокчейна, исключите "-e LAG_INTERVAL=300 -e SYNC_INTERVAL=258" из команды запуска.
+   :::
 
 3. Проверьте, работают ли контейнеры:
 

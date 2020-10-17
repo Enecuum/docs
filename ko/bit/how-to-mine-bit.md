@@ -98,10 +98,14 @@ You can stop/restart the container without worrying; no data will be lost.
 4. Download PoS container:
 
    ```
-   docker run -ti --name bit_pos -p8000:8000 --link bit_db:dbhost -e POS_ID=<your_pos_contract_hash>  -e POS_SHARE=<your_secret_pos_share>  -e DB_PASS='root' -e DB_PORT=3306 -d  enecuum/bit_pos
+   docker run -ti --name bit_pos -p7000:7000 --link bit_db:dbhost -e POS_ID=<your_pos_contract_hash>  -e POS_SHARE=<your_secret_pos_share> -e PORT=7000 -e PEER='95.216.246.116:7000' -e DB_PASS='root' -e DB_PORT=3306 -e LAG_INTERVAL=300 -e SYNC_INTERVAL=258 -d enecuum/bit_pos
    ```
 
    Change the `POS_ID` parameter value to the PoS contract hash *without* brackets <>.  Choose a secret combination of characters and use it for your `POS_SHARE` parameter. `POS_SHARE` mechanism is not used and will be turned on later with new rules for receiving your `POS_SHARE`. 
+
+   ::: tip
+   The command above starts PoS in a fast sync mode, if you want to download full blockchain history please remove "-e LAG_INTERVAL=300 -e SYNC_INTERVAL=258" from the command.
+   :::
 
 5. Check if your container is running:
 
@@ -133,10 +137,10 @@ You can stop/restart the container without worrying; no data will be lost.
 
 2. Generate public and private keys using Enecuum App or [BIT Web Wallet](https://bit-wallet.enecuum.com/). Do a backup copy. You can use the same key pair for PoA, PoS and PoW.
 
-3. Download PoW container:
+3. Download and run PoW container:
 
    ```
-   docker run -ti --name bit_pow -p8000:8000 --link bit_db:dbhost -e PUB_KEY=<your_pub_key> -e DB_PASS='root' -e DB_PORT=3306 -d  enecuum/bit_pow
+   docker run -ti --name bit_pow -p7000:7000 --link bit_db:dbhost -e PUB_KEY=<your_pub_key> -e DB_PASS='root' -e DB_PORT=3306 -e PORT=7000 -e PEER='95.216.246.116:7000' -e LAG_INTERVAL=300 -e SYNC_INTERVAL=258 -d enecuum/bit_pow
    ```
 
    Change the `PUB-KEY` parameter value to the generated public key *without* brackets <>. 
@@ -171,8 +175,12 @@ You can stop/restart the container without worrying; no data will be lost.
 2. Download Fullnode container:
 
    ```
-   docker run -ti --name bit_fullnode -p8000:8000 -p80:80 --link bit_db:dbhost -e DB_PASS='root' -e DB_PORT=3306 -d  enecuum/bit_fullnode
+   docker run -ti --name bit_fullnode -p7000:7000 -p80:80 --link bit_db:dbhost -e DB_PASS='root' -e PORT=7000 -e PEER='95.216.246.116:7000' -e LAG_INTERVAL=300 -e SYNC_INTERVAL=258 -e DB_PORT=3306 -d  enecuum/bit_fullnode
    ```
+
+   ::: tip
+   The command above starts PoW in a fast sync mode, if you want to download full blockchain history please remove "-e LAG_INTERVAL=300 -e SYNC_INTERVAL=258" from the command.
+   :::
 
 3. Check if your container is running:
 

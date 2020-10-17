@@ -56,7 +56,7 @@ Note that PoW and Fullnode can only work with **public IP addresses.** The IP ad
 Current build nodes work stable only on Linux OS. There are network issues running nodes on Windows and Mac.
 :::
 
-- BIT components are deployed through *Docker*, a platform meant for building, sharing, and running applications with containers. So first of all, [download Docker](https://www.docker.com/) for your OS using official guides. For Windows users, we recommend [Docker Toolbox](https://github.com/docker/toolbox/releases). Linux users can follow [Docker guide for Ubuntu.](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+- BIT components are deployed through *Docker*, a platform meant for building, sharing, and running applications with containers. So first of all, [download Docker](https://www.docker.com/) for your OS using official guides. Linux users can follow [Docker guide for Ubuntu.](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
 - After installing Docker, download the database that will be used in your Fullnode, PoW or PoS. **This is a mandatory step**.
 
@@ -95,13 +95,17 @@ You can stop/restart the container without worrying; no data will be lost.
 
 3. Create a PoS contract via web-wallet as [this guide states](how-to-pos.md).
 
-4. Download PoS container:
+4. Download and run PoS container:
 
    ```
-   docker run -ti --name bit_pos -p8000:8000 --link bit_db:dbhost -e POS_ID=<your_pos_contract_hash>  -e POS_SHARE=<your_secret_pos_share>  -e DB_PASS='root' -e DB_PORT=3306 -d  enecuum/bit_pos
+   docker run -ti --name bit_pos -p7000:7000 --link bit_db:dbhost -e POS_ID=<your_pos_contract_hash>  -e POS_SHARE=<your_secret_pos_share> -e PORT=7000 -e PEER='95.216.246.116:7000' -e DB_PASS='root' -e DB_PORT=3306 -e LAG_INTERVAL=300 -e SYNC_INTERVAL=258 -d enecuum/bit_pos
    ```
 
    Change the `POS_ID` parameter value to the PoS contract hash *without* brackets <>.  Choose a secret combination of characters and use it for your `POS_SHARE` parameter. `POS_SHARE` mechanism is not used and will be turned on later with new rules for receiving your `POS_SHARE`. 
+
+   ::: tip
+   The command above starts PoS in a fast sync mode, if you want to download full blockchain history please remove "-e LAG_INTERVAL=300 -e SYNC_INTERVAL=258" from the command.
+   :::
 
 5. Check if your container is running:
 
@@ -133,13 +137,17 @@ You can stop/restart the container without worrying; no data will be lost.
 
 2. Generate public and private keys using Enecuum App or [BIT Web Wallet](https://bit-wallet.enecuum.com/). Do a backup copy. You can use the same key pair for PoA, PoS and PoW.
 
-3. Download PoW container:
+3. Download and run PoW container:
 
    ```
-   docker run -ti --name bit_pow -p8000:8000 --link bit_db:dbhost -e PUB_KEY=<your_pub_key> -e DB_PASS='root' -e DB_PORT=3306 -d  enecuum/bit_pow
+   docker run -ti --name bit_pow -p7000:7000 --link bit_db:dbhost -e PUB_KEY=<your_pub_key> -e DB_PASS='root' -e DB_PORT=3306 -e PORT=7000 -e PEER='95.216.246.116:7000' -e LAG_INTERVAL=300 -e SYNC_INTERVAL=258 -d enecuum/bit_pow
    ```
 
    Change the `PUB-KEY` parameter value to the generated public key *without* brackets <>. 
+
+   ::: tip
+   The command above starts PoW in a fast sync mode, if you want to download full blockchain history please remove "-e LAG_INTERVAL=300 -e SYNC_INTERVAL=258" from the command.
+   :::
 
 4. Check if your container is running:
 
@@ -168,11 +176,15 @@ You can stop/restart the container without worrying; no data will be lost.
 
    If you don't see the container in the list, please follow the instructions provided in the prerequisites.
 
-2. Download Fullnode container:
+2. Download and run Fullnode container:
 
    ```
-   docker run -ti --name bit_fullnode -p8000:8000 -p80:80 --link bit_db:dbhost -e DB_PASS='root' -e DB_PORT=3306 -d  enecuum/bit_fullnode
+   docker run -ti --name bit_fullnode -p7000:7000 -p80:80 --link bit_db:dbhost -e DB_PASS='root' -e PORT=7000 -e PEER='95.216.246.116:7000' -e LAG_INTERVAL=300 -e SYNC_INTERVAL=258 -e DB_PORT=3306 -d  enecuum/bit_fullnode
    ```
+
+   ::: tip
+   The command above starts Fullnode in a fast sync mode, if you want to download full blockchain history please remove "-e LAG_INTERVAL=300 -e SYNC_INTERVAL=258" from the command.
+   :::
 
 3. Check if your container is running:
 
