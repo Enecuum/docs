@@ -47,6 +47,7 @@ module.exports = {
 						collapsable: false,
 						children: [
 							['/enq/emission-model','ENQ Emission Model'],
+							['/enq/api','API/Integration'],
 							['/enq/how-to-use','How to Use the App'],
 							['/enq/how-to-buy','How to Buy ENQ on Exchange'],
 							//['/enq/how-to-swap','How to Swap ENQ'],
@@ -101,6 +102,7 @@ module.exports = {
 						collapsable: false,
 						children: [
 							['/ru/enq/emission-model','Модель эмиссии ENQ'],
+							['/ru/enq/api','API/Интеграция'],
 							['/ru/enq/how-to-use','Как пользоваться приложением'],
 							['/ru/enq/how-to-buy','Как купить ENQ на бирже'],
 							//['/ru/enq/how-to-swap','Как сделать своп ENQ'],
@@ -153,6 +155,7 @@ module.exports = {
 						collapsable: false,
 						children: [
 							['/ko/enq/emission-model','ENQ 배출 모델'],
+							['/ko/enq/api','API/Integration'],
 							['/ko/enq/how-to-use','How to Use the App'],
 							['/ko/enq/how-to-buy','How to Buy ENQ on Exchange'],
 							['/ko/enq/how-to-pos','How to Run PoS Node'],
