@@ -1,14 +1,13 @@
-# API/Integration
+# API/Интеграция
 
-Enecuum's API is available on [Swagger.](https://app.swaggerhub.com/apis-docs/enecuum/EnecuumNodeAPI/1.0.0)
+API Enecuum доступен на [Swagger.](https://app.swaggerhub.com/apis-docs/enecuum/EnecuumNodeAPI/1.0.0)
 
-Enecuum's wallet creation is included in the introduction. Instructions on how to send transactions and generate signatures are available in POST /tx method. 
+Инструкцию по созданию кошелька в Enecuum можно найти во введении. Инструкции по отправке транзакций и генерации подписей доступны в методе POST /tx.
 
-::: danger DANGER
+::: danger ОСТОРОЖНО
 
-Rejected transactions are also recorded in the blockchain. Use GET /tx to check transaction status.
+Отклоненные транзакции записываются в блокчейн. Используйте GET /tx, чтобы проверить статус транзакции.
 
 :::
 
-Be aware that any wallet, including the one created for technical purposes, can receive referral rewards. This can happen if someone decides to use the wallet's referral address as their referral agent. These rewards are marked accordingly in the blockchain.
-
+Имейте в виду, что любой кошелек, в том числе созданный для технических целей, может получать реферальные вознаграждения. Это может произойти, если кто-то решит использовать реферальный адрес кошелька в качестве своего реферального агента. Эти награды стмечены в блокчейне соответствующим образом.

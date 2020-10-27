@@ -1,102 +1,104 @@
 # Как купить ENQ на бирже
 
-## Buy ENQ
+## Купить ENQ
 
 ::: tip СОВЕТ
 ENQ доступен на [нескольких биржах](https://enecuum.com/buy). Это руководство объясняет покупку на бирже KuCoin.
 
-You need cryptocurrency to buy ENQ. If you already have BTC or USDT, skip to step 3. If you have other crypto, e.g. ETH, you can exchange it to BTC or USDT in the same way as in steps 3-4, and then exchange BTC or USDT to ENQ.
+Для покупки ENQ необходима криптовалюта. Если у вас уже есть BTC или USDT, вы можете пропустить шаг 2. Если у вас есть другая криптовалюта, например ETH, вы можете обменять её на BTC или USDT аналогично шагам 3-4, а затем обменять BTC или USDT на ENQ.
 :::
 
-1. Log in or create an account on [KuCoin.](https://www.kucoin.com/) 
-2. You can buy ENQ with other cryptocurrencies based on the available trading pairs. For KuCoin exchange, BTC and USDT are available. If you buy crypto with a credit card, USDT may arrive faster and with lower fee, but please do your own research. Skip to step 3 if you already have crypto.
+1. Войдите или создайте учетную запись на [KuCoin.](https://www.kucoin.com/) 
+2. Вы можете купить ENQ за другую криптовалюту в зависимости от доступных торговых пар. Для KuCoin доступны BTC и USDT. Если вы покупаете криптовалюту с помощью банковской карты,  то получение USDT может пройти быстрее и с более низкой комиссией, но, пожалуйста, исследуйте эту информацию в дополнительных источниках. Если у вас уже есть криптовалюта, перейдите к шагу 3.
 
-	a. Select Buy Crypto -> Credit/Debit Card.
+	a. Выберите Купить криптовалюту -> Кредитная/дебетовая карта.
 	
 	<p align = "center"> <img src="./img/how-to-buy/2a.png"> </p>
 	   
-	b. Fill in the form and confirm. Follow the instructions provided by the exchange.
+	b. Заполните форму и подтвердите. Следуйте инструкциям биржи.
 	
 	<p align = "center"> <img src="./img/how-to-buy/2b.png" width = "500"> </p>
 	   
-3. Transfer the crypto from your main account to the trading account.
+3. Переведите криптовалюту с основного аккаунта на торговый аккаунт.
 
-	a. Go to Assets -> Main account.
+	a. Выберите Активы -> Основной аккаунт.
 	
 	<p align = "center"> <img src="./img/how-to-buy/3a.png"> </p>
 	   
-	b. Search for USDT or BTC. Click "Transfer".
+	b. Найдите USDT или BTC. Нажмите «Перевести».
 	
 	<p align = "center"> <img src="./img/how-to-buy/3b.png"> </p>
 	   
-	c. Fill in the form and confirm.
+	c. Заполните форму и подтвердите.
 	
 	<p align = "center"> <img src="./img/how-to-buy/3c.png" width = "500"> </p>
 	   
-4. Exchange BTC or USDT to ENQ.
+4. Обменяйте BTC или USDT на ENQ.
 
-	a. Go to Trade -> Spot.
+	a. Выберите Торговля -> Спотовый.
 	
 	<p align = "center"> <img src="./img/how-to-buy/4a.png"> </p>
 	   
-	b. Select the trading pair in the top-left corner of the page. Search for ENQ. Choose your desired pair.
+	b. Выберите торговую пару в верхнем левом углу страницы. Найдите ENQ. Выберите желаемую пару.
 	
 	<p align = "center"> <img src="./img/how-to-buy/4b.png"> </p>
 	   
-	c. Navigate to the bottom-right corner of the page. Find "Spot". Fill in your trading password. 
+	c. Перейдите в правый нижний угол страницы. Найдите «Спот». Введите свой торговый пароль.
 	
 	<p align = "center"> <img src="./img/how-to-buy/4c.png"> </p>
 	   
-	d. Look at the available orders. You can click on the order to quickly buy ENQ, or you can place your own order at the desired price. Click "Buy ENQ" when you are ready.
+	d. Исследуйте доступные ордеры. Вы можете нажать на ордер, чтобы быстро купить ENQ, или вы можете разместить свой ордер по желаемой цене. Когда будете готовы, нажмите «Купить ENQ».
 	
 	<p align = "center"> <img src="./img/how-to-buy/4d.png"> </p>
 	   
-5. Transfer ENQ to your main account.
+5. Переведите ENQ на основной аккаунта.
 
-	a. Go to Assets -> Trading account.
+	a. Перейдите в Активы -> Торговый аккаунт.
 	
 	<p align = "center"> <img src="./img/how-to-buy/5a.png"> </p>
 	   
-	b. Search for ENQ. Click "Transfer".
+	b. Найдите ENQ. Нажмите «Перевести».
 	
 	<p align = "center"> <img src="./img/how-to-buy/5b.png"> </p>
 	   
-	c. Fill in the form and confirm.
+	c. Заполните форму и подтвердите.
 	
 	<p align = "center"> <img src="./img/how-to-buy/5c.png" width = "500"> </p>
 	   
-6. Withdraw ENQ.
+6. Выведите ENQ.
 
-	a. Go to Main account.
+	a. Перейдите в основной аккаунт.
 	
 	<p align = "center"> <img src="./img/how-to-buy/6a.png"> </p>
 	   
-	b. Search for ENQ. Click "Withdraw".
+	b. Найдите ENQ. Нажмите «Вывод».
 	
 	<p align = "center"> <img src="./img/how-to-buy/6b.png"> </p>
 	   
-	c. Fill in the form. Use your ENQ public key.
+	c. Заполните форму. Используйте свой открытый ключ (адрес) ENQ. Обратите внимание на комиссию за вывод средств.
+	
+	<p align = "center"> <img src="./img/how-to-buy/6c.png" width = "500"> </p>
 	   
-7. ENQ should appear in your Enecuum wallet. You can check your balance by searching for your public key in [Blockchain Explorer](http://pulse.enecuum.com/), logging in to [web wallet](https://wallet.enecuum.com/) or downloading [Enecuum App](http://app.enecuum.com/).
+7. ENQ должен появиться в вашем кошельке Enecuum. Вы можете проверить свой баланс, выполнив поиск своего открытого ключа в [Blockchain Explorer](https://pulse.enecuum.com/), войдя в [веб-кошелёк](https://wallet.enecuum.com/) или загрузив [приложение Enecuum](https://app.enecuum.com/).
 
-## Deposit ENQ
+## Депозит ENQ
 
-1. On KuCoin, go to Main account.
+1. Перейдите в основной аккаунт KuCoin.
 
 <p align = "center"> <img src="./img/how-to-buy/3a.png"> </p>
 
-2. Search for ENQ. Click "Deposit".
+2. Найдите ENQ. Нажмите «Депозит».
 
 <p align = "center"> <img src="./img/how-to-buy/6b.png"> </p>
 
-3. Copy the deposit address.
+3. Скопируйте адрес для депозита.
 
 <p align = "center"> <img src="./img/how-to-buy/deposit3.png" width = "500"> </p>
 
-4. Transfer ENQ from your Enecuum wallet to the copied address. You can do that via [web wallet](https://wallet.enecuum.com/) or [via Enecuum app](http://app.enecuum.com/).
+4. Переведите ENQ со своего кошелька Enecuum на скопированный адрес. Вы можете сделать это через [веб-кошелёк](https://wallet.enecuum.com/) или [приложение Enecuum](https://app.enecuum.com/).
 
 <p align = "center"> <img src="./img/how-to-buy/deposit4.png"> </p>
 
 <p align = "center"> <img src="./img/how-to-buy/deposit4mobile.png" width = "300"> </p>
 
-5. ENQ should appear in your KuCoin account.
+5. ENQ должен появиться в вашем аккаунте KuCoin.

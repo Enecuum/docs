@@ -75,9 +75,11 @@ You need cryptocurrency to buy ENQ. If you already have BTC or USDT, skip to ste
 	
 	<p align = "center"> <img src="./img/how-to-buy/6b.png"> </p>
 	   
-	c. Fill in the form. Use your ENQ public key.
+	c. Fill in the form. Use your ENQ public key. Please take notice of the withdrawal fee.
+	
+	<p align = "center"> <img src="./img/how-to-buy/6c.png" width = "500"> </p>
 	   
-7. ENQ should appear in your Enecuum wallet. You can check your balance by searching for your public key in [Blockchain Explorer](http://pulse.enecuum.com/), logging in to [web wallet](https://wallet.enecuum.com/) or downloading [Enecuum App](http://app.enecuum.com/).
+7. ENQ should appear in your Enecuum wallet. You can check your balance by searching for your public key in [Blockchain Explorer](https://pulse.enecuum.com/), logging in to [web wallet](https://wallet.enecuum.com/) or downloading [Enecuum App](https://app.enecuum.com/).
 
 ## Deposit ENQ
 
@@ -93,7 +95,7 @@ You need cryptocurrency to buy ENQ. If you already have BTC or USDT, skip to ste
 
 <p align = "center"> <img src="./img/how-to-buy/deposit3.png" width = "500"> </p>
 
-4. Transfer ENQ from your Enecuum wallet to the copied address. You can do that via [web wallet](https://wallet.enecuum.com/) or [via Enecuum app](http://app.enecuum.com/).
+4. Transfer ENQ from your Enecuum wallet to the copied address. You can do that via [web wallet](https://wallet.enecuum.com/) or [via Enecuum app](https://app.enecuum.com/).
 
 <p align = "center"> <img src="./img/how-to-buy/deposit4.png"> </p>
 
