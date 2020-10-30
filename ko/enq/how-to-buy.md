@@ -89,13 +89,13 @@ You need cryptocurrency to buy ENQ. If you already have BTC or USDT, skip to ste
 
 2. Search for ENQ. Click "Deposit".
 
-<p align = "center"> <img src="./img/how-to-buy/6b.png"> </p>
+<p align = "center"> <img src="./img/how-to-buy/deposit2.png"> </p>
 
 3. Copy the deposit address.
 
 <p align = "center"> <img src="./img/how-to-buy/deposit3.png" width = "500"> </p>
 
-4. Transfer ENQ from your Enecuum wallet to the copied address. You can do that via [web wallet](https://wallet.enecuum.com/) or [via Enecuum app](https://app.enecuum.com/).
+4. Transfer ENQ from your Enecuum wallet to the copied address. You can do that via [web wallet](https://wallet.enecuum.com/) or via [Enecuum app](https://app.enecuum.com/).
 
 <p align = "center"> <img src="./img/how-to-buy/deposit4.png"> </p>
 
