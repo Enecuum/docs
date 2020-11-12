@@ -8,7 +8,7 @@ The total number of ENQ tokens ([ERC-20](https://etherscan.io/token/0x16ea01acb4
 
 The two phases of ENQ emission are presented below.
 
-### Step 1. The allocation of the ENQ (ERC-20)
+### Stage 1. The allocation of the ENQ (ERC-20)
 
 1. 33,834,817 ENQ (ERC-20) are proposed to be available for sale under the ENQ Token Sale, which will be subject to the ENQ Token Sale terms and conditions. It is intended that it will be possible to exchange ENQ (ERC-20) for ENQ at a rate of 1:1, once the Enecuum adaptive decentralized environment is operational;
 2. 25,376,112.75 ENQ (ERC-20) are proposed to be reserved for advisers and partners. It is intended that it will be possible to exchange ENQ (ERC-20) for ENQ at a rate of 1:1, once the Enecuum adaptive decentralized environment is operational;
@@ -17,11 +17,13 @@ The two phases of ENQ emission are presented below.
 
 ### Stage 2. Distribution of ENQ (after the main net launch)
 
-1. 17,500,000.00 ENQ are proposed to be reserved as a reward to the team with a one-year period of uniform unlocking  after the launch of the main network;
-2. 45,500,000.00 ENQ are proposed to be reserved as a reserve fund with a one-year period of uniform unlocking after the launch of the main network;
+1. [17,500,000.00 ENQ](https://pulse.enecuum.com/#!/account/0270a88ea6f7c5ea2a2ec3878008d878a70fd5d4ca27d5866d0eec3594cab0b912/0) are proposed to be reserved as a reward to the team with a one-year period of uniform unlocking  after the launch of the main network;
+2. [45,500,000.00 ENQ](https://pulse.enecuum.com/#!/account/026df0aa41967d8d47082c36b29a164aa1c90cdd07cb02d373daaba90b8eca5301/0) are proposed to be reserved as a reserve fund with a one-year period of uniform unlocking after the launch of the main network;
 3. 160,119,436.25 ENQ will be distributed among network participants (miners) within 25 years after the launch of the main network, as well as a support to the miners network development program.
 
 <p align = "center"> <img src="./img/emission-model/emission-pie-chart.png" width="700"/> </p>
+
+You can read the full report of the Stage 2 implementation in our [official Medium article](https://medium.com/enqblockchain/swap-report-c59225475a8e).
 
 ### Mining emission model
 
