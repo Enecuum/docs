@@ -32,9 +32,36 @@ In order for the contact to become active, you need to fulfill these requirement
 
 ### Delegate to Your PoS Contract
 
-In order for the contract to become active, you need to delegate to it. A minimal self-delegated stake is 25001 ENQ.
+In order for the contract to become active, you need to delegate to it. The minimum self-delegated stake is 25001 ENQ.
 
 To find out how to delegate your funds, refer to [the according guide.](how-to-delegate.md)
+
+### Add Description to Your PoS Contract 
+
+If you want, you can add description in different languages and social media links to your PoS contract.
+
+1. Fork Enecuum's [Blockchain Explorer repository](https://github.com/Enecuum/explorer).
+2. Add PoS contract description in the `assets/info/pos-info-storage-enq.js` file. Use the existing data as an example. 
+3. Do a pull request. You can use [Genesis Lab pull request](https://github.com/Enecuum/explorer/pull/2) as a reference.
+4. In [web wallet](https://wallet.enecuum.com/), go to "My POS Contracts" tab. Select "Manage" next to your PoS contract.
+
+<p align = "center"> <img src="./img/how-to-pos/AddDescStep4.png" width="600"> </p>
+
+5. In the "Message" field, type in the pull request number and confirm the transaction.
+
+<p align = "center"> <img src="./img/how-to-pos/AddDescStep5.png" width="600"> </p>
+
+6. Wait until the transaction is processed. Navigate to the "History" tab and search for the transaction that was done in the previous step. You may need to reload the page a few times.
+
+<p align = "center"> <img src="./img/how-to-pos/AddDescStep6.png" width="600"> </p>
+
+7. Copy the transaction hash.
+
+<p align = "center"> <img src="./img/how-to-pos/AddDescStep7.png" width="600"> </p>
+
+8. In the pull request, leave a comment with the transaction hash. Wait until the team reviews your pull request.
+
+<p align = "center"> <img src="./img/how-to-pos/AddDescStep8.png" width="600"> </p>
 
 ## Run a PoS Node
 

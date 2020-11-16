@@ -32,9 +32,36 @@ In order for the contact to become active, you need to fulfill these requirement
 
 ### Delegate to Your PoS Contract
 
-In order for the contract to become active, you need to delegate to it. A minimal self-delegated stake is 25001 ENQ.
+In order for the contract to become active, you need to delegate to it. The minimum self-delegated stake is 25001 ENQ.
 
 To find out how to delegate your funds, refer to [the according guide.](how-to-delegate.md)
+
+### Add Description to Your PoS Contract 
+
+If you want, you can add description in different languages and social media links to your PoS contract.
+
+1. Fork Enecuum's [Blockchain Explorer repository](https://github.com/Enecuum/explorer).
+2. Add PoS contract description in the `assets/info/pos-info-storage-enq.js` file. Use the existing data as an example. 
+3. Do a pull request. You can use [Genesis Lab pull request](https://github.com/Enecuum/explorer/pull/2) as a reference.
+4. In [web wallet](https://wallet.enecuum.com/), go to "My POS Contracts" tab. Select "Manage" next to your PoS contract.
+
+<p align = "center"> <img src="./img/how-to-pos/AddDescStep4.png" width="600"> </p>
+
+5. In the "Message" field, type in the pull request number and confirm the transaction.
+
+<p align = "center"> <img src="./img/how-to-pos/AddDescStep5.png" width="600"> </p>
+
+6. Wait until the transaction is processed. Navigate to the "History" tab and search for the transaction that was done in the previous step. You may need to reload the page a few times.
+
+<p align = "center"> <img src="./img/how-to-pos/AddDescStep6.png" width="600"> </p>
+
+7. Copy the transaction hash.
+
+<p align = "center"> <img src="./img/how-to-pos/AddDescStep7.png" width="600"> </p>
+
+8. In the pull request, leave a comment with the transaction hash. Wait until the team reviews your pull request.
+
+<p align = "center"> <img src="./img/how-to-pos/AddDescStep8.png" width="600"> </p>
 
 ## Run a PoS Node
 
@@ -97,7 +124,7 @@ You can stop/restart the container without worrying; no data will be lost.
    docker run -ti --name pulse_pos --link pulse_db:dbhost -p8000:8000 -e POS_ID=<your_pos_id> -e PORT=8000 -e DB_PASS='<your_db_password>' -e PEER='95.216.68.221:8000' -e DB_PORT=3306 -e LAG_INTERVAL=300 -e SYNC_INTERVAL=258 -d enecuum/pulse_pos
    ```
 
-   Change the `<your_pos_id>` parameter value to the PoS contract hash *without* brackets <>. You can use the hash from the previous step as the POS_ID parameter. Type your database password in `<your_db_password>`.
+   Change the `<your_pos_id>` parameter value to the PoS contract hash *without* brackets <>. You can use the hash from the previous step as the POS_ID parameter. Type your database password in `<your_db_password>`. 
 
    ::: tip
    The command above starts PoS in a fast sync mode, if you want to download full blockchain history please remove "-e LAG_INTERVAL=300 -e SYNC_INTERVAL=258" from the command.
@@ -149,13 +176,13 @@ You can check your PoS node page in the Blockchain Explorer to see if it is runn
 
 You might need to erase your PoS logs if you want to free up disk space. 
 
-1. Empty the PM2 logs:
+1. Empty logs of the PoS node:
 
    ``` 
    docker exec pulse_pos pm2 flush
    ```
    
-2. Shrink the log file size:
+2. Empty docker logs. Note that this will empty logs for **ALL** docker containers of you server, not only PoS node:
 
    ``` 
    truncate -s 0 /var/lib/docker/containers/*/*-json.log;
@@ -163,7 +190,7 @@ You might need to erase your PoS logs if you want to free up disk space.
 
 ### Save logs
 
-if there are problems with running the node, you might need to save your docker logs and share them with the Enecuum team. No personal information will be saved.
+If there are problems with running the node, you might need to save your docker logs and share them with the Enecuum team. No personal information will be saved.
 
 1. Upload your log file:
 
