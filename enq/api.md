@@ -7,6 +7,12 @@ Enecuum's API is available on [Swagger.](https://app.swaggerhub.com/apis-docs/en
 Enecuum's wallet creation is included in the introduction. Instructions on how to send transactions and generate signatures are available in POST /tx method. 
 
 ::: danger DANGER
+ENQ has token hash/ID/transaction ticker of **0000000000000000000000000000000000000000000000000000000000000000**. Non-zero values means that you deal with not Enecuum but other asset. Custom tokens have a random hexadecimal  string as a token ID.
+:::
+
+
+
+::: danger DANGER
 Rejected transactions are also recorded in the blockchain. Use GET /tx to check transaction status.
 :::
 
@@ -18,8 +24,10 @@ To get an explanation of the responses, refer to the response schemas. You can a
 
 ## Custom Token Integration
 
-In several API methods, token ID needs to be specified. For ENQ, the token ID is all zeros. If the ID is different, that means it's a custom token.
+In several API methods, token ID needs to be specified. For ENQ, the token ID is all zeros. If token ID is a random hexadecimal  string, that means it's a custom token.
 
 To send transactions with custom tokens, use POST /tx with the specified token ID. 
 
-To find out the custom token fees, total supply and other parameters, use GET /token_info with the specified token ID. The custom token fees are explained in the [Fee Principles](token-issue.md#fee-principles) guide.
+To check balance use GET /balance method with the specified token ID.
+
+To find out the custom token fees, total supply and other parameters, use GET /token_info with the specified token ID. The custom token fees are explained in the [Fee Principles](/enq/token-issue.md#fee-principles) guide.
