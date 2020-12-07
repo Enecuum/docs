@@ -10,7 +10,7 @@ In the Enecuum network, there are three types of custom tokens:
 - Reissuable - tokens with a flexible supply. After the token release, its supply can be changed by issuing or burning of coins.
 - Mineable - tokens that can be mined. Some volume is selected for instant release (pre-mine), and the rest is mined by users.
 
-### Common parameters
+### Common Parameters
 
 Each type of token has the following common parameters:
 
@@ -23,7 +23,7 @@ Each type of token has the following common parameters:
 - Fee - an exact fee amount for token transactions. The fee from each transaction will be sent to the wallet of the token creator.
 - Min fee - a minimum fee for token transactions if the token type is percentage. 
 
-### Mineable token parameters
+### Mineable Token Parameters
 
 Besides the parameters mentioned above, mineable tokens also feature the following: 
 
@@ -51,14 +51,13 @@ With each transaction, including custom tokens, users need to pay the transactio
 
 The token creator also chooses the fee type. The fee can be either fixed or percentage. The fixed fee stays the same for any transaction. The percentage fee depends on the transaction amount. If the percentage fee is selected, the creator can also choose the minimum fee. Then, the user will pay the minimum fee if the transaction percent fee is too low.
 
-<p align = "center"> <img src="./img/token-issue/fee-principle-wide.svg" width="900"> </p>
+<p align = "center"> <img src="./img/token-issue/fee-principle.svg" width="400"> </p>
 
 Here's an example of how it works:
 
 1. Carol creates her custom token CRL. She sets her transaction fee type to fixed. She also sets the fee amount to 1 CRL. Carol pays the fee in ENQ to the Enecuum Genesis address for the token creation. 
 2. Alice sends 10 CRL to Bob. She pays 1 CRL fee to Carol. Bob receives 10 CRL.
 3. Carol pays 0.1 ENQ fee to the Enecuum Genesis address for the transaction that Alice sent.
-
 
 ## Issue Tokens via Enecuum Network
 

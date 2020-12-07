@@ -51,7 +51,7 @@ With each transaction, including custom tokens, users need to pay the transactio
 
 The token creator also chooses the fee type. The fee can be either fixed or percentage. The fixed fee stays the same for any transaction. The percentage fee depends on the transaction amount. If the percentage fee is selected, the creator can also choose the minimum fee. Then, the user will pay the minimum fee if the transaction percent fee is too low.
 
-<p align = "center"> <img src="./img/token-issue/fee-principle-wide.svg" width="900"> </p>
+<p align = "center"> <img src="./img/token-issue/fee-principle.svg" width="400"> </p>
 
 Here's an example of how it works:
 
