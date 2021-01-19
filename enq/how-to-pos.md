@@ -41,7 +41,7 @@ To find out how to delegate your funds, refer to [the according guide.](how-to-d
 If you want, you can add description in different languages and social media links to your PoS contract.
 
 1. Fork Enecuum's [Blockchain Explorer repository](https://github.com/Enecuum/explorer).
-2. Add PoS contract description in the `assets/info/pos-info-storage-enq.js` file. Use the existing data as an example. 
+2. Add PoS contract description in the `assets/info/pos-info-storage-enq.json` file. Use the existing data as an example. 
 3. Do a pull request. You can use [Genesis Lab pull request](https://github.com/Enecuum/explorer/pull/2) as a reference.
 4. In [web wallet](https://wallet.enecuum.com/), go to "My POS Contracts" tab. Select "Manage" next to your PoS contract.
 

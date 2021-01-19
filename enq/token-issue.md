@@ -99,6 +99,33 @@ You can create custom token via ENQ App or on your computer using our website.
 
 <p align = "center"> <img src="./img/token-issue/7-web-result.jpg" width="500"> </p>
 
+## Add Description to Your Custom Token
+
+If you want, you can add description in different languages and social media links to your custom token.
+
+1. Fork Enecuum's [Blockchain Explorer repository](https://github.com/Enecuum/explorer).
+2. Add token description in the `assets/info/token-info-storage-enq.json` file. Use the existing data as an example. 
+3. Do a pull request. You can use [Genesis Lab pull request](https://github.com/Enecuum/explorer/pull/2) as a reference. Note that the example describes a PoS contract, but a custom token description is done in a similar way.
+4. In [web wallet](https://wallet.enecuum.com/), go to "Send" tab. 
+
+<p align = "center"> <img src="./img/token-issue/AddDescStep4.png" width="600"> </p>
+
+5. In the "Amount" field, type in 0. In the "Address", enter `02833f453fb8bf10cc5e8fd362d563851543559f3ea6e662ef114d8db8f72dda19` for Pulse (ENQ) Network and `029dd222eeddd5c3340e8d46ae0a22e2c8e301bfee4903bcf8c899766c8ceb3a7d` for BIT Network. In the "Data" field, type in the pull request number and confirm the transaction. 
+
+<p align = "center"> <img src="./img/token-issue/AddDescStep5.png" width="600"> </p>
+
+6. Wait until the transaction is processed. At the bottom of the page, search for the transaction that was done in the previous step. You may need to reload the page a few times.
+
+<p align = "center"> <img src="./img/token-issue/AddDescStep6.png" width="600"> </p>
+
+7. Copy the transaction hash.
+
+<p align = "center"> <img src="./img/token-issue/AddDescStep7.png" width="600"> </p>
+
+8. In the pull request, leave a comment with the transaction hash. Wait until the team reviews your pull request.
+
+<p align = "center"> <img src="./img/token-issue/AddDescStep8.png" width="600"> </p>
+
 ## Errors When Creating Tokens
 
 If you see an error when issuing your custom token, there can be several reasons:
