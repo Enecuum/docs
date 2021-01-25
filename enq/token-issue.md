@@ -105,6 +105,11 @@ If you want, you can add description in different languages and social media lin
 
 1. Fork Enecuum's [Blockchain Explorer repository](https://github.com/Enecuum/explorer).
 2. Add token description in the `assets/info/token-info-storage-enq.json` file. Use the existing data as an example. 
+
+::: tip TIP
+You can optionally specify **coingecko-id**. It is used in Enecuum Blockchain Explorer, mining app and wallet to automatically display token prices. If your token is listed on CoinGecko, you can get coingecko-id from the address of your CoinGecko page. For example, Nayuta Coin's ([https://www.coingecko.com/en/coins/nayuta-coin](https://www.coingecko.com/en/coins/nayuta-coin)) coingecko-id is nayuta-coin.
+:::
+
 3. Do a pull request. You can use [Genesis Lab pull request](https://github.com/Enecuum/explorer/pull/2) as a reference. Note that the example describes a PoS contract, but a custom token description is done in a similar way.
 4. In [web wallet](https://wallet.enecuum.com/), go to "Send" tab. 
 
