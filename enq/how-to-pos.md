@@ -213,3 +213,7 @@ If there are problems with running the node, you might need to save your docker 
 <p align = "center"> <img src="./img/how-to-pos/PoSContractRewards.png" width="500"> </p>
 
 At the PoS contract page (list of all contracts is [here](https://pulse.enecuum.com/#!/pos-contracts)), you can find the amount of delegated coins and rewards that your contract receives. Please note that rewards shown in the Blockchain Explorer are split between PoS owner and its delegators according to your PoS fee value. 
+
+## Run a Fullnode
+
+Fullnode is distributed though our [GitHub](https://github.com/Enecuum/node-main). You can follow the instructions there.
