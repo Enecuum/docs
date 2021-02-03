@@ -84,15 +84,15 @@ Slot owners are determined during each macroblock creation, and if no one has th
 
 Here's an example to illustrate mining slot rules:
 
-| Token owner |  Token(s)  | Miners | Available balance |                                                        Mining chance                                                        |
-|:-----------:|:----------:|:------:|:-----------------:|:---------------------------------------------------------------------------------------------------------------------------:|
-| Alice       | ALC        | 100    | 700 000 ENQ       | Slot is guaranteed. Token will be mined every macroblock. Unlikely to gain a random slot.                                   |
-| Bob         | BOB1, BOB2 | 100, 1 | 500 000 ENQ       | Slot is guaranteed. Tokens will be mined every macroblock. BOB1 is more likely to be mined. Unlikely to gain a random slot. |
-| Carol       | CRL        | 2 000  | 300 000 ENQ       | Does not have enough available balance for a guaranteed slot. Gains more random slots due to higher number of miners.       |
-| Dave        | DVE        | 1 000  | 200 000 ENQ       | Does not have enough available balance for a guaranteed slot. Less likely to gain a random slot compared to CRL and ENQ.    |
-| Enecuum     | ENQ        | 1 500  | --                | Slot is guaranteed. Token will be mined every macroblock. Can gain a random slot.                                           |
+| Token owner |  Token(s)  | Miners online | Available balance |                                                                      Mining chance                                                                      |
+|:-----------:|:----------:|:-------------:|:-----------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| Alice       | ALC        | 100           | 700 000 ENQ       | Slot is guaranteed. Token will be mined every macroblock. Unlikely to gain a random slot due to low number of miners.                                   |
+| Bob         | BOB1, BOB2 | 100, 1        | 500 000 ENQ       | Slot is guaranteed. Tokens will be mined every macroblock. BOB1 is more likely to be mined. Unlikely to gain a random slot due to low number of miners. |
+| Carol       | CRL        | 2 000         | 300 000 ENQ       | Does not have enough available balance for a guaranteed slot. Gains most random slots due to higher number of miners.                                   |
+| Dave        | DVE        | 1 000         | 200 000 ENQ       | Does not have enough available balance for a guaranteed slot. Less likely to gain a random slot compared to CRL and ENQ.                                |
+| Enecuum     | ENQ        | 1 500         | --                | Slot is guaranteed. Token will be mined every macroblock. Can gain a random slot.                                                                       |
 
-In this example, 2 mining slots are reserved by Alice and Bob, because they meet the requirements. Their tokens will be mined with every macroblock. One slot is always reserved for ENQ. The rest of the mining slots for custom tokens becomes random. Keeping in mind one additional slot, the total number of random slots equals 9. Each token in this table can compete for 9 random mining slots. Because Carol has most miners, she will gain more slots, but the mining won't be stable. In case other tokens get more miners, CRL mining rate will drop significantly.
+In this example, 2 mining slots are reserved by Alice and Bob, because they meet the requirements. Their tokens will be mined with every macroblock. One slot is always reserved for ENQ. The rest of the mining slots for custom tokens become random. Keeping in mind one additional slot, the total number of random slots equals 9. Each token in this table can compete for 9 random mining slots. Because Carol has more miners, she will gain more slots, but the mining won't be stable. In case other tokens get more miners, CRL mining rate will drop significantly.
 
 
 ## Issue Tokens via Enecuum Network
