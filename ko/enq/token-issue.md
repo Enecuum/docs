@@ -59,6 +59,42 @@ Here's an example of how it works:
 2. Alice sends 10 CRL to Bob. She pays 1 CRL fee to Carol. Bob receives 10 CRL.
 3. Carol pays 0.1 ENQ fee to the Enecuum Genesis address for the transaction that Alice sent.
 
+## Mining Slots
+
+To ensure consistency of custom tokens mining, we implement so-called **“mining slots”** — additional rules of microblock publishing that achieve predictable emission time of the custom token in case of permanent non-zero number of miners online.
+
+Macroblocks are issued every 15 seconds and consist of microblocks created by PoA miners. If all miners have equal probability to create a microblock, then there is no guarantee that a specific token or even a native coin will be mined in a macroblock. A mining slot is an exclusive place in a macroblock for specific token miners. It allows miners of token with a slot to compete only among themselves and not with other token miners. As the size of a macroblock is limited, these slots will be distributed on a competitive basis. For now, there are 10 slots available for custom tokens in a macroblock. There is always one additional slot for a native coin (ENQ) and one random slot (any mining token can be mined with it).
+
+In random slots, all mineable tokens, including ENQ, will compete on equal terms. The more miners a token has, the more likely it will gain a random slot.
+
+### How to Get a Slot
+
+::: tip TIP
+Having a mining slot is useful. Without slots, the stability of the token emission is not guaranteed due to competition among miners of different tokens.
+:::
+
+There are two requirements for getting a mining slot for your custom token:
+
+1. Among mining token owners, you must be in the top 10 wallet list sorted by available ENQ balance (i.e., "delegated", "undelegated", "transit", and "reward" balances are not taken into account).
+2. You must have at least 500 000 ENQ.
+
+Slot owners are determined during each macroblock creation, and if no one has the minimum required balance, then slots will be considered random. If your wallet passes the requirements and owns several mining tokens, the slot will be shared between all your tokens with distribution based on the following rule: the more miners a token has, the more likely it will be mined.
+
+### Mining Slot Example
+
+Here's an example to illustrate mining slot rules:
+
+| Token owner |  Token(s)  | Miners online | Available balance |                                                                      Mining chance                                                                      |
+|:-----------:|:----------:|:-------------:|:-----------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| Alice       | ALC        | 100           | 700 000 ENQ       | Slot is guaranteed. Token will be mined every macroblock. Unlikely to gain a random slot due to low number of miners.                                   |
+| Bob         | BOB1, BOB2 | 100, 1        | 500 000 ENQ       | Slot is guaranteed. Tokens will be mined every macroblock. BOB1 is more likely to be mined. Unlikely to gain a random slot due to low number of miners. |
+| Carol       | CRL        | 2 000         | 300 000 ENQ       | Does not have enough available balance for a guaranteed slot. Gains most random slots due to higher number of miners.                                   |
+| Dave        | DVE        | 1 000         | 200 000 ENQ       | Does not have enough available balance for a guaranteed slot. Less likely to gain a random slot compared to CRL and ENQ.                                |
+| Enecuum     | ENQ        | 1 500         | --                | Slot is guaranteed. Token will be mined every macroblock. Can gain a random slot.                                                                       |
+
+In this example, 2 mining slots are reserved by Alice and Bob, because they meet the requirements. Their tokens will be mined with every macroblock. One slot is always reserved for ENQ. The rest of the mining slots for custom tokens become random. Keeping in mind one additional slot, the total number of random slots equals 9. Each token in this table can compete for 9 random mining slots. Because Carol has more miners, she will gain more slots, but the mining won't be stable. In case other tokens get more miners, CRL mining rate will drop significantly.
+
+
 ## Issue Tokens via Enecuum Network
 
 You can create custom token via ENQ App or on your computer using our website.
