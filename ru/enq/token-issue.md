@@ -146,7 +146,7 @@
 2. Добавьте описание токена в файл `assets/info/token-info-storage-enq.json`. Используйте в качестве примера существующие данные.
 
 ::: tip СОВЕТ
-При желании вы можете указать **coingecko-id**. Он используется в Enecuum Blockchain Explorer, приложении для майнинга и кошельке для автоматического отображения цены токенов. Если ваш токен указан на CoinGecko, вы можете получить coingecko-id из адреса вашей страницы CoinGecko. Например, coingecko-id токена Nayuta Coin ([https://www.coingecko.com/en/coins/nayuta-coin](https://www.coingecko.com/en/coins/nayuta-coin)) — nayuta-coin.
+При желании вы можете указать **coingecko_id**. Он используется в Enecuum Blockchain Explorer, приложении для майнинга и кошельке для автоматического отображения цены токенов. Если ваш токен указан на CoinGecko, вы можете получить coingecko_id из адреса вашей страницы CoinGecko. Например, coingecko_id токена Nayuta Coin ([https://www.coingecko.com/en/coins/nayuta-coin](https://www.coingecko.com/en/coins/nayuta-coin)) — nayuta-coin.
 :::
 
 3. Сделайте запрос на включение (pull request). Вы можете использовать [pull request от Genesis Lab](https://github.com/Enecuum/explorer/pull/2) в качестве примера. Обратите внимание, что в примере описывается PoS-контракт, но описание пользовательского токена выполняется аналогичным образом.
