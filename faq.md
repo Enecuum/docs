@@ -20,13 +20,13 @@ To find out more, please read our [Tech paper.](https://enecuum.com/documentatio
 
 #### What is PoA?
 
-PoA publishers are involved in the microblock publishing process. Microblocks contain transactions. PoA  validates PoSLeader.
+PoA publishers are involved in the microblock publishing process. Microblocks contain transactions. PoA  validates PoSLeader's right to publish macroblocks.
 
 To find out more, please read our [Tech paper.](https://enecuum.com/documentation)
 
-#### Can I be a PoW or PoS miner?
+#### Can I be a PoW miner?
 
-Currently, BIT network with non-tradable tokens is used for testing the team's PoW and PoS. Please read the tutorial on [How to Mine BIT](/bit/how-to-mine-bit.html) to find out more. ENQ PoW and PoS mining will be released after the tests are done.
+Currently, BIT network with non-tradable tokens is used for testing the team's PoW . Please read the tutorial on [How to Mine BIT](/bit/how-to-mine-bit.html) to find out more. ENQ PoW mining will be released after the tests are done.
 
 #### What can the Enecuum App do?
 
@@ -176,6 +176,73 @@ Please back up a copy of your private key and reinstall the app.  It is more rel
 You can check your referrer in the [Blockchain Explorer.](https://pulse.enecuum.com/) Enter your wallet address (public key) in the search field on the top right of the page. Click the hash that has "refreward" description. You will see your address in the "publisher" field and your referrer's address in the corresponding field.
 
 ## Troubleshooting
+
+### PoS/PoW nodes
+
+#### PoS/PoW container stops in a minute after start
+
+There are users that experience troubles running PoS/PoW on certain processors (usually *old ones*). The cause is in the RandomX configuration supplied in Docker images. For example hardware support for AES in CPU is certainly favorable. We do not search for exact requirements for RandomX in our Docker images, as it is a very complex task. You may refer to RandomX devs if you want to dig into it. Instead we provide a guide on how to build RandomX from source on your exact computer. This method worked flawlessly for a couple of PoS owners. It may not cover your exact CPU, so you can update the guide via GitHub pull request if you have additional tricks to make RandomX work. 
+
+**Prerequisites**: you need a Linux-based OS and *git*, *NodeJS*, *C/C++ developer tools* installed. Search online for your OS-specific instructions. For example, develper tools will be in "build-essentials" metapackage in Ubuntu OS  and it will be "base-devel" package group in Arch. 
+
+-   Build RandomX
+       ```bash
+        git clone https://github.com/tevador/RandomX.git
+        cd RandomX
+        mkdir build && cd build
+        cmake -DARCH=native ..
+        make
+       ```
+    
+    
+    
+-   Build NodeJS addon (binding for RandomX)
+    ```bash
+     git clone https://github.com/prudanoff/node-randomx.git
+     cp build/librandomx.a node-randomx
+     cp src/randomx.h node-randomx
+     cd node-randomx
+     npm install -g node-gyp
+     npm i
+    ```
+
+-   Test the addon
+
+    ```bash
+    node index.js
+    ```
+
+    It should print a series of hashes like this:
+
+    ```bash
+    Starting RandomX virtual machine...
+    Start hashing...
+    Hash: 069a72f05bdc684f4536b6294174cd7740cf8b75e174ffb8a0ac1aedd2091f87 Nonce: 3
+    Hash: 01e5a6cfc599e64c2d495dc8fcd6deb86c99d49803856414aa63bb0eb45f05eb Nonce: 31
+    ```
+
+    If it fails try: 
+
+    ```
+    node-gyp rebuild
+    ```
+
+-   Install the addon to the container with your node application:
+
+   ```bash
+    docker cp build/Release/addon.node  pulse_pos:app/node_modules/node-randomx
+   ```
+   or
+
+   ```bash
+    docker cp build/Release/addon.node  pulse_pow:app/node_modules/node-randomx
+   ```
+   based on PoW or PoS you are using.
+
+- Start docker container with PoW/PoS
+
+- Anyway the newer a CPU the less power it consumes in general, so a CPU upgrade may be a good way to fix RandomX instead of building it.
+
 
 ###  Running the App
 
