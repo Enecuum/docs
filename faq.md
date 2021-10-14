@@ -181,7 +181,7 @@ You can check your referrer in the [Blockchain Explorer.](https://pulse.enecuum.
 
 #### PoS/PoW container stops in a minute after start
 
-There are users that experience troubles running PoS/PoW on certain processors (usually *old ones*). The cause is in the RandomX configuration supplied in Docker images. For example hardware support for AES in CPU is certainly favorable. We do not search for exact requirements for RandomX in our Docker images, as it is a very complex task. You may refer to RandomX devs if you want to dig into it. Instead we provide a guide on how to build RandomX from source on your exact computer. This method worked flawlessly for a couple of PoS owners. It may not cover your exact CPU, so you can update the guide via GitHub pull request if you have additional tricks to make RandomX work. 
+There are users that experience troubles running PoS/PoW on certain processors (usually *old ones*). The cause is in the RandomX configuration supplied in Docker images. For example hardware support for AES in CPU is certainly favorable. We do not search for exact requirements for RandomX in our Docker images, as it is a very complex task (You may refer to RandomX devs if you want to dig into it). Instead we provide a guide on how to build RandomX from source on your exact computer. This method worked flawlessly for a couple of PoS owners. It may not cover your exact CPU, so you can update the guide via GitHub pull request if you have additional tricks to make RandomX work. 
 
 **Prerequisites**: you need a Linux-based OS and *git*, *NodeJS*, *C/C++ developer tools* installed. Search online for your OS-specific instructions. For example, develper tools will be in "build-essentials" metapackage in Ubuntu OS  and it will be "base-devel" package group in Arch. 
 
@@ -229,19 +229,22 @@ There are users that experience troubles running PoS/PoW on certain processors (
 
 -   Install the addon to the container with your node application:
 
-   ```bash
+    ```bash
     docker cp build/Release/addon.node  pulse_pos:app/node_modules/node-randomx
-   ```
-   or
+    ```
+   
+    or
 
-   ```bash
+    ```bash
     docker cp build/Release/addon.node  pulse_pow:app/node_modules/node-randomx
-   ```
-   based on PoW or PoS you are using.
+    ```
+    based on PoW or PoS you are using.
 
 - Start docker container with PoW/PoS
 
 - Anyway the newer a CPU the less power it consumes in general, so a CPU upgrade may be a good way to fix RandomX instead of building it.
+
+- You can try RandomX build on Xeon CPU X5650 using `enecuum/pulse_pos:v1.10-legacy-cpu` Docker image instead of usual `enecuum/pulse_pos`. But keep in mind that the image might be outdated when you read this.
 
 
 ###  Running the App

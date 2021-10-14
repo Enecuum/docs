@@ -72,7 +72,7 @@ Note that PoW and Fullnode can only work with **public IP addresses.** The IP ad
 :::
 
 ::: tip
-Minimal hardware requirements are **1 CPU, 2 GB of RAM, 20 GB of disk**. These are like of a small VPS server offered by the majority of hosting providers. Disk requirements will rise with the size of the blockchain and are estimated as **1 TB** in 1-2 years. Please note this minimal hardware may **not** let your node to achieve maximum performance (and rewards). Recommended hardware requirements will be published after PoS software updates bringing planned optimizations. 
+Minimal hardware requirements are **1 CPU, 2 GB of RAM, 20 GB of disk**. These are like of a small VPS server offered by the majority of hosting providers. Disk requirements will rise with the size of the blockchain and are estimated as **1 TB** in 1-2 years. *Fast sync* mode allows you to stick with minimal disk and clear it from time to time. Please note this minimal hardware may **not** let your node to achieve maximum performance (and rewards). Recommended hardware requirements are following: **4 core CPU, 4 GB of RAM**. 
 :::
 
 ::: danger NOTICE
