@@ -140,7 +140,7 @@ You can stop/restart the container without worrying; no data will be lost.
 3. Download and run PoW container:
 
    ```
-   docker run -ti --name bit_pow -p7000:7000 --link bit_db:dbhost -e PUB_KEY=<your_pub_key> -e DB_PASS='root' -e DB_PORT=3306 -e PORT=7000 -e PEER='95.216.246.116:7000' -e LAG_INTERVAL=300 -e SYNC_INTERVAL=258 -d enecuum/bit_pow
+   docker run -ti --name bit_pow -p7000:7000 --link bit_db:dbhost -e PUB_KEY=<your_pub_key> -e DB_PASS='root' -e DB_PORT=3306 -e PORT=7000 -e PEER='95.216.246.116:7000' -e LAG_INTERVAL=300 -e SYNC_INTERVAL=258 -e MINER_INSTANCES=1 -d enecuum/bit_pow
    ```
 
    Change the `PUB-KEY` parameter value to the generated public key *without* brackets <>. 
@@ -148,6 +148,12 @@ You can stop/restart the container without worrying; no data will be lost.
    ::: tip
    The command above starts PoW in a fast sync mode, if you want to download full blockchain history please remove "-e LAG_INTERVAL=300 -e SYNC_INTERVAL=258" from the command.
    :::
+
+   ::: tip
+   Starting a PoW node with an argument "-e MINER_INSTANCES=*n*" defines number of concurrent miner threads as *n*. Please note that each running miner thread consumes 2.1 GB RAM (and one spare core of CPU is advised to unleash the full power) in addition to standard [PoS system requirements](/enq/how-to-pos.html#run-a-pos-node).
+   :::
+
+   
 
 4. Check if your container is running:
 
@@ -185,6 +191,8 @@ You can stop/restart the container without worrying; no data will be lost.
    ::: tip
    The command above starts Fullnode in a fast sync mode, if you want to download full blockchain history please remove "-e LAG_INTERVAL=300 -e SYNC_INTERVAL=258" from the command.
    :::
+
+   
 
 3. Check if your container is running:
 

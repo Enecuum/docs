@@ -138,7 +138,7 @@ docker run -d --name bit_db -e MYSQL_ROOT_PASSWORD=root enecuum/bit_db
 3. Скачайте контейнер PoW:
 
    ```
-   docker run -ti --name bit_pow -p7000:7000 --link bit_db:dbhost -e PUB_KEY=<ваш_публичный_ключ> -e DB_PASS='root' -e DB_PORT=3306 -e PORT=7000 -e PEER='95.216.246.116:7000' -e LAG_INTERVAL=300 -e SYNC_INTERVAL=258 -d enecuum/bit_pow
+   docker run -ti --name bit_pow -p7000:7000 --link bit_db:dbhost -e PUB_KEY=<ваш_публичный_ключ> -e DB_PASS='root' -e DB_PORT=3306 -e PORT=7000 -e PEER='95.216.246.116:7000' -e LAG_INTERVAL=300 -e SYNC_INTERVAL=258 -e MINER_INSTANCES=1 -d enecuum/bit_pow
    ```
    
    Измените значение параметра `PUB-KEY` на публичный ключ, который был сгенерирован в предыдущем пункте, *без* угловых скобок <>.
@@ -146,6 +146,10 @@ docker run -d --name bit_db -e MYSQL_ROOT_PASSWORD=root enecuum/bit_db
    ::: tip ВНИМАНИЕ
    
    Команда выше запускает узел PoW в режиме быстрой синхронизации, если вы хотите хранить полную историю блокчейна, исключите "-e LAG_INTERVAL=300 -e SYNC_INTERVAL=258" из команды запуска.
+   :::
+   
+   ::: tip
+   Запуск PoW узла с аргументом "-e MINER_INSTANCES=*n*" определяет число параллельных потоков майнинга равным *n*. Пожалуйста, учитывайте, что каждый запущенный поток майнинга потребляет 2.1 GB оперативной памяти (также разумно выделять одно свободное ядро ЦПУ на наждый поток для использования вычислительных ресуров на молную мощь) в дополнение к стандартным [системным требованиям для PoS](/ru/enq/how-to-pos.html#запуск-pos-узnа).
    :::
    
 4. Проверьте, работают ли контейнеры:
